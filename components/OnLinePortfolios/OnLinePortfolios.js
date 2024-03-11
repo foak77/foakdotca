@@ -1,12 +1,10 @@
-import styles from "./../../components/OnLinePortfolios/OnLinePortfolios.module.scss";
+import styles from "./OnLinePortfolios.module.scss";
 import PortfolioCard from "./PortfolioCard";
-import { cookies } from "next/headers";
-
 import { indie } from "@/app/fonts";
 
 async function getData() {
-  const cookieStore = cookies();
-  const res = await fetch("http://localhost:3000/api/onportfolios", {
+  const res = await fetch("http://127.0.0.1:3000/api/onportfolios", {
+    method: "get",
     cache: "no-store",
   });
   if (!res.ok) {
@@ -17,7 +15,7 @@ async function getData() {
 }
 
 export default async function OnLinePortfolios() {
-  const onportfolios = await getData();
+  const { onportfolios } = await getData();
   return (
     <main className={styles.onportfolio}>
       <section className={styles.onportfolio__title_wrap}>
@@ -35,7 +33,7 @@ export default async function OnLinePortfolios() {
         description of the work and the link to its respective app.
       </p>
       <section className={styles.onportfolio__map}>
-        {onportfolios.onportfolios.map((port) => (
+        {onportfolios.map((port) => (
           <PortfolioCard key={port.id} portfolio={port} />
         ))}
       </section>
