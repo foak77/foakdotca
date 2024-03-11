@@ -1,0 +1,157 @@
+@import "./../mixins";
+@import "./../variables";
+
+.portfolio {
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  @include flex-column-center-center;
+  overflow: hidden;
+  &__wrap {
+    @include flex-column-center-center;
+    width: 350px;
+  }
+  &__title {
+    // font-family: "Indie Flower", cursive;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 28px;
+    margin: 20px 0px 20px 0px;
+    color: $darkgray;
+    background-image: url("./../../public/images/tape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__imgs {
+    display: none;
+    margin: 0px 0px 0px 0px;
+    width: 350px;
+    height: auto;
+    &:last-child {
+      margin: 0px 0px 100px 0px;
+    }
+  }
+  &__imgs_MOB {
+    display: block;
+    margin: 0px 0px 0px 0px;
+    width: 350px;
+    height: auto;
+    &:last-child {
+      margin: 0px 0px 100px 0px;
+    }
+  }
+  &__heading {
+    font-size: 1.375rem;
+    margin: 50px 0px 50px 0px;
+    line-height: 2.25rem;
+    color: $darkgray;
+    width: 350px;
+    filter: drop-shadow(0px 0px 1px gray);
+  }
+  &__firstP {
+    &:first-letter {
+      color: $darkgray !important;
+      float: left !important;
+      font-family: Georgia !important;
+      font-size: 4.5rem !important;
+      line-height: 60px !important;
+      padding-top: 6px !important;
+      padding-right: 8px !important;
+      padding-left: 3px !important;
+    }
+  }
+  &__skill_list_item,
+  &__skill_list_item1 {
+    display: inline;
+    font-size: 1.1rem;
+    color: $darkgray;
+    padding: 5px 15px;
+    margin: 5px;
+    background-image: url("./../../public/images/tape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__transition {
+    width: 300%;
+    height: auto;
+    margin-bottom: 80px;
+  }
+  &__bottomrip {
+    width: 300vw;
+    height: auto;
+    bottom: -1px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .portfolio {
+    &__wrap {
+      width: 740px;
+    }
+    &__title {
+      margin: 0px 0px 70px 0px;
+    }
+    &__heading {
+      width: 740px;
+      margin: 30px 0px 30px 0px;
+    }
+    &__imgs {
+      display: block;
+      margin: 80px 0px 80px 0px;
+      width: 740px;
+    }
+    &__imgs_MOB {
+      display: none;
+    }
+    &__bottomrip {
+      width: 200vw;
+    }
+    &__transition {
+      width: 250%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .portfolio {
+    &__wrap {
+      width: 1000px;
+    }
+    &__heading {
+      width: 1000px;
+      margin: 0px 0px 0px 0px;
+    }
+    &__imgs {
+      // display: block;
+      margin: 80px 0px 80px 0px;
+      width: 1000px;
+    }
+    &__bottomrip {
+      width: 150vw;
+    }
+    &__transition {
+      width: 150%;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .portfolio {
+    &__wrap {
+      width: 1312px;
+    }
+    &__imgs {
+      margin: 80px 0px 80px 0px;
+      // width: 1312px;
+    }
+    &__bottomrip {
+      width: 100vw;
+    }
+    &__transition {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,508 @@
+@import "./variables";
+@import "./mixins";
+
+.main {
+  @include flex-column-start-center;
+  width: 100%;
+  overflow: hidden;
+  &__wrapperTop {
+    @include flex-column-start-center;
+    width: 350px;
+  }
+  &__wrapperMid {
+    @include flex-column-start-center;
+    width: 350px;
+  }
+  &__wrapperBottom {
+    @include flex-column-start-center;
+    width: 350px;
+  }
+  &__paragraphBlock_A {
+    width: 350px;
+  }
+  &__paragraphBlockWrap {
+    @include flex-column-center-center;
+    width: 350px;
+  }
+  &__paragraphBlockWrapLeft {
+    width: 350px;
+    font-size: 1.275rem;
+    line-height: 2.25rem;
+    padding: 0px 0px 40px 0px;
+    color: $darkgray;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+  &__paragraphBlockWrapRight {
+    width: 350px;
+    font-size: 1.275rem;
+    line-height: 2.25rem;
+    padding: 0px 0px 40px 0px;
+    color: $darkgray;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+
+  &__firstP {
+    &:first-letter {
+      color: $darkgray;
+      float: left;
+      font-family: Georgia;
+      font-size: 4.5rem;
+      line-height: 60px;
+      padding-top: 6px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
+  }
+  &__paragraph {
+    font-weight: 200;
+    font-size: 1.275rem;
+    line-height: 2.25rem;
+    padding: 0px 0px 40px 0px;
+    color: $darkgray;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+  &__paragraphIndie {
+    color: $darkgray;
+    // font-family: "Indie Flower", cursive;
+    line-height: 2.25rem;
+    font-size: 1.7rem;
+    padding-bottom: 30px;
+  }
+  &__sampleWork_M {
+    margin: 50px 0px 50px 0px;
+  }
+  &__sampleWork_L {
+    display: none;
+  }
+  &__dLoad {
+    margin: 0px 0px 80px 0px;
+  }
+  &__paragraphBlock_B {
+    width: 350px;
+    @include flex-column-start-center;
+    margin: 40px 0px 60px 0px;
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 100;
+    filter: drop-shadow(0px 0px 0px $lightgray);
+  }
+  &__title_list {
+    @include flex-column-center-center;
+    background-color: #fcf;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: $darkgray;
+    width: 100%;
+    height: 80px;
+    margin: 0px 0px 40px 0px;
+    font-size: 1.8rem;
+    // font-family: "Indie Flower", cursive;
+    transform: rotate(1deg);
+  }
+  &__list_paragraph1,
+  &__list_paragraph2,
+  &__list_paragraph3,
+  &__list_paragraph4,
+  &__list_paragraph5 {
+    line-height: 2rem;
+    text-align: center;
+    color: $darkblue;
+    font-size: 1.25rem;
+    list-style: none;
+    padding: 25px;
+    margin-bottom: 20px;
+    // font-family: "Indie Flower", cursive;
+  }
+
+  &__list_paragraph1,
+  &__list_paragraph3 {
+    background-color: #ffc;
+    width: 230px;
+  }
+
+  &__list_paragraph3 {
+    background-color: #fcf;
+    width: 230px;
+  }
+
+  &__list_paragraph4 {
+    background-color: #cff;
+    width: 250px;
+  }
+
+  &__list_paragraph2,
+  &__list_paragraph5 {
+    background-color: #cfc;
+    width: 250px;
+  }
+  // --------------------------------DropShadow Horrizontal
+  &__dropShadow {
+    position: relative;
+    width: 100%;
+  }
+  &__dropShadow:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 26px;
+    left: 46px;
+    width: 72%;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-box-shadow: 8px 6px 10px 25px $gray;
+    -moz-box-shadow: 8px 6px 10px 20px $gray;
+    box-shadow: 8px 6px 10px 20px $gray;
+  }
+  &__dropShadow:after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    bottom: 74px;
+    left: 36px;
+    width: 75%;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    transform: rotate(3deg);
+    -webkit-box-shadow: 8px 6px 10px 25px $gray;
+    -moz-box-shadow: 8px 6px 10px 25px $gray;
+    box-shadow: 8px 6px 10px 25px $gray;
+  }
+  &__sectionB {
+    @include flex-column-start-center;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 20px;
+    font-weight: 100;
+    width: 350px;
+    filter: drop-shadow(0px 0px 0px $lightgray);
+  }
+  //---------------------------------DropShadow
+  &__dropShadow1 {
+    width: 230px;
+    transform: rotate(3deg);
+  }
+  &__dropShadow2 {
+    width: 250px;
+    transform: rotate(-2deg);
+  }
+  &__dropShadow3 {
+    width: 230px;
+    transform: rotate(-3deg);
+  }
+  &__dropShadow4 {
+    width: 250px;
+    transform: rotate(-0deg);
+  }
+  &__dropShadow5 {
+    width: 250px;
+    transform: rotate(-2deg);
+  }
+  &__dropShadow1:before,
+  &__dropShadow2:before,
+  &__dropShadow3:before,
+  &__dropShadow4:before,
+  &__dropShadow5:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    bottom: 23px;
+    left: 8px;
+    top: 90%;
+    width: 47%;
+    -webkit-box-shadow: 0 4px 10px $gray;
+    -moz-box-shadow: 0 4px 10px $gray;
+    box-shadow: 0 4px 10px $gray;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  &__dropShadow1:after,
+  &__dropShadow2:after,
+  &__dropShadow3:after,
+  &__dropShadow4:after,
+  &__dropShadow5:after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    bottom: 23px;
+    right: 8px;
+    top: 90%;
+    width: 47%;
+    -webkit-box-shadow: 0 4px 10px $gray;
+    -moz-box-shadow: 0 4px 10px $gray;
+    box-shadow: 0 4px 10px $gray;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  &__paragraphBlock_C {
+    width: 350px;
+    // transform: rotate(-1deg);
+  }
+  &__toprip {
+    width: 300%;
+    height: auto;
+    transform: rotateY(180deg);
+  }
+  &__bottomrip {
+    margin-top: 50px;
+    width: 300%;
+    height: auto;
+    bottom: -1px;
+  }
+  &__transition {
+    width: 300%;
+    height: auto;
+    margin-bottom: 80px;
+    margin-top: 40px;
+  }
+  &__pageLink {
+    color: $yellow;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .main {
+    &__wrapperTop {
+      width: 740px;
+    }
+    &__wrapperMid {
+      width: 740px;
+      margin-top: 60px;
+    }
+    &__wrapperBottom {
+      width: 740px;
+    }
+    &__sampleWork_M {
+      display: none;
+    }
+    &__sampleWork_L {
+      display: block;
+      margin: 50px 0px 50px 0px;
+    }
+    &__paragraphBlockWrap {
+      @include flex-column-center-center;
+      width: 740px;
+    }
+    &__paragraphBlockWrapLeft {
+      width: 740px;
+    }
+    &__paragraphBlockWrapRight {
+      width: 740px;
+    }
+    &__paragraphBlock_A {
+      width: 740px;
+    }
+    &__sampleWork_M {
+      margin: 32px 0px 32px 180px;
+    }
+
+    &__paragraphBlock_B {
+      width: 740px;
+      @include flex-row-spaceevenly-start-wrap;
+      margin-top: 20px;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    &__paragraphBlock_C {
+      width: 640px;
+    }
+
+    &__bottomrip {
+      width: 200vw;
+    }
+    &__transition {
+      width: 200%;
+      height: auto;
+      margin-bottom: 60px;
+    }
+    // --------------------------------DropShadow
+    //   Horrizontal
+    &__dropShadow {
+      width: 100%;
+      // content: "";
+    }
+    &__dropShadow:before {
+      width: 85%;
+      content: "";
+    }
+    &__dropShadow:after {
+      width: 86%;
+      content: "";
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .main {
+    &__wrapperTop {
+      width: 1000px;
+    }
+    &__wrapperMid {
+      width: 1000px;
+    }
+    &__wrapperBottom {
+      width: 1000px;
+    }
+    &__sampleWork_L {
+      display: block;
+      margin: 50px 0px 50px 10px;
+    }
+    &__paragraphBlockWrap {
+      @include flex-row-spacearound-start;
+      width: 1000px;
+    }
+    &__paragraphBlockWrapLeft {
+      width: 450px;
+    }
+    &__paragraphBlockWrapRight {
+      width: 450px;
+    }
+
+    &__paragraphBlock_A {
+      width: 1000px;
+    }
+    &__paragraphBlock_B {
+      width: 800px;
+      @include flex-row-spaceevenly-start-wrap;
+    }
+    &__paragraphBlock_C {
+      width: 800px;
+    }
+    &__paragraphBlock_C > p {
+      width: 800px;
+    }
+    &__paragraph {
+      width: 950px;
+    }
+    &__list_paragraph1,
+    &__list_paragraph3 {
+      width: 250px;
+    }
+
+    &__list_paragraph3 {
+      width: 230px;
+    }
+
+    &__list_paragraph4 {
+      width: 250px;
+    }
+
+    &__list_paragraph2,
+    &__list_paragraph5 {
+      width: 250px;
+    }
+
+    &__bottomrip {
+      width: 150vw;
+    }
+    &__transition {
+      width: 150%;
+    }
+
+    // horizontal dropshadow
+    &__dropShadow {
+      width: 90%;
+    }
+    &__dropShadow:before {
+      left: 140px;
+    }
+    &__dropShadow:after {
+      left: 110px;
+      width: 100%;
+    }
+    // --------------------------------DropShadow Horrizontal
+
+    &__dropShadow:before {
+      width: 75%;
+    }
+    &__dropShadow:after {
+      width: 78%;
+    }
+    //---------------------------------DropShadow
+    &__dropShadow1 {
+      width: 250px;
+      transform: rotate(3deg);
+    }
+    &__dropShadow2 {
+      width: 250px;
+      transform: rotate(-2deg);
+    }
+    &__dropShadow3 {
+      width: 230px;
+      transform: rotate(-3deg);
+    }
+    &__dropShadow4 {
+      width: 250px;
+      transform: rotate(0deg);
+    }
+    &__dropShadow5 {
+      width: 250px;
+      transform: rotate(-2deg);
+    }
+    &__dropShadow1:before,
+    &__dropShadow2:before,
+    &__dropShadow3:before,
+    &__dropShadow4:before,
+    &__dropShadow5:before {
+      top: 86%;
+    }
+    &__dropShadow1:after,
+    &__dropShadow2:after,
+    &__dropShadow3:after,
+    &__dropShadow4:after,
+    &__dropShadow5:after {
+      top: 86%;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .main {
+    &__wrapperTop {
+      width: 1312px;
+    }
+    &__wrapperMid {
+      width: 1312px;
+    }
+    &__wrapperBottom {
+      width: 1312px;
+    }
+    &__sampleWork_L {
+      margin: 50px 0px 50px 20px;
+    }
+    &__paragraphBlock_A {
+      width: 1312px;
+    }
+    &__paragraphBlock_B {
+      width: 1312px;
+    }
+    // &__paragraphBlock_C {
+    //   width: 1312px;
+    // }
+    &__sampleWork_M {
+      margin: 32px 0px 32px 100px;
+    }
+    &__dropShadow {
+      position: relative;
+      width: 85%;
+    }
+    &__dropShadow:before {
+      width: 88%;
+      left: 90px;
+    }
+    &__dropShadow:after {
+      width: 85%;
+    }
+    &__transition {
+      width: 100%;
+    }
+  }
+}

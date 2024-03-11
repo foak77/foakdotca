@@ -1,0 +1,83 @@
+@import "./../../app/mixins";
+@import "./../../app//variables";
+
+.footer {
+  @include flex-column-start-center;
+  background-color: $gray;
+  width: 100%;
+  height: auto;
+  &__wrapper {
+    @include flex-column-start-center;
+    width: $mobile;
+    padding: 60px 0px 60px 0px;
+  }
+  &__linkBlock {
+    text-decoration: none !important;
+    list-style-type: none !important;
+  }
+  &__logo {
+    width: 125px;
+    height: auto;
+  }
+  &__navBlock1 {
+    @include flex-column-start-center;
+    width: 200px;
+    margin: 0 30px 30px 0px;
+  }
+  &__navBlock2 {
+    @include flex-column-start-center;
+    width: 200px;
+    margin: 0 30px 30px 0px;
+  }
+  &__navBlock3 {
+    @include flex-column-start-center;
+    width: 200px;
+    margin: 0 30px 0px 0px;
+  }
+  &__link {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: $black;
+    text-decoration: none !important;
+    list-style-type: none !important;
+    &:hover {
+      color: $lightwhite;
+    }
+  }
+  &__icon {
+    font-size: 1.25rem;
+    margin: 0px 12px 0px 0px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .footer {
+    &__wrapper {
+      @include flex-row-center-start;
+      width: $tablet;
+    }
+    &__navBlock1 {
+      @include flex-column-start-center;
+      width: 200px;
+      margin: 0 30px 0px 0px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer {
+    &__wrapper {
+      @include flex-row-center-start;
+      width: $desktop;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .footer {
+    &__wrapper {
+      @include flex-row-center-start;
+      width: $larger;
+    }
+  }
+}

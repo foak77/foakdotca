@@ -1,0 +1,275 @@
+@import "./../variables";
+@import "./../mixins";
+
+.about {
+  @include flex-column-start-center;
+  width: 100%;
+  overflow: hidden;
+  &__transition {
+    width: 300%;
+    height: auto;
+    margin-bottom: 60px;
+  }
+  &__title_wrap {
+    @include flex-column-start-center;
+    width: 350px;
+    margin: 30px 0px 60px 0px;
+  }
+  &__title {
+    @include flex-column-center-center;
+    // font-family: "Indie Flower", cursive;
+    width: 100%;
+    height: 80px;
+    font-size: 1.65rem;
+    background-image: url("./../../public/images/tape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: $darkgray;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__info {
+    @include flex-column-start-center;
+    width: 100%;
+    background-image: url("./../../public/images/bg_ripped_paper_mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    padding-top: 40px;
+  }
+  &__section_wrap {
+    @include flex-column-start-center;
+    width: 350px;
+  }
+
+  &__section {
+    font-weight: 200;
+    width: 350px;
+    margin-top: 40px;
+    filter: drop-shadow(0px 0px 1px $lightgray);
+    color: $darkgray;
+  }
+
+  &__section1 {
+    margin-top: 30px;
+    filter: drop-shadow(0px 0px 1px $lightgray);
+    color: $darkgray;
+  }
+
+  &__paragraphTop {
+    width: 350px;
+    font-size: 1.275rem;
+    line-height: 2.125rem;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 40px 0;
+    font-weight: 200;
+    filter: drop-shadow(0px 0px 1px $gray);
+    color: $darkgray;
+  }
+  &__firstP {
+    &:first-letter {
+      color: $darkgray !important;
+      float: left !important;
+      font-family: Georgia !important;
+      font-size: 4.5rem !important;
+      line-height: 60px !important;
+      padding-top: 6px !important;
+      padding-right: 8px !important;
+      padding-left: 3px !important;
+    }
+  }
+  &__paragraph {
+    font-size: 1.275rem;
+    line-height: 2.125rem;
+    padding: 0px 0px 0px 0px;
+    margin: 50px 0px 50px 0px;
+    filter: drop-shadow(0px 0px 1px $gray);
+    color: $darkgray;
+  }
+  &__paragraphLast {
+    filter: drop-shadow(0px 0px 1px $lightgray);
+    color: $darkgray;
+  }
+
+  &__skill {
+    @include flex-column-start-center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  &__skill_list {
+    @include flex-row-center-center-wrap;
+    list-style-type: none;
+    margin-bottom: 40px;
+  }
+
+  &__skill_list_item {
+    margin: 19px;
+  }
+
+  &__imgsIcon {
+    filter: drop-shadow(0px 0px 3px $gray);
+    width: 48px;
+    height: auto;
+  }
+
+  &__bill {
+    opacity: 0.25;
+    width: 200px;
+    height: auto;
+    margin: 0px 0px 100px 70px;
+  }
+
+  &__skill_color {
+    margin: 0px 0px 0px 10px;
+    color: $red;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .about {
+    &__transition {
+      width: 250%;
+      margin-bottom: 60px;
+    }
+    &__info {
+      @include flex-column-start-center;
+      background-image: url("./../../public/images/bg_ripped_paper_tablet.png");
+      background-size: 100% 100%;
+    }
+    &__section_wrap {
+      @include flex-column-start-center;
+      width: 350px;
+    }
+    &__title_img {
+      position: absolute;
+      right: -110px;
+      top: -20px;
+      width: 150px;
+      filter: drop-shadow(0px 0px 2px $gray);
+    }
+    &__paragraphTop {
+      width: 740px;
+    }
+    &__firstP {
+      &:first-child:first-letter {
+        color: $darkgray !important;
+        float: left !important;
+        font-family: Georgia !important;
+        font-size: 4.5rem !important;
+        line-height: 60px !important;
+        padding-top: 6px !important;
+        padding-right: 8px !important;
+        padding-left: 3px !important;
+      }
+    }
+    &__section_wrap {
+      width: 740px;
+      @include flex-row-spacebetween-start;
+    }
+
+    &__skill_list {
+      margin-bottom: 0px;
+    }
+
+    &__skill_list_item {
+      margin: 20px;
+    }
+
+    &__imgsIcon {
+      filter: drop-shadow(0px 0px 3px $gray);
+      width: 45px;
+    }
+    &__section {
+      font-weight: 200;
+      width: 335px;
+    }
+
+    &__section1 {
+      color: $lightwhite;
+      margin-top: 0;
+    }
+    &__bill {
+      opacity: 0.25;
+      width: 200px;
+      height: auto;
+      margin: 0px 0px 50px 60px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .about {
+    &__transition {
+      width: 150%;
+    }
+    &__info {
+      background-image: url("./../../public/images/bg_ripped_paper_desktop.png");
+    }
+    &__section_wrap {
+      width: 1000px;
+      @include flex-row-spacebetween-start;
+    }
+    &__paragraphTop {
+      width: 1000px;
+    }
+    &__firstP {
+      &:first-child:first-letter {
+        color: $darkgray !important;
+        float: left !important;
+        font-family: Georgia !important;
+        font-size: 4.5rem !important;
+        line-height: 60px !important;
+        padding-top: 6px !important;
+        padding-right: 8px !important;
+        padding-left: 3px !important;
+      }
+    }
+
+    &__section {
+      font-weight: 200;
+      width: 430px;
+    }
+    &__bill {
+      width: 300px;
+      margin: 0px 0px 80px 60px;
+    }
+
+    &__skill_list_item {
+      margin: 20px;
+    }
+
+    &__imgsIcon {
+      filter: drop-shadow(0px 0px 3px $gray);
+      width: 45px;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .about {
+    &__transition {
+      width: 100%;
+    }
+    &__info {
+      background-image: url("./../../public/images/bg_ripped_paper_larger.png");
+    }
+    &__section_wrap {
+      width: 1312px;
+      @include flex-row-spacebetween-start;
+    }
+
+    &__section {
+      font-weight: 200;
+      width: 590px;
+    }
+
+    &__paragraph {
+      font-size: 1.325rem;
+    }
+    &__bill {
+      margin: 0px 0px 100px 120px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.menu {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background-color: $blue;
+  opacity: 0.8;
+  padding: 20px 20px 20px 20px;
+  &__link {
+    text-decoration: none;
+  }
+  &__list {
+    font-family: "Nunito Sans", sans-serif;
+    border-bottom: 1px solid $white;
+    padding: 8px 0px 8px 0px;
+    text-decoration: none;
+    list-style-type: none;
+    color: $lightwhite;
+    font-size: 1.125rem;
+    &:hover {
+      color: $lightyellow;
+    }
+  }
+  &__icon {
+    margin-right: 16px;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+}

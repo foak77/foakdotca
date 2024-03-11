@@ -1,0 +1,192 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.education {
+  @include flex-column-start-center;
+  width: 100%;
+  background-color: $lightblue;
+  // background-image: url("./../../public/images/education_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  &__toprip {
+    width: 300vw;
+    height: auto;
+    transform: rotateY(180deg);
+  }
+  &__bottomrip {
+    width: 300vw;
+    height: auto;
+    bottom: -1px;
+  }
+
+  &__title {
+    // font-family: "Indie Flower", cursive;
+    font-size: 2rem;
+    text-align: center;
+    padding: 16px 32px;
+    margin: 40px 0;
+    color: $darkgray;
+    background-image: url("./../../public/images/tape1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 0px 2px $black);
+  }
+
+  &__education_wrap {
+    @include flex-column-start-center;
+    width: 350px;
+  }
+
+  &__section {
+    @include flex-column-start-center;
+    width: 100%;
+  }
+
+  &__schoolcard {
+    @include flex-column-start-center;
+    width: 230px;
+    background-color: $lightwhite;
+    overflow: hidden;
+    border-radius: 5px;
+    padding-top: 5px;
+    margin-bottom: 40px;
+    filter: drop-shadow(5px 5px 5px $gray);
+  }
+  &__schoolname {
+    font-size: 1.125rem;
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    padding: 20px;
+    width: 95%;
+    background-color: $blue;
+    margin-bottom: 23px;
+    color: $lightwhite;
+    font-weight: 300;
+    line-height: 1.6rem;
+  }
+  &__schooltag {
+    position: absolute;
+    color: $yellow;
+    font-size: 2.3rem;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: $lightwhite;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  &__schooltype {
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+  }
+  &__schoolcourse {
+    padding: 8px 0px 8px 0px;
+    width: 95%;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: center;
+  }
+  &__schoolyear {
+    font-weight: 100;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 8px 0px 8px 0px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .education {
+    &__education_wrap {
+      @include flex-column-start-center;
+      width: 740px;
+    }
+    &__toprip {
+      width: 200vw;
+      height: auto;
+      transform: rotateY(180deg);
+      overflow: hidden;
+    }
+    &__bottomrip {
+      width: 200vw;
+      height: auto;
+      bottom: -1px;
+    }
+
+    &__section {
+      @include flex-row-spacebetween-start;
+      width: 80%;
+    }
+
+    &__schoolcard {
+      @include flex-column-start-center;
+      // width: 95%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .education {
+    &__education-wrap {
+      @include flex-column-start-center;
+      width: 1000px;
+    }
+    &__toprip {
+      width: 150vw;
+      height: auto;
+      transform: rotateY(180deg);
+      overflow: hidden;
+    }
+    &__bottomrip {
+      width: 150vw;
+      height: auto;
+      bottom: -1px;
+    }
+
+    &__section {
+      width: 90%;
+    }
+
+    &__schoolcard {
+      @include flex-column-start-center;
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .education {
+    //   // width: 1000px;
+    &__toprip {
+      width: 100vw;
+      height: auto;
+      transform: rotateY(180deg);
+      overflow: hidden;
+    }
+    &__bottomrip {
+      width: 100vw;
+      height: auto;
+      bottom: -1px;
+    }
+    //   &__education-wrap {
+    //     @include flex-row-spacebetween-start;
+    //     width: 1312px;
+    //   }
+
+    //   &__section {
+    //     @include flex-row-spacearound-start;
+    //   }
+    //   &__schoolcard {
+    //     @include flex-column-start-center;
+    //     width: 200px;
+    //   }
+  }
+}

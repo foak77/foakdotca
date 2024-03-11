@@ -1,0 +1,78 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.workplaceCard {
+  width: 350px;
+  @include flex-column-start-center;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  filter: drop-shadow(5px 5px 10px $black);
+  &__clip {
+    width: 100%;
+    height: auto;
+  }
+  &__underClip {
+    @include flex-column-start-center;
+    width: 100%;
+    background-image: url("./../../public/images/pasteBoard_backgroud.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &__duties {
+    width: 90%;
+    padding: 20px 15px 20px 15px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.275rem;
+    margin: 0;
+  }
+
+  &__company {
+    text-align: center;
+    width: 85%;
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray;
+  }
+
+  &__date {
+    text-align: center;
+    width: 85%;
+    font-size: 0.9rem;
+    margin: 10px 0px 20px 0;
+  }
+
+  &__spaceBetweenBullets {
+    padding-bottom: 16px;
+  }
+
+  &__bullets {
+    // font-family: "Indie Flower", cursive;
+    list-style-type: none;
+    width: 85%;
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .workplaceCard {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .workplaceCard {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .workplaceCard {
+    width: 350px;
+  }
+}

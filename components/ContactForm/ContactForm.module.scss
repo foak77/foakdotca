@@ -1,0 +1,183 @@
+@import "./../../app/variables";
+@import "./../../app/mixins";
+
+.contactForm {
+  @include flex-column-center-center;
+  width: 100%;
+  overflow: hidden;
+  &__toprip {
+    width: 300%;
+    height: auto;
+  }
+  &__wrap {
+    @include flex-column-center-center;
+    margin: 40px 0px 40px 0px;
+    width: 350px;
+    border-radius: 5px;
+    padding: 16px 0px 16px 0px;
+  }
+  &__title {
+    // font-family: "Indie Flower", cursive;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 28px;
+    margin: 20px 0;
+    color: $darkgray;
+    background-image: url("./../../public/images/tape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__left {
+    @include flex-column-center-center;
+    width: 100%;
+    height: auto;
+  }
+  &__right {
+    @include flex-column-center-center;
+    width: 100%;
+  }
+  &__form {
+    @include flex-column-center-center;
+    width: 90%;
+    height: auto;
+  }
+  &__icons {
+    color: $darkgray;
+    font-size: 1.8rem;
+    margin: 5px 10px 0px 0px;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+  &__name,
+  &__email,
+  &__subject,
+  &__message,
+  &__button {
+    @include flex-row-end-start;
+    width: 100%;
+    margin: 0px 0px 16px 0px;
+  }
+  &__name_input,
+  &__email_input,
+  &__subject_input {
+    // font-family: "Indie Flower", cursive;
+    font-size: 1.125rem;
+    background-color: $white;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    padding: 0px 0px 0px 15px;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__name_input:focus,
+  &__email_input:focus,
+  &__subject_input:focus {
+    outline-color: rgba(170, 135, 57, 1);
+    background-color: $white;
+  }
+  &__name_input:active,
+  &__email_input:active,
+  &__subject_input:active {
+    background-color: $white;
+  }
+  &__message_input {
+    font-size: 1.125rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 5px;
+    width: 250px;
+    height: 80px;
+    padding: 5px 0px 0px 15px;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__message_input:focus {
+    outline-color: rgba(170, 135, 57, 1);
+    background-color: $white;
+  }
+  &__btn {
+    // font-family: "Indie Flower", cursive;
+    border: none;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 28px;
+    margin: 20px 0;
+    color: $darkgray;
+    background-color: transparent;
+    background-image: url("./../../public/images/tape1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__message_log {
+    @include flex-column-center-center;
+    background-color: $darkblue;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0 10px;
+    height: 40px;
+    color: $lightwhite;
+  }
+  &__text {
+    @include flex-column-center-center;
+    font-weight: 200;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    margin: 0px 0px;
+    font-size: 1.3rem;
+    line-height: 1.75rem;
+    // font-family: "Indie Flower", cursive;
+    transform: rotate(-2deg);
+  }
+  &__bottomrip {
+    width: 300%;
+    height: auto;
+    bottom: -1px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .contactForm {
+    &__toprip {
+      width: 200%;
+    }
+    &__bottomrip {
+      width: 200%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .contactForm {
+    &__wrap {
+      @include flex-row-center-start;
+      width: 1000px;
+    }
+    &__toprip {
+      width: 150%;
+    }
+    &__bottomrip {
+      width: 150%;
+    }
+    &__text {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .contactForm {
+    &__toprip {
+      width: 100%;
+    }
+    &__bottomrip {
+      width: 100%;
+    }
+  }
+}

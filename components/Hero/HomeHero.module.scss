@@ -1,0 +1,85 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.hero {
+  position: relative;
+  background-image: url("./../../public/images/front-Image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; // z-index: 1;
+  @include flex-column-start-center;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: 80px;
+  &__toprip {
+    width: 300vw;
+    height: auto;
+    transform: rotateY(180deg);
+  }
+  &__bottomrip {
+    width: 300vw;
+    height: auto;
+    transform: rotateX(180deg);
+    position: absolute;
+    bottom: -1px;
+  }
+  &__helloFrame {
+    @include flex-column-center-center;
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    filter: drop-shadow(0px 0px 2px $lightgray);
+    color: $darkgray;
+    font-weight: 800;
+    // -webkit-text-stroke: 0.5px $white;
+    font-size: 3rem;
+    top: 0;
+  }
+  &__text {
+    font-weight: 200;
+    font-size: 1.32rem;
+    filter: drop-shadow(0px 0px 2px $lightgray);
+  }
+  &__hero_img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .hero {
+    &__toprip {
+      width: 200vw;
+    }
+    &__bottomrip {
+      width: 200vw;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .hero {
+    &__toprip {
+      width: 150vw;
+    }
+    &__bottomrip {
+      width: 150vw;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .hero {
+    &__toprip {
+      width: 100vw;
+    }
+    &__bottomrip {
+      width: 100vw;
+    }
+  }
+}

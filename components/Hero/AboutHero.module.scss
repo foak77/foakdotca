@@ -1,0 +1,68 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.aboutHero {
+  position: relative;
+  background-image: url("./../../public/images/front-Image.jpg");
+  @include flex-column-start-center;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover cover;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: 50px;
+  &__toprip {
+    width: 300vw;
+    height: auto;
+    transform: rotateY(180deg);
+  }
+  &__bottomrip {
+    width: 300vw;
+    height: auto;
+    transform: rotateX(180deg);
+    // transform: rotateY(180deg);
+    position: absolute;
+    bottom: -1px;
+  }
+  &__hero_img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .aboutHero {
+    &__toprip {
+      width: 200vw;
+    }
+    &__bottomrip {
+      width: 200vw;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .aboutHero {
+    &__toprip {
+      width: 150vw;
+    }
+    &__bottomrip {
+      width: 150vw;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .aboutHero {
+    &__toprip {
+      width: 100vw;
+    }
+    &__bottomrip {
+      width: 100vw;
+    }
+  }
+}

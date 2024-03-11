@@ -1,0 +1,67 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.portfolioHero {
+  position: relative;
+  background-image: url("./../../public/images/front-Image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover cover;
+  @include flex-column-start-center;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  margin-bottom: 80px;
+  &__toprip {
+    width: 300vw;
+    height: auto;
+    transform: rotateY(180deg);
+  }
+  &__bottomrip {
+    width: 300vw;
+    height: auto;
+    transform: rotateX(180deg);
+    position: absolute;
+    bottom: -1px;
+  }
+  &__hero_img {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .portfolioHero {
+    &__toprip {
+      width: 200vw;
+    }
+    &__bottomrip {
+      width: 200vw;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .portfolioHero {
+    &__toprip {
+      width: 150vw;
+    }
+    &__bottomrip {
+      width: 150vw;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .portfolioHero {
+    &__toprip {
+      width: 100vw;
+    }
+    &__bottomrip {
+      width: 100vw;
+    }
+  }
+}

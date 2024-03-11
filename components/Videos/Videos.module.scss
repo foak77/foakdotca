@@ -1,0 +1,103 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.video {
+  @include flex-column-start-center;
+  width: 100%;
+  &__wrap {
+    @include flex-column-start-center;
+    width: 100%;
+  }
+  &__heading {
+    text-align: left;
+    font-size: 1.375rem;
+    margin: 0px 0px 60px 0px;
+    line-height: 2.25rem;
+    color: $darkgray;
+    font-weight: 200;
+    width: 350px;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+
+  &__firstP {
+    &:first-letter {
+      color: $darkgray !important;
+      float: left !important;
+      font-family: Georgia !important;
+      font-size: 4.5rem !important;
+      line-height: 60px !important;
+      padding-top: 6px !important;
+      padding-right: 8px !important;
+      padding-left: 3px !important;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    // font-family: "Indie Flower", cursive;
+    text-align: center;
+    padding: 10px 28px;
+    margin: 0px 0px 60px 0px;
+    color: $darkgray;
+    background-image: url("./../../public/images/tape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__frameWrap {
+    @include flex-column-center-center;
+    width: 350px;
+  }
+  &__frame {
+    width: 350px;
+    margin: 0px 0px 50px 0px;
+    border: 2px solid $black;
+    border-radius: 8px;
+    filter: drop-shadow(3px 3px 10px $black);
+  }
+  &__frameOFF {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .video {
+    &__heading {
+      width: 740px;
+    }
+    &__frameWrap {
+      // @include flex-column-center-center;
+      width: 740px;
+    }
+    &__frame {
+      width: 420px;
+    }
+    &__frameOFF {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .video {
+    &__frameWrap {
+      @include flex-row-center-center-wrap;
+      width: 1000px;
+    }
+    &__frame {
+      margin: 30px 30px 30px 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .video {
+    &__frameWrap {
+      width: 1312px;
+    }
+    &__frame {
+      width: 320px;
+    }
+  }
+}

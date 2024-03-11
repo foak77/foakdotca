@@ -1,0 +1,111 @@
+@import "./../../app/variables";
+@import "./../../app/mixins";
+
+.cardframe {
+  overflow: hidden;
+  margin: 30px 30px 30px 30px;
+  width: 350px;
+  padding: 0px 0px 20px 0px;
+  border-radius: 10px;
+  background-color: $lightwhite;
+  filter: drop-shadow(1px 1px 3px $gray);
+  &:nth-child(6) {
+    display: none;
+  }
+  &:nth-child(7) {
+    display: none;
+  }
+  &:nth-child(8) {
+    display: none;
+  }
+  &:nth-child(9) {
+    display: none;
+  }
+  &:nth-child(10) {
+    display: none;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 0px 3px $gray);
+  }
+  &__info {
+    @include flex-column-start-start;
+    padding: 16px 16px;
+  }
+  &__title {
+    padding: 8px 0 8px 0;
+    width: 100%;
+    text-align: left;
+    color: $blue;
+    font-size: 1rem;
+    border-bottom: 1px solid $blue;
+    margin: 0px 0px 8px 0px;
+  }
+  &__stack {
+    font-size: 0.8rem;
+    margin: 0px 0px 8px 0px;
+  }
+  &__mode {
+    background-color: $lightyellow;
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    border-radius: 8px;
+    margin: 30px;
+  }
+  &__paragraphs {
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 200;
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+    padding: 0px 0px 8px 0px;
+    border-bottom: 1px solid $blue;
+  }
+  &__descripiton {
+    margin-bottom: 0px;
+    font-weight: 200;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.9rem;
+    overflow: auto;
+  }
+
+  &__link {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: $lightgray;
+    text-decoration: none;
+    color: $blue;
+    font-weight: 800;
+    &:hover {
+      background-color: $yellow;
+      transition: 0.3s ease;
+      color: $lightwhite;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .cardframe {
+    &:nth-child(6) {
+      display: block;
+    }
+    &:nth-child(7) {
+      display: block;
+    }
+    &:nth-child(8) {
+      display: block;
+    }
+    &:nth-child(9) {
+      display: block;
+    }
+    &:nth-child(10) {
+      display: block;
+    }
+  }
+}
