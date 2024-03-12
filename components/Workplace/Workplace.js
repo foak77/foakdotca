@@ -1,6 +1,7 @@
 import styles from "./Workplace.module.scss";
 import WorkplaceCard from "./WorkplaceCard";
 import { indie } from "@/app/fonts";
+import { cookies } from "next/headers";
 
 async function getData() {
   try {
@@ -17,6 +18,7 @@ async function getData() {
 
 export default async function Workplace() {
   // const { workplaces } = await getData();
+  const Cu = cookies();
   const workplaces = await getData();
   return (
     <section className={styles.workplace}>

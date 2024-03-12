@@ -1,6 +1,7 @@
 import styles from "./OnLinePortfolios.module.scss";
 import PortfolioCard from "./PortfolioCard";
 import { indie } from "@/app/fonts";
+import { cookies } from "next/headers";
 
 async function getData() {
   try {
@@ -18,8 +19,10 @@ async function getData() {
 }
 
 export default async function OnLinePortfolios() {
+  const Cu = cookies();
   // const { onportfolios } = await getData();
   const onportfolios = await getData();
+  console.log(onportfolios);
   return (
     <main className={styles.onportfolio}>
       <section className={styles.onportfolio__title_wrap}>
