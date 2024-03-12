@@ -4,7 +4,7 @@ import { indie } from "@/app/fonts";
 export const fetchCache = "force-no-store";
 
 async function getData() {
-  const res = await fetch("http://127.0.0.1:3000/api/onportfolios", {
+  const res = await fetch(`${process.env.URL}/api/onportfolios`, {
     method: "get",
     cache: "no-store",
   });
