@@ -1,28 +1,25 @@
 import styles from "./OnLinePortfolios.module.scss";
 import PortfolioCard from "./PortfolioCard";
 import { indie } from "@/app/fonts";
-import { cookies } from "next/headers";
 
 async function getData() {
   try {
     const res = await fetch(`${process.env.URL}/api/onportfolios`, {
-      method: "get",
-      cache: "no-store",
+      // method: "get",
+      // cache: "no-store",
     });
     if (!res.ok) {
       throw new Error("💥💥💥FAIL TO FETCH DATA");
     }
-    return res.json();
+    return await res.json();
   } catch (error) {
     console.log(error);
   }
 }
 
 export default async function OnLinePortfolios() {
-  const Cu = cookies();
-  // const { onportfolios } = await getData();
   const onportfolios = await getData();
-  console.log(onportfolios);
+
   return (
     <main className={styles.onportfolio}>
       <section className={styles.onportfolio__title_wrap}>

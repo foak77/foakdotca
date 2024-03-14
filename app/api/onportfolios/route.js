@@ -6,7 +6,7 @@ export async function GET() {
   try {
     await dbConnect();
     const onportfolios = await Onportfolios.find();
-    return NextResponse.json({ onportfolios });
+    return NextResponse.json({ onportfolios }, { status: 200 });
   } catch (error) {
     return new NextResponse("💥💥💥 ERROR in Fetchin workplaces" + error, {
       status: 500,
