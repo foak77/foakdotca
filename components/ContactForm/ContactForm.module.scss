@@ -17,7 +17,6 @@
     padding: 16px 0px 16px 0px;
   }
   &__title {
-    // font-family: "Indie Flower", cursive;
     font-size: 2rem;
     text-align: center;
     padding: 10px 28px;
@@ -61,7 +60,6 @@
   &__name_input,
   &__email_input,
   &__subject_input {
-    // font-family: "Indie Flower", cursive;
     font-size: 1.125rem;
     background-color: $white;
     box-sizing: border-box;
@@ -99,7 +97,6 @@
     background-color: $white;
   }
   &__btn {
-    // font-family: "Indie Flower", cursive;
     border: none;
     font-size: 2rem;
     text-align: center;
@@ -131,13 +128,16 @@
     margin: 0px 0px;
     font-size: 1.3rem;
     line-height: 1.75rem;
-    // font-family: "Indie Flower", cursive;
-    transform: rotate(-2deg);
   }
   &__bottomrip {
     width: 300%;
     height: auto;
     bottom: -1px;
+  }
+  &__emailR {
+    display: inline;
+    color: $red;
+    font-weight: 500;
   }
 }
 
@@ -165,8 +165,11 @@
       width: 150%;
     }
     &__text {
-      font-size: 1.8rem;
-      line-height: 2.8rem;
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+    &__emailR {
+      padding: 20px 0px;
     }
   }
 }

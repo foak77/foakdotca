@@ -6,7 +6,7 @@ async function getData() {
   try {
     const res = await fetch(`${process.env.URL}/api/onportfolios`, {
       // method: "get",
-      cache: "no-store",
+      // cache: "no-store",
     });
     if (!res.ok) {
       throw new Error("💥💥💥FAIL TO FETCH DATA");

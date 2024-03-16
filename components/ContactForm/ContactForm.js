@@ -12,7 +12,7 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 import { MdFormatQuote } from "react-icons/md";
 import { SiGooglemessages } from "react-icons/si";
 
-import { indie } from "@/app/fonts";
+import { indie, nunito } from "@/app/fonts";
 
 export default function Contact({}) {
   const router = useRouter();
@@ -24,27 +24,27 @@ export default function Contact({}) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const contact = {};
-    Array.from(e.currentTarget.elements).forEach((field) => {
-      if (!field.name) return;
-      contact[field.name] = field.value;
-    });
+    // const contact = {};
+    // Array.from(e.currentTarget.elements).forEach((field) => {
+    //   if (!field.name) return;
+    //   contact[field.name] = field.value;
+    // });
 
-    try {
-      const res = await fetch("/api/email", {
-        method: "post",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({ contact }),
-      });
-      console.log("RES", res);
-      if (res.ok) {
-        router.push("/thank-you");
-      } else {
-        throw new Error("Fail to Create Topic");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const res = await fetch("/api/email", {
+    //     method: "post",
+    //     headers: { "Content-type": "application/json" },
+    //     body: JSON.stringify({ contact }),
+    //   });
+    //   console.log("RES", res);
+    //   if (res.ok) {
+    //     router.push("/thank-you");
+    //   } else {
+    //     throw new Error("Fail to Create Topic");
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
 
   return (
@@ -143,6 +143,14 @@ export default function Contact({}) {
             </section>
           )}
           <section className={`${styles.contactForm__text} ${indie.className}`}>
+            &ldquo; I apologize for any inconvenience caused, as it appears that
+            Sengrid is experiencing some technical dificulties and my contact
+            form is currently down. Kindly reach out to me via the email &ldquo;
+            <span
+              className={`${styles.contactForm__emailR} ${nunito.className}`}
+            >
+              emailtofred@gmail.com
+            </span>
             &ldquo; Thank You for taking the time and the interest in contacting
             me. There are some aditional links in the footer pointing to my
             LinkedIn, GitHub Account and my Resume for download. &ldquo;
