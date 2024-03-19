@@ -28,7 +28,7 @@ export async function POST(request) {
     <p>${body.contact.message}</p>`,
   };
 
-  // console.log("DATA", data);
+  console.log("DATA", data);
 
   await mail
     .send(data)

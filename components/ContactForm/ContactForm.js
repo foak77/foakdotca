@@ -16,11 +16,7 @@ import { indie, nunito } from "@/app/fonts";
 
 export default function Contact({}) {
   const router = useRouter();
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [subject, setSubject] = useState("");
-  // const [message, setMessage] = useState("");
-  const [logMessage, setLogMessage] = useState("");
+  // const [logMessage, setLogMessage] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -28,11 +24,6 @@ export default function Contact({}) {
     Array.from(e.currentTarget.elements).forEach((field) => {
       if (!field.name) return;
       contact[field.name] = field.value;
-    });
-    console.log("CONTACT FORM", contact);
-    const res = await fetch("/api/email", {
-      method: "post",
-      body: JSON.stringify({ contact }),
     });
     try {
       const res = await fetch("/api/email", {
@@ -71,8 +62,6 @@ export default function Contact({}) {
                 <RiUser3Fill className={styles.contactForm__icons} />
               </label>
               <input
-                // onChange={(e) => setName(e.target.value)}
-                // value={name}
                 type="text"
                 name="name"
                 className={styles.contactForm__name_input}
@@ -85,8 +74,6 @@ export default function Contact({}) {
                 <FaEnvelopeOpenText className={styles.contactForm__icons} />
               </label>
               <input
-                // onChange={(e) => setEmail(e.target.value)}
-                // value={email}
                 type="text"
                 name="email"
                 className={styles.contactForm__email_input}
@@ -99,8 +86,6 @@ export default function Contact({}) {
                 <MdFormatQuote className={styles.contactForm__icons} />
               </label>
               <input
-                // onChange={(e) => setSubject(e.target.value)}
-                // value={subject}
                 type="text"
                 name="subject"
                 className={styles.contactForm__subject_input}
@@ -113,8 +98,6 @@ export default function Contact({}) {
                 <SiGooglemessages className={styles.contactForm__icons} />
               </label>
               <textarea
-                // onChange={(e) => setMessage(e.target.value)}
-                // value={message}
                 type="text"
                 name="message"
                 placeholder="Your message"
@@ -135,7 +118,7 @@ export default function Contact({}) {
         </section>
 
         <section className={styles.contactForm__right}>
-          {logMessage === "" ? (
+          {/* {logMessage === "" ? (
             <section
               className={styles.contactForm__empty_message_log}
             ></section>
@@ -143,16 +126,8 @@ export default function Contact({}) {
             <section className={styles.contactForm__message_log}>
               {logMessage}
             </section>
-          )}
+          )} */}
           <section className={`${styles.contactForm__text} ${indie.className}`}>
-            &ldquo; I apologize for any inconvenience caused, as it appears that
-            Sengrid is experiencing some technical dificulties and my contact
-            form is currently down. Kindly reach out to me via the email &ldquo;
-            <span
-              className={`${styles.contactForm__emailR} ${nunito.className}`}
-            >
-              emailtofred@gmail.com
-            </span>
             &ldquo; Thank You for taking the time and the interest in contacting
             me. There are some aditional links in the footer pointing to my
             LinkedIn, GitHub Account and my Resume for download. &ldquo;
