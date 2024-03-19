@@ -22,13 +22,13 @@ export async function POST(request) {
     to: process.env.SENDGRID_EMAIL_TO,
     from: process.env.SENDGRID_EMAIL_FROM,
     subject: body.contact.subject,
-    text: message,
+    text: body.contact.message,
     html: `<h2>My name is ${body.contact.name}</h2>
     <p>My email is ${body.contact.email}</p>
     <p>${body.contact.message}</p>`,
   };
 
-  console.log("daaaaaattttaaaaaa", data);
+  // console.log("DATA", data);
 
   await mail
     .send(data)
@@ -45,5 +45,6 @@ export async function POST(request) {
       };
     });
 
+  // console.log("RESPONSE FROM ROUTE", response);
   return NextResponse.json(response);
 }

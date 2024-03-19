@@ -24,27 +24,29 @@ export default function Contact({}) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // const contact = {};
-    // Array.from(e.currentTarget.elements).forEach((field) => {
-    //   if (!field.name) return;
-    //   contact[field.name] = field.value;
-    // });
-
-    // try {
-    //   const res = await fetch("/api/email", {
-    //     method: "post",
-    //     headers: { "Content-type": "application/json" },
-    //     body: JSON.stringify({ contact }),
-    //   });
-    //   console.log("RES", res);
-    //   if (res.ok) {
-    //     router.push("/thank-you");
-    //   } else {
-    //     throw new Error("Fail to Create Topic");
-    //   }
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    const contact = {};
+    Array.from(e.currentTarget.elements).forEach((field) => {
+      if (!field.name) return;
+      contact[field.name] = field.value;
+    });
+    console.log("CONTACT FORM", contact);
+    const res = await fetch("/api/email", {
+      method: "post",
+      body: JSON.stringify({ contact }),
+    });
+    try {
+      const res = await fetch("/api/email", {
+        method: "post",
+        body: JSON.stringify({ contact }),
+      });
+      if (res.ok) {
+        router.push("/thank-you");
+      } else {
+        throw new Error("Fail to Create Topic");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

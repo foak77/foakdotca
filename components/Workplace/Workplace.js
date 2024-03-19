@@ -17,7 +17,6 @@ async function getData() {
 
 export default async function Workplace() {
   const workplaces = await getData();
-  console.log(workplaces);
 
   return (
     <section className={styles.workplace}>
