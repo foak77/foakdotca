@@ -1,5 +1,4 @@
 import ContactForm from "@/components/ContactForm/ContactForm";
-// import { cookies } from "next/headers";
 
 export const metadata = {
   title: "Contact",
@@ -15,7 +14,5 @@ export const metadata = {
 };
 
 export default function Contact() {
-  // const cookieStore = cookies();
-
   return <ContactForm />;
 }

@@ -4,15 +4,16 @@ import { indie } from "@/app/fonts";
 
 async function getData() {
   try {
-    const res = await fetch(`${process.env.URL}/api/workplaces`, {
-      // method: "get",
-      // cache: "no-store",
-    });
-    if (!res.ok) {
-      throw new Error("💥💥💥FAIL TO FETCH DATA");
+    const res = await fetch(`${process.env.URL}/api/workplaces`);
+
+    if (res.message) {
+      alert("💥💥💥 FAIL TO FETCH DATA");
+      return;
     }
     return await res.json();
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export default async function Workplace() {

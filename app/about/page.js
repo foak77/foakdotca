@@ -1,9 +1,7 @@
 import styles from "./../about/about.module.scss";
 import Image from "next/image";
-
 import Workplace from "@/components/Workplace/Workplace";
 import Education from "@/components/Education/Education";
-
 import transition from "./../../public/images/transition1.png";
 import postNoBill from "./../../public/images/post_no_bill.png";
 import aftereffects from "./../../public/images/icons/aftereffects.png";
@@ -26,7 +24,6 @@ import seo from "./../../public/images/icons/seo.png";
 import sketchup from "./../../public/images/icons/sketchup.png";
 import vscode from "./../../public/images/icons/vscode.png";
 import wordpress from "./../../public/images/icons/wordpress.png";
-
 import { indie } from "./../fonts";
 
 export const metadata = {
@@ -78,140 +75,140 @@ export default function About() {
             <section className={styles.about__section}>
               <section className={styles.about__skill}>
                 <ul className={styles.about__skill_list}>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"01"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={photoshop}
                       alt="photoshop"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"02"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={ilustrator}
                       alt="ilustrator"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"03"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={indesign}
                       alt="indesign"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"04"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={premiere}
                       alt="premiere"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"05"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={aftereffects}
                       alt="aftereffects"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"06"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={corel}
                       alt="corel"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"07"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={sketchup}
                       alt="sketchup"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"08"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={canva}
                       alt="canva"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"09"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={figma}
                       alt="figma"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"10"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={css}
                       alt="css"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"11"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={html}
                       alt="html"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"12"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={javascript}
                       alt="javascript"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"13"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={react}
                       alt="react"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"14"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={next}
                       alt="next"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"15"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={wordpress}
                       alt="wordpress"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"16"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={vscode}
                       alt="vscode"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"17"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={github}
                       alt="github"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"18"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={googleadds}
                       alt="googleadds"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"19"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={facebookads}
                       alt="facebookads"
                     />
                   </li>
-                  <li className={styles.about__skill_list_item}>
+                  <li key={"20"} className={styles.about__skill_list_item}>
                     <Image
                       className={styles.about__imgsIcon}
                       src={seo}
@@ -239,7 +236,7 @@ export default function About() {
               alt="post no bill"
               width={"auto"}
               height={"auto"}
-            ></Image>
+            />
           </section>
           <section
             className={`${styles.about__section} ${styles.about__section1}`}

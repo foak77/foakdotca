@@ -3,9 +3,7 @@ import OnLinePortfolios from "@/components/OnLinePortfolios/OnLinePortfolios";
 import bottomrip from "./../../public/images/transition2.png";
 import transition from "./../../public/images/transition1.png";
 import Videos from "@/components/Videos/Videos";
-
 import Image from "next/image";
-
 import img0 from "./../../public/images/img0.png";
 import img1 from "./../../public/images/img1.png";
 import img2 from "./../../public/images/img2.png";
@@ -13,7 +11,6 @@ import img3 from "./../../public/images/img3.png";
 import img4 from "./../../public/images/img4.png";
 import img5 from "./../../public/images/img5.png";
 import img6 from "./../../public/images/img6.png";
-
 import img0Mob from "./../../public/images/img0-Mob.png";
 import img1Mob from "./../../public/images/img1-Mob.png";
 import img2Mob from "./../../public/images/img2-Mob.png";
@@ -21,7 +18,6 @@ import img3Mob from "./../../public/images/img3-Mob.png";
 import img4Mob from "./../../public/images/img4-Mob.png";
 import img5Mob from "./../../public/images/img5-Mob.png";
 import img6Mob from "./../../public/images/img6-Mob.png";
-
 import { indie } from "./../fonts";
 
 export const metadata = {

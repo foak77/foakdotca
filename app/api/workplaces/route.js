@@ -3,19 +3,22 @@ import dbConnect from "@/lib/mongoDb/dbConnect";
 import Workplaces from "./../../../models/workplaceModel";
 
 export async function GET() {
-  try {
-    await dbConnect();
-    const workplaces = await Workplaces.find();
-    return NextResponse.json({ workplaces }, { status: 200 });
-  } catch (error) {
-    return new NextResponse("💥💥💥 ERROR in Fetchin workplaces" + error, {
+  await dbConnect();
+  const workplaces = await Workplaces.find();
+
+  // console.log("WORPLACES ROUTE", workplaces);
+
+  if (!workplaces) {
+    return NextResponse.json({
+      message: "💥💥💥 ERROR IN FETCHING",
+      error: true,
       status: 500,
     });
   }
-}
 
-// export async function GET() {
-//   await dbConnect();
-//   const workplaces = await Workplaces.find();
-//   return NextResponse.json({ workplaces });
-// }
+  return NextResponse.json({
+    workplaces,
+    message: "🌟🌟🌟 WORKPLACES FOUND",
+    status: 200,
+  });
+}

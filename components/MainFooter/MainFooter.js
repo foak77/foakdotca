@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "./../../components/MainFooter/MainFooter.module.scss";
 import logo from "./../../public/images/logo.png";
 import Image from "next/image";
-import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { TiLightbulb } from "react-icons/ti";
 import { TiPencil } from "react-icons/ti";
 import { GiTalk } from "react-icons/gi";
@@ -56,12 +55,6 @@ export default function MainFooter() {
                 Contact
               </Link>
             </li>
-            {/* <li>
-              <Link className={styles.footer__link} href={"/blog"} title="Blog">
-                <HiOutlineDesktopComputer className={styles.footer__icon} />
-                Blog
-              </Link>
-            </li> */}
           </ul>
         </section>
         <section className={styles.footer__navBlock3}>

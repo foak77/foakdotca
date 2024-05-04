@@ -5,10 +5,6 @@
   @include flex-column-center-center;
   width: 100%;
   overflow: hidden;
-  &__toprip {
-    width: 300%;
-    height: auto;
-  }
   &__wrap {
     @include flex-column-center-center;
     margin: 40px 0px 40px 0px;
@@ -129,15 +125,19 @@
     font-size: 1.3rem;
     line-height: 1.75rem;
   }
-  &__bottomrip {
-    width: 300%;
-    height: auto;
-    bottom: -1px;
-  }
   &__emailR {
     display: inline;
     color: $red;
     font-weight: 500;
+  }
+  &__toprip {
+    width: 300%;
+    height: auto;
+  }
+  &__bottomrip {
+    width: 300%;
+    height: auto;
+    bottom: -1px;
   }
 }
 

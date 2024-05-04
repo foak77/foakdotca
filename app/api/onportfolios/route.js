@@ -8,14 +8,8 @@ export async function GET() {
     const onportfolios = await Onportfolios.find();
     return NextResponse.json({ onportfolios }, { status: 200 });
   } catch (error) {
-    return new NextResponse("💥💥💥 ERROR in Fetchin workplaces" + error, {
+    return NextResponse.json("💥💥💥 ERROR in Fetchin workplaces" + error, {
       status: 500,
     });
   }
 }
-
-// export async function GET() {
-//   await dbConnect();
-//   const onportfolios = await Onportfolios.find();
-//   return NextResponse.json({ onportfolios });
-// }

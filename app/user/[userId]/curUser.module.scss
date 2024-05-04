@@ -1,0 +1,94 @@
+@import "./../../mixins";
+@import "./../../variables";
+
+.curUser {
+  overflow: hidden;
+  &__wrapper {
+    @include flex-column-start-center;
+    width: 100vw;
+    height: auto;
+    margin: 150px 0px;
+  }
+  &__twrap {
+    @include flex-row-start-base;
+    margin-bottom: 8px;
+  }
+  &__message {
+    margin-bottom: 8px;
+    color: $red;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+  &__user {
+    font-size: 1.3rem;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+
+  &__button {
+    font-size: 1.125rem;
+    background-color: $darkblue;
+    color: $lightwhite;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    filter: drop-shadow(0px 0px 3px $gray);
+    &:hover {
+      transition: 0.2s;
+      background-color: $lightblue;
+    }
+  }
+  &__green {
+    background-color: $green;
+    &:hover {
+      transition: 0.2s;
+      background-color: $lightgreen;
+    }
+  }
+  &__toprip {
+    width: 300%;
+    height: auto;
+  }
+  &__bottomrip {
+    position: relative;
+    width: 300%;
+    height: auto;
+    bottom: -7px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .curUser {
+    &__toprip {
+      width: 200%;
+    }
+    &__bottomrip {
+      width: 200%;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .curUser {
+    &__toprip {
+      width: 150%;
+    }
+    &__bottomrip {
+      width: 150%;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .curUser {
+    &__toprip {
+      width: 100%;
+    }
+    &__bottomrip {
+      width: 100%;
+    }
+  }
+}

@@ -1,11 +1,16 @@
+"use client";
 import Link from "next/link";
 import styles from "./../MainHeader/MainHeader.module.scss";
 import Image from "next/image";
 import logo from "./../../public/images/logo.png";
-import NavLink from "./../MainHeader/NavLink";
 import HamburgerIcon from "./HamburgerIcon";
+import { useStore } from "./../../global-store/globalStore";
 
 export default function MainHeader() {
+  // GLOBAL STATE
+  const userId = useStore((state) => state.userId);
+  const appConnection = useStore((state) => state.appConnection);
+
   return (
     <>
       <header className={styles.header}>
@@ -13,23 +18,27 @@ export default function MainHeader() {
         <Link href={"/"} title="Home">
           <Image className={styles.header__logo} src={logo} alt="logo" />
         </Link>
-        <menu className={styles.header__listBlock}>
-          {/* <li className={styles.header__list}>
-            <NavLink  href="/">Home</NavLink>
-          </li> */}
-          <li className={styles.header__list}>
-            <NavLink href="/about">About Me</NavLink>
+        <ul className={styles.header__listBlock}>
+          <li key={"01"} className={styles.header__list}>
+            <Link href="/about">About Me</Link>
           </li>
-          <li className={styles.header__list}>
-            <NavLink href="/portfolio">Portfolio</NavLink>
+          <li key={"02"} className={styles.header__list}>
+            <Link href="/portfolio">Portfolio</Link>
           </li>
-          <li className={styles.header__list}>
-            <NavLink href="/contact">Contact</NavLink>
+          <li key={"03"} className={styles.header__list}>
+            <Link href="/contact">Contact</Link>
           </li>
-          {/* <li className={styles.header__list}>
-            <NavLink  href="/blog">Blog</NavLink>
-          </li> */}
-        </menu>
+          {!appConnection && (
+            <li key={"04"} className={styles.header__list}>
+              <Link href="/sign-in">Sign In</Link>
+            </li>
+          )}
+          {appConnection && (
+            <li key={"05"} className={styles.header__list}>
+              <Link href={`/user/${userId}`}>Profile</Link>
+            </li>
+          )}
+        </ul>
       </header>
     </>
   );

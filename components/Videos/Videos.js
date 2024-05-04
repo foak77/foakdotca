@@ -1,5 +1,4 @@
 import styles from "./../../components/Videos/Videos.module.scss";
-
 import { indie } from "@/app/fonts";
 
 export default function Videos() {
@@ -16,7 +15,7 @@ export default function Videos() {
           <section className={styles.video__frameWrap}>
             <video
               controls
-              preload="auto"
+              preload="true"
               playsInline
               className={`${styles.video__frame}`}
               alt="video"
@@ -25,7 +24,7 @@ export default function Videos() {
             </video>
             <video
               controls
-              preload="auto"
+              preload="true"
               playsInline
               className={`${styles.video__frame} ${styles.video__frameOFF}`}
               alt="video"
@@ -34,13 +33,18 @@ export default function Videos() {
             </video>
             <video
               controls
-              preload
+              preload="true"
               className={`${styles.video__frame} ${styles.video__frameOFF}`}
               alt="video"
             >
               <source src="/videos/metropica_V.mp4" type="video/mp4" />
             </video>
-            <video controls preload className={styles.video__frame} alt="video">
+            <video
+              controls
+              preload="true"
+              className={styles.video__frame}
+              alt="video"
+            >
               <source
                 src="/videos/Uflawless_Dermal Fillers.mp4"
                 type="video/mp4"
@@ -48,7 +52,7 @@ export default function Videos() {
             </video>
             <video
               controls
-              preload
+              preload="true"
               className={`${styles.video__frame} ${styles.video__frameOFF}`}
               alt="video"
             >
@@ -57,7 +61,12 @@ export default function Videos() {
                 type="video/mp4"
               />
             </video>
-            <video controls preload className={styles.video__frame} alt="video">
+            <video
+              controls
+              preload="true"
+              className={styles.video__frame}
+              alt="video"
+            >
               <source
                 src="/videos/Uflawless_Youthful Skin Cells.mp4"
                 type="video/mp4"

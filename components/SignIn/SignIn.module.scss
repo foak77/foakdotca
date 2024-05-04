@@ -1,0 +1,138 @@
+@import "./../../app/mixins";
+@import "./../../app/variables";
+
+.signin {
+  overflow: hidden;
+  &__wrapper {
+    width: 100vw;
+    height: auto;
+    margin: 150px 0px;
+    @include flex-column-start-center;
+  }
+  &__wrap {
+    width: 350px;
+  }
+  &__text {
+    @include flex-column-center-center;
+    font-weight: 200;
+    text-align: center;
+    width: 350px;
+    height: auto;
+    margin: 0px 0px 40px 0px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+  &__twrap {
+    @include flex-row-start-base;
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-size: 1.25rem;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+  &__message {
+    margin-bottom: 8px;
+    color: $red;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+  &__icons {
+    color: $darkgray;
+    font-size: 1.8rem;
+    margin: 5px 10px 0px 0px;
+    filter: drop-shadow(0px 0px 1px $gray);
+  }
+  &__email,
+  &__password {
+    @include flex-row-start-start;
+    width: 100%;
+    margin: 0px 0px 16px 0px;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 0px 0px 0px;
+    padding-left: 16px;
+    font-size: 1.125rem;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__label {
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+  }
+  &__button {
+    font-size: 0.8rem;
+    background-color: $darkblue;
+    color: $lightwhite;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    filter: drop-shadow(0px 0px 3px $gray);
+    &:hover {
+      transition: 0.2s;
+      background-color: $lightblue;
+    }
+  }
+  &__green {
+    background-color: $green;
+    &:hover {
+      transition: 0.2s;
+      background-color: $lightgreen;
+    }
+  }
+  &__toprip {
+    width: 300%;
+    height: auto;
+    overflow: hidden;
+  }
+  &__bottomrip {
+    position: relative;
+    width: 300%;
+    height: auto;
+    bottom: -7px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .signin {
+    &__toprip {
+      width: 200%;
+    }
+    &__bottomrip {
+      width: 200%;
+    }
+    &__text {
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .signin {
+    &__toprip {
+      width: 150%;
+    }
+    &__bottomrip {
+      width: 150%;
+    }
+  }
+}
+
+@media screen and (min-width: $larger) {
+  .signin {
+    &__toprip {
+      width: 100%;
+    }
+    &__bottomrip {
+      width: 100%;
+    }
+  }
+}

@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 const workplaceSchema = new mongoose.Schema({
   id: { type: Number },

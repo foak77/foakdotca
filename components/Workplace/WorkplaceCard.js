@@ -16,7 +16,10 @@ function WorkplaceCard({ work }) {
         <ul className={`${styles.workplaceCard__bullets} ${indie.className}`}>
           {work.description.map((desc, index) => {
             return (
-              <li className={styles.workplaceCard__bullets_list} key={desc._id}>
+              <li
+                className={styles.workplaceCard__bullets_list}
+                key={desc[index]}
+              >
                 <p className={styles.workplaceCard__spaceBetweenBullets}>
                   {desc}
                 </p>
