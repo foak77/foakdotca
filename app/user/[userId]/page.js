@@ -44,7 +44,7 @@ export default function UserId({ params }) {
       await updateUserName("");
       false;
       // REFRESH
-      router.refresh();
+      router.push("/sign-in");
     } catch (Error) {
       console.log(Error);
       setMessage("💥 FAILED TO LOGOUT");
