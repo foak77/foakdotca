@@ -12,7 +12,7 @@ export default function Hero() {
         <h2 className={styles.hero__underTitle}>To my online resume</h2>
         <p className={styles.hero__text}>- Step Inside and Explore -</p>
         <p className={styles.hero__underText}>
-          I'm in pursuit of fresh career horizons!
+          I am in pursuit of fresh career horizons!
         </p>
       </section>
       <Image className={styles.hero__bottomrip} src={toprip} alt="hero" />
