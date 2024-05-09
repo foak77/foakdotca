@@ -33,13 +33,26 @@
     filter: drop-shadow(0px 0px 2px $lightgray);
     color: $darkgray;
     font-weight: 800;
-    // -webkit-text-stroke: 0.5px $white;
     font-size: 3rem;
-    top: 0;
+    line-height: 1;
+  }
+  &__underTitle {
+    filter: drop-shadow(0px 0px 2px $lightgray);
+    color: $darkgray;
+    font-weight: 800;
+    font-size: 1.4rem;
   }
   &__text {
     font-weight: 200;
     font-size: 1.32rem;
+    filter: drop-shadow(0px 0px 2px $lightgray);
+  }
+  &__underText {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-weight: 200;
+    font-size: 1.35rem;
     filter: drop-shadow(0px 0px 2px $lightgray);
   }
   &__hero_img {
