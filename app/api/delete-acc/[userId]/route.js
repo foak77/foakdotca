@@ -14,6 +14,8 @@ export async function PATCH(request) {
     .select("+status")
     .select("+password");
 
+  console.log("USER", user);
+
   if (!(user || status)) {
     return NextResponse.json({
       message: "💥 USER NOT FOUND OR SESSION EXPIRED",

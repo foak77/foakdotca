@@ -16,7 +16,13 @@ export default function MainHeader() {
       <header className={styles.header}>
         <HamburgerIcon />
         <Link href={"/"} title="Home">
-          <Image className={styles.header__logo} src={logo} alt="logo" />
+          <Image
+            className={styles.header__logo}
+            src={logo}
+            width={175}
+            height={"auto"}
+            alt="logo"
+          />
         </Link>
         <ul className={styles.header__listBlock}>
           <li key={"01"} className={styles.header__list}>
