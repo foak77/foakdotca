@@ -6,6 +6,7 @@ import HomeHero from "@/components/Hero/HomeHero";
 //images
 import sample_work_1_M from "./../public/images/sample_work_1_M.png";
 import sample_work_1_L from "./../public/images/sample_work_1_L.png";
+import sample_work_Larger from "./../public/images/sample_Larger.png";
 import bottomrip from "./../public/images/transition2.png";
 import toprip from "./../public/images/transition1.png";
 //files
@@ -44,6 +45,11 @@ export default function Home() {
           <Image
             src={sample_work_1_L}
             className={`${styles.main__sampleWork_L}`}
+            alt="sample work"
+          />
+          <Image
+            src={sample_work_Larger}
+            className={`${styles.main__sampleWork_Larger}`}
             alt="sample work"
           />
         </Link>
@@ -148,22 +154,23 @@ export default function Home() {
           />
         </Link>
         <section className={`${styles.main__paragraphBlock_C}`}>
-          <p className={`${styles.main__paragraphIndie} ${indie.className}`}>
-            &ldquo; Curious about who is behind the scenes? Dive into the
-            captivating narratives of the
+          <p className={`${styles.main__paragraph} ${styles.main__firstP}`}>
+            Curious about who is behind the scenes? Dive into the captivating
+            narratives of the{" "}
             <Link className={`${styles.main__pageLink}`} href={"/about"}>
-              &nbsp;&ldquo;ABOUT&ldquo;&nbsp;
-            </Link>
+              ABOUT
+            </Link>{" "}
             and
             <Link className={`${styles.main__pageLink}`} href={"/portfolio"}>
-              &nbsp;&ldquo;PORTFOLIO&ldquo;&nbsp;
-            </Link>
-            section, where you&apos;ll learn more about the essence of my
+              {" "}
+              PORTFOLIO
+            </Link>{" "}
+            section, where you will learn more about the essence of my
             professional journey, and the driving force behind my work.
           </p>
-          <p className={`${styles.main__paragraphIndie} ${indie.className}`}>
+          <p className={`${styles.main__paragraph}`}>
             Let&apos;s create something extraordinary together. I can&apos;t
-            wait to connect with you! &ldquo;
+            wait to connect with you!
           </p>
         </section>
       </section>

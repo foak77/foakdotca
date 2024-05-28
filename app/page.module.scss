@@ -74,6 +74,9 @@
   &__sampleWork_L {
     display: none;
   }
+  &__sampleWork_Larger {
+    display: none;
+  }
   &__dLoad {
     margin: 0px 0px 80px 0px;
   }
@@ -264,7 +267,7 @@
     margin-top: 40px;
   }
   &__pageLink {
-    color: $yellow;
+    color: $red;
   }
 }
 
@@ -278,6 +281,7 @@
       margin-top: 60px;
     }
     &__wrapperBottom {
+      @include flex-row-start-start;
       width: 740px;
     }
     &__sampleWork_M {
@@ -308,11 +312,10 @@
       width: 740px;
       @include flex-row-spaceevenly-start-wrap;
       margin-top: 20px;
-      border-radius: 8px;
       padding: 20px;
     }
     &__paragraphBlock_C {
-      width: 640px;
+      width: 100%;
     }
 
     &__bottomrip {
@@ -349,11 +352,15 @@
       width: 1000px;
     }
     &__wrapperBottom {
+      @include flex-row-center-center;
       width: 1000px;
     }
-    &__sampleWork_L {
+    &__sampleWork_Larger {
       display: block;
-      margin: 50px 0px 50px 10px;
+      margin: 50px 0px 50px 0px;
+    }
+    &__sampleWork_L {
+      display: none;
     }
     &__paragraphBlockWrap {
       @include flex-row-spacearound-start;
@@ -374,10 +381,11 @@
       @include flex-row-spaceevenly-start-wrap;
     }
     &__paragraphBlock_C {
-      width: 800px;
+      @include flex-column-center-center;
+      width: 1000px;
     }
     &__paragraphBlock_C > p {
-      width: 800px;
+      width: 100%;
     }
     &__paragraph {
       width: 950px;
@@ -472,9 +480,9 @@
     &__wrapperMid {
       width: 1312px;
     }
-    &__wrapperBottom {
-      width: 1312px;
-    }
+    // &__wrapperBottom {
+    //   width: px;
+    // }
     &__sampleWork_L {
       margin: 50px 0px 50px 20px;
     }
