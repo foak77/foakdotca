@@ -3,7 +3,6 @@ import Image from "next/image";
 import Workplace from "@/components/Workplace/Workplace";
 import Education from "@/components/Education/Education";
 import transition from "./../../public/images/transition1.png";
-import postNoBill from "./../../public/images/post_no_bill.png";
 import aftereffects from "./../../public/images/icons/aftereffects.png";
 import canva from "./../../public/images/icons/canva.png";
 import corel from "./../../public/images/icons/corel.png";
@@ -47,215 +46,215 @@ export default function About() {
         src={transition}
         alt="transition image"
       />
+      <section className={styles.about__positive}>
+        <section className={styles.about__title_wrap}>
+          <h1 className={`${styles.about__topTitle} ${indie.className}`}>
+            About, Skills & Experience
+          </h1>
+        </section>
+      </section>
+      <section className={`${styles.about__paragraphTopWrapper}`}>
+        <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
+          Drawing inspiration from a cross-cultural existence in both Canada and
+          Brazil, I bring a unique worldview to my endeavors. Grateful for the
+          enriching experiences of studying, working and living in both
+          countries, I am excited about the unfolding future of the web and
+          design. I envision a harmonious convergence of technology and art,
+          shaping a brighter world for us all.
+        </p>
+        <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
+          Meeting with prospects, art directors, graphic designer, ilustrators,
+          and business owners to determine the project&apos;s scope and how and
+          when it would be delivered is a big part of my daily routine. I find
+          these interactions to be incredibly valuable as they help me
+          understand the client&apos;s needs and ensure a successful project
+          outcome.
+        </p>
+      </section>
+      <Image
+        className={styles.about__transition}
+        src={transition}
+        alt="transition image"
+      />
       <section className={styles.about__title_wrap}>
-        <h1 className={`${styles.about__title} ${indie.className}`}>
-          About, Skills & Experience
+        <h1
+          className={`${styles.about__pencil} ${indie.className} ${styles.about__tilt}`}
+        >
+          Tools
         </h1>
       </section>
-      <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
-        Drawing inspiration from a cross-cultural existence in both Canada and
-        Brazil, I bring a unique worldview to my endeavors. Grateful for the
-        enriching experiences of studying, working and living in both countries,
-        I am excited about the unfolding future of the web and design. I
-        envision a harmonious convergence of technology and art, shaping a
-        brighter world for us all.
-      </p>
       <section className={styles.about__info}>
-        <section className={styles.about__section_wrap}>
-          <section className={styles.about__section}>
-            <section className={styles.about__section}>
-              <p
-                className={`${styles.about__firstP} ${styles.about__paragraph}`}
-              >
-                Besides enjoyment and hard work in the activities that I engage
-                in. These are some of the tools I have been continuously
-                learning and working with.
-              </p>
-            </section>
-            <section className={styles.about__section}>
-              <section className={styles.about__skill}>
-                <ul className={styles.about__skill_list}>
-                  <li key={"01"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={photoshop}
-                      alt="photoshop"
-                    />
-                  </li>
-                  <li key={"02"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={ilustrator}
-                      alt="ilustrator"
-                    />
-                  </li>
-                  <li key={"03"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={indesign}
-                      alt="indesign"
-                    />
-                  </li>
-                  <li key={"04"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={premiere}
-                      alt="premiere"
-                    />
-                  </li>
-                  <li key={"05"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={aftereffects}
-                      alt="aftereffects"
-                    />
-                  </li>
-                  <li key={"06"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={corel}
-                      alt="corel"
-                    />
-                  </li>
-                  <li key={"07"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={sketchup}
-                      alt="sketchup"
-                    />
-                  </li>
-                  <li key={"08"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={canva}
-                      alt="canva"
-                    />
-                  </li>
-                  <li key={"09"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={figma}
-                      alt="figma"
-                    />
-                  </li>
-                  <li key={"10"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={css}
-                      alt="css"
-                    />
-                  </li>
-                  <li key={"11"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={html}
-                      alt="html"
-                    />
-                  </li>
-                  <li key={"12"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={javascript}
-                      alt="javascript"
-                    />
-                  </li>
-                  <li key={"13"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={react}
-                      alt="react"
-                    />
-                  </li>
-                  <li key={"14"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={next}
-                      alt="next"
-                    />
-                  </li>
-                  <li key={"15"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={wordpress}
-                      alt="wordpress"
-                    />
-                  </li>
-                  <li key={"16"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={vscode}
-                      alt="vscode"
-                    />
-                  </li>
-                  <li key={"17"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={github}
-                      alt="github"
-                    />
-                  </li>
-                  <li key={"18"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={googleadds}
-                      alt="googleadds"
-                    />
-                  </li>
-                  <li key={"19"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={facebookads}
-                      alt="facebookads"
-                    />
-                  </li>
-                  <li key={"20"} className={styles.about__skill_list_item}>
-                    <Image
-                      className={styles.about__imgsIcon}
-                      src={seo}
-                      alt="seo"
-                    />
-                  </li>
-                </ul>
-              </section>
-              <section className={styles.about__section}>
-                <p
-                  className={`${styles.about__paragraph} ${styles.about__firstP} ${styles.about__paragraphLast}`}
-                >
-                  Meeting with prospects, art directors, graphic designer,
-                  ilustrators, and business owners to determine the
-                  project&apos;s scope and how and when it would be delivered is
-                  a big part of my daily routine. I find these interactions to
-                  be incredibly valuable as they help me understand the
-                  client&apos;s needs and ensure a successful project outcome.
-                </p>
-              </section>
-            </section>
-            <Image
-              className={styles.about__bill}
-              src={postNoBill}
-              alt="post no bill"
-              width={"auto"}
-              height={"auto"}
-            />
-          </section>
-          <section
-            className={`${styles.about__section} ${styles.about__section1}`}
-          >
-            <h3 className={`${styles.about__skill_color}`}>Tools</h3>
-            <p className={styles.about__paragraph}>
-              In my daily activities, I heavily rely on photo, vector, layout
-              editing skills and tools, imposing pages and building magazines,
-              and scheduling plan software. These tools are essential in my
-              work, and I constantly dedicate time to improve my skills and
-              master them. I&apos;m always on the lookout for new techniques and
-              features that can enhance my productivity and creativity.
-            </p>
-            <h3
-              className={`${styles.about__skill_list_item} ${styles.about__skill_color}`}
+        <section className={styles.about__tools_wrapper}>
+          <section className={styles.about__tools_wrap}>
+            <p
+              className={`${styles.about__paragraph_tools} ${styles.about__firstP}`}
             >
-              Enjoy
+              In my daily activities, I heavily rely on photo, vector, layout
+              editing, imposing, and scheduling plan software. These tools are
+              essential in my work, and I constantly dedicate time to improve my
+              skills and master them. I am always on the lookout for new
+              techniques and features that can enhance my productivity and
+              creativity.
+            </p>
+            <p
+              className={` ${styles.about__paragraph_special} ${indie.className}`}
+            >
+              Besides enjoyment and hard work in the activities that I engage
+              in. These are some of the tools I have been continuously learning
+              and working with.
+            </p>
+          </section>
+
+          <section className={styles.about__skill}>
+            <ul className={styles.about__skill_list}>
+              <li key={"01"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={photoshop}
+                  alt="photoshop"
+                />
+              </li>
+              <li key={"02"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={ilustrator}
+                  alt="ilustrator"
+                />
+              </li>
+              <li key={"03"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={indesign}
+                  alt="indesign"
+                />
+              </li>
+              <li key={"04"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={premiere}
+                  alt="premiere"
+                />
+              </li>
+              <li key={"05"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={aftereffects}
+                  alt="aftereffects"
+                />
+              </li>
+              <li key={"06"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={corel}
+                  alt="corel"
+                />
+              </li>
+              <li key={"07"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={sketchup}
+                  alt="sketchup"
+                />
+              </li>
+              <li key={"08"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={canva}
+                  alt="canva"
+                />
+              </li>
+              <li key={"09"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={figma}
+                  alt="figma"
+                />
+              </li>
+              <li key={"10"} className={styles.about__skill_list_item}>
+                <Image className={styles.about__imgsIcon} src={css} alt="css" />
+              </li>
+              <li key={"11"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={html}
+                  alt="html"
+                />
+              </li>
+              <li key={"12"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={javascript}
+                  alt="javascript"
+                />
+              </li>
+              <li key={"13"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={react}
+                  alt="react"
+                />
+              </li>
+              <li key={"14"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={next}
+                  alt="next"
+                />
+              </li>
+              <li key={"15"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={wordpress}
+                  alt="wordpress"
+                />
+              </li>
+              <li key={"16"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={vscode}
+                  alt="vscode"
+                />
+              </li>
+              <li key={"17"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={github}
+                  alt="github"
+                />
+              </li>
+              <li key={"18"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={googleadds}
+                  alt="googleadds"
+                />
+              </li>
+              <li key={"19"} className={styles.about__skill_list_item}>
+                <Image
+                  className={styles.about__imgsIcon}
+                  src={facebookads}
+                  alt="facebookads"
+                />
+              </li>
+              <li key={"20"} className={styles.about__skill_list_item}>
+                <Image className={styles.about__imgsIcon} src={seo} alt="seo" />
+              </li>
+            </ul>
+          </section>
+        </section>
+        <Image
+          className={styles.about__transition}
+          src={transition}
+          alt="transition image"
+        />
+
+        <section className={styles.about__section_wrap}>
+          <section className={`${styles.about__section}`}>
+            <section className={`${styles.about__title_b1}`}></section>
+            <h3 className={`${styles.about__title_1} ${indie.className}`}>
+              enjoyment
             </h3>
-            <p className={styles.about__paragraph}>
+            <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
               I really enjoy creating visual elements and graphic pieces such as
               logos, flyers, posters, magazines, and newspapers. Designing
               layouts and carefully selecting colors, images, and typefaces is a
@@ -263,24 +262,29 @@ export default function About() {
               have found a new playground to explore and experiment with fresh
               ideas.
             </p>
-            <h3
-              className={`${styles.about__skill_list_item} ${styles.about__skill_color}`}
-            >
-              Collaborate
+          </section>
+
+          <section className={`${styles.about__section}`}>
+            <section className={`${styles.about__title_b2}`}></section>
+            <h3 className={`${styles.about__title_2} ${indie.className}`}>
+              Collaboration
             </h3>
-            <p className={styles.about__paragraph}>
+            <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
               Collaboration is key to my work, and I actively seek opportunities
               to collaborate with designers, web designers, developers, and
               professionals from various fields. Each collaboration brings new
               challenges and learning opportunities, helping me expand my skills
               and broaden my horizons.
             </p>
-            <h3
-              className={`${styles.about__skill_list_item1} ${styles.about__skill_color}`}
-            >
+          </section>
+
+          <section className={`${styles.about__section}`}>
+            <section className={`${styles.about__title_b3}`}></section>
+            <h3 className={`${indie.className} ${styles.about__title_3}`}>
               Be Confident
             </h3>
-            <p className={styles.about__paragraph}>
+
+            <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
               I am passionate about what I do, and I am committed to delivering
               exceptional work to the people I get involved professionaly. By
               embracing new challenges, sharpening my skills, and maintaining a

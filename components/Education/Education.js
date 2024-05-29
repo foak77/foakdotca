@@ -1,7 +1,7 @@
 import styles from "./Education.module.scss";
 import { FaGraduationCap } from "react-icons/fa6";
 import Image from "next/image";
-import toprip from "./../../public/images/transition1.png";
+import toprip from "./../../public/images/transition-y.png";
 import bottomrip from "./../../public/images/transition2.png";
 
 import { indie } from "@/app/fonts";
@@ -14,7 +14,8 @@ function Education() {
         Education
       </h2>
       <section className={styles.education__education_wrap}>
-        <section className={styles.education__section}>
+        {/* <section className={styles.education__section}> */}
+        <div className={styles.education__frame}>
           <section className={styles.education__schoolcard}>
             <h5 className={styles.education__schoolname}>
               Udemy - Online Courses
@@ -26,6 +27,8 @@ function Education() {
             </p>
             <p className={styles.education__schoolyear}>October 2023</p>
           </section>
+        </div>
+        <div className={styles.education__frame}>
           <section className={styles.education__schoolcard}>
             <h5 className={styles.education__schoolname}>
               Udemy - Online Courses
@@ -37,8 +40,11 @@ function Education() {
             </p>
             <p className={styles.education__schoolyear}>March & April 2023</p>
           </section>
-        </section>
-        <section className={styles.education__section}>
+        </div>
+        {/* </section> */}
+
+        {/* <section className={styles.education__section}> */}
+        <div className={styles.education__frame}>
           <section className={styles.education__schoolcard}>
             <h5 className={styles.education__schoolname}>
               BrainStation Bootcamp
@@ -48,6 +54,8 @@ function Education() {
             <p className={styles.education__schoolcourse}>WEB DEVELOPMENT</p>
             <p className={styles.education__schoolyear}>April - June 2020.</p>
           </section>
+        </div>
+        <div className={styles.education__frame}>
           <section className={styles.education__schoolcard}>
             <h5 className={styles.education__schoolname}>
               George Brown College
@@ -59,8 +67,10 @@ function Education() {
             <p className={styles.education__schoolcourse}>WEB DEVELOPMENT</p>
             <p className={styles.education__schoolyear}>2018</p>
           </section>
-        </section>
-        <section className={styles.education__section}>
+        </div>
+        {/* </section> */}
+        {/* <section className={styles.education__section}> */}
+        <div className={styles.education__frame}>
           <section className={styles.education__schoolcard}>
             <h5 className={styles.education__schoolname}>
               George Brown College
@@ -72,6 +82,8 @@ function Education() {
             <p className={styles.education__schoolcourse}>WEB DESIGN</p>
             <p className={styles.education__schoolyear}>2017</p>
           </section>
+        </div>
+        <div className={styles.education__frame}>
           <section className={styles.education__schoolcard}>
             <h5 className={styles.education__schoolname}>
               Pontifical Catholic University of Parana
@@ -85,7 +97,8 @@ function Education() {
             </p>
             <p className={styles.education__schoolyear}>1999</p>
           </section>
-        </section>
+        </div>
+        {/* </section> */}
       </section>
       <Image
         className={styles.education__bottomrip}

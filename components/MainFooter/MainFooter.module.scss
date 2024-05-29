@@ -18,6 +18,8 @@
   &__logo {
     width: 150px;
     height: auto;
+    filter: drop-shadow(0px 0px 1px $black);
+    color: $darkgray;
   }
   &__navBlock1 {
     @include flex-column-start-center;

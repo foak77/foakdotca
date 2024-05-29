@@ -8,17 +8,26 @@
   &__transition {
     width: 300%;
     height: auto;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+  }
+  &__positive {
+    z-index: 100;
+    background-image: url("./../../public/images/positive.png");
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 5px $gray);
+    margin-bottom: 40px;
   }
   &__title_wrap {
     @include flex-column-start-center;
     width: 350px;
     margin: 30px 0px 60px 0px;
+    overflow: visible;
   }
-  &__title {
+  &__topTitle {
     @include flex-column-center-center;
-    // font-family: "Indie Flower", cursive;
-    width: 100%;
+    width: 350px;
     height: 80px;
     font-size: 1.65rem;
     background-image: url("./../../public/images/tape.png");
@@ -28,10 +37,80 @@
     color: $darkgray;
     filter: drop-shadow(0px 0px 2px $gray);
   }
+
+  &__title {
+    @include flex-column-center-center;
+    width: 350px;
+    height: 80px;
+    font-size: 1.65rem;
+    background-image: url("./../../public/images/tape.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: $darkgray;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__title_b1 {
+    @include flex-column-center-center;
+    background-image: url(./../../public/images/ballon-1.png);
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 10px $gray);
+  }
+  &__title_b2 {
+    @include flex-column-center-center;
+    background-image: url(./../../public/images/ballon-2.png);
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 10px $gray);
+  }
+
+  &__title_b3 {
+    @include flex-column-center-center;
+    background-image: url(./../../public/images/ballon-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(0px 0px 10px $gray);
+  }
+
+  &__title_3,
+  &__title_2,
+  &__title_1 {
+    font-size: 2rem;
+    color: $darkgray;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+
+  &__tilt {
+    transform: rotate(-10deg);
+  }
+  &__pencil {
+    @include flex-column-center-center;
+    padding-top: 22px;
+    width: 350px;
+    height: 70px;
+    font-size: 2.5rem;
+    background-image: url("./../../public/images/pencil.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: $darkgray;
+    filter: drop-shadow(0px 6px 5px $gray);
+  }
+
   &__info {
     @include flex-column-start-center;
     width: 100%;
-    background-image: url("./../../public/images/bg_ripped_paper_mobile.png");
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: 300% 100%;
@@ -43,6 +122,7 @@
   }
 
   &__section {
+    @include flex-column-start-center;
     font-weight: 200;
     width: 350px;
     margin-top: 40px;
@@ -50,12 +130,29 @@
     color: $darkgray;
   }
 
-  &__section1 {
-    margin-top: 30px;
-    filter: drop-shadow(0px 0px 1px $lightgray);
-    color: $darkgray;
+  &__tools_wrapper {
+    @include flex-column-center-center;
+    width: 350px;
   }
 
+  &__paragraph_tools {
+    font-size: 1.275rem;
+    line-height: 2.125rem;
+    filter: drop-shadow(0px 0px 1px $gray);
+    color: $darkgray;
+    margin-bottom: 48px;
+  }
+
+  &__tools_wrap {
+    width: 350px;
+    @include flex-column-center-center;
+    margin-bottom: 48px;
+  }
+
+  &__paragraphTopWrapper {
+    width: 350px;
+    @include flex-column-start-center;
+  }
   &__paragraphTop {
     width: 350px;
     font-size: 1.275rem;
@@ -86,6 +183,13 @@
     filter: drop-shadow(0px 0px 1px $gray);
     color: $darkgray;
   }
+  &__paragraph_special {
+    font-size: 1.77rem;
+    line-height: 2.8rem;
+    filter: drop-shadow(0px 0px 1px $gray);
+    color: $darkgray;
+    margin-bottom: 48px;
+  }
   &__paragraphLast {
     filter: drop-shadow(0px 0px 1px $lightgray);
     color: $darkgray;
@@ -95,29 +199,22 @@
     @include flex-column-start-center;
     width: 100%;
     margin-bottom: 50px;
+    // padding: 16px;
   }
 
   &__skill_list {
     @include flex-row-center-center-wrap;
     list-style-type: none;
-    margin-bottom: 40px;
   }
 
   &__skill_list_item {
-    margin: 19px;
+    margin: 22px;
   }
 
   &__imgsIcon {
-    filter: drop-shadow(0px 0px 3px $gray);
-    width: 48px;
+    filter: drop-shadow(0px 10px 8px $gray);
+    width: 56px;
     height: auto;
-  }
-
-  &__bill {
-    opacity: 0.25;
-    width: 200px;
-    height: auto;
-    margin: 0px 0px 100px 70px;
   }
 
   &__skill_color {
@@ -125,6 +222,15 @@
     color: $red;
     font-size: 1.5rem;
   }
+  &__ballon_1 {
+    background-image: url(./../../public/images/ballon-1.png);
+  }
+  // &__ballon_2 {
+  //   background-image: url(./../../public/images/ballon-2.png);
+  // }
+  // &__ballon_3 {
+  //   background-image: url(./../../public/images/ballon-3.png);
+  // }
 }
 
 @media screen and (min-width: $tablet) {
@@ -135,12 +241,27 @@
     }
     &__info {
       @include flex-column-start-center;
-      background-image: url("./../../public/images/bg_ripped_paper_tablet.png");
+
       background-size: 100% 100%;
     }
+    &__tools_wrapper {
+      width: 740px;
+    }
+    &__tools_wrap {
+      width: 740px;
+      margin-bottom: 52px;
+    }
+    &__paragraph_tool {
+      font-size: 1.275rem;
+      line-height: 2.125rem;
+      filter: drop-shadow(0px 0px 1px $gray);
+      color: $darkgray;
+    }
     &__section_wrap {
-      @include flex-column-start-center;
-      width: 350px;
+      width: 740px;
+    }
+    &__section {
+      width: 740px;
     }
     &__title_img {
       position: absolute;
@@ -149,8 +270,19 @@
       width: 150px;
       filter: drop-shadow(0px 0px 2px $gray);
     }
+    &__paragraphTopWrapper {
+      width: 740px;
+    }
     &__paragraphTop {
       width: 740px;
+    }
+    &__paragraph_special {
+      width: 100%;
+      font-size: 1.77rem;
+      line-height: 2.8rem;
+      filter: drop-shadow(0px 0px 1px $gray);
+      color: $darkgray;
+      margin-bottom: 48px;
     }
     &__firstP {
       &:first-child:first-letter {
@@ -164,9 +296,9 @@
         padding-left: 3px !important;
       }
     }
-    &__section_wrap {
+
+    &__skill {
       width: 740px;
-      @include flex-row-spacebetween-start;
     }
 
     &__skill_list {
@@ -178,23 +310,7 @@
     }
 
     &__imgsIcon {
-      filter: drop-shadow(0px 0px 3px $gray);
-      width: 45px;
-    }
-    &__section {
-      font-weight: 200;
-      width: 335px;
-    }
-
-    &__section1 {
-      color: $lightwhite;
-      margin-top: 0;
-    }
-    &__bill {
-      opacity: 0.25;
-      width: 200px;
-      height: auto;
-      margin: 0px 0px 50px 60px;
+      width: 60px;
     }
   }
 }
@@ -204,15 +320,41 @@
     &__transition {
       width: 150%;
     }
-    &__info {
-      background-image: url("./../../public/images/bg_ripped_paper_desktop.png");
+    &__title {
+      width: 200px;
     }
     &__section_wrap {
+      width: 1000px;
+      @include flex-row-spacebetween-start-wrap;
+    }
+    &__section {
+      font-weight: 200;
+      width: 300px;
+    }
+    &__paragraphTopWrapper {
       width: 1000px;
       @include flex-row-spacebetween-start;
     }
     &__paragraphTop {
+      width: 465px;
+    }
+    &__tools_wrapper {
       width: 1000px;
+      @include flex-row-spacebetween-start;
+    }
+    &__tools_wrap {
+      width: 500px;
+      margin-bottom: 52px;
+    }
+    &__paragraph_tools {
+      width: 400px;
+    }
+    &__paragraph_special {
+      width: 400px;
+    }
+
+    &__skill {
+      width: 500px;
     }
     &__firstP {
       &:first-child:first-letter {
@@ -227,22 +369,12 @@
       }
     }
 
-    &__section {
-      font-weight: 200;
-      width: 430px;
-    }
-    &__bill {
-      width: 300px;
-      margin: 0px 0px 80px 60px;
-    }
-
     &__skill_list_item {
-      margin: 20px;
+      margin: 18px;
     }
 
     &__imgsIcon {
-      filter: drop-shadow(0px 0px 3px $gray);
-      width: 45px;
+      width: 68px;
     }
   }
 }
@@ -252,24 +384,53 @@
     &__transition {
       width: 100%;
     }
-    &__info {
-      background-image: url("./../../public/images/bg_ripped_paper_larger.png");
+
+    &__title {
+      width: 200px;
     }
     &__section_wrap {
       width: 1312px;
-      @include flex-row-spacebetween-start;
     }
-
     &__section {
       font-weight: 200;
-      width: 590px;
+      width: 400px;
     }
-
+    &__paragraph_tools {
+      width: 500px;
+      font-size: 1.325rem;
+    }
+    &__paragraph_special {
+      width: 500px;
+    }
     &__paragraph {
       font-size: 1.325rem;
     }
-    &__bill {
-      margin: 0px 0px 100px 120px;
+    &__paragraphTopWrapper {
+      width: 1312px;
+    }
+    &__paragraphTop {
+      width: 600px;
+    }
+    &__tools_wrapper {
+      width: 1312px;
+      @include flex-row-spacebetween-center;
+    }
+    &__header_1 {
+      width: 50%;
+      margin-bottom: 52px;
+    }
+    &__paragraph_header {
+      padding: 80px;
+      font-size: 1.275rem;
+      line-height: 2.125rem;
+      filter: drop-shadow(0px 0px 1px $gray);
+      color: $darkgray;
+    }
+    &__skill {
+      width: 50%;
+    }
+    &__imgsIcon {
+      width: 60px;
     }
   }
 }

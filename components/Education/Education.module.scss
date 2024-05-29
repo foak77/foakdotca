@@ -41,6 +41,45 @@
     width: 350px;
   }
 
+  &__frame {
+    background-color: #ddc;
+    border: solid 5vmin #eee;
+    border-bottom-color: #fff;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+      0 5px 10px 5px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 0 40px 0px;
+    height: auto;
+    padding: 18px;
+    position: relative;
+    text-align: center;
+    &:before {
+      border-radius: 2px;
+      bottom: -2vmin;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+      content: "";
+      left: -2vmin;
+      position: absolute;
+      right: -2vmin;
+      top: -2vmin;
+    }
+    &:after {
+      border-radius: 2px;
+      bottom: -2.5vmin;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      content: "";
+      left: -2.5vmin;
+      position: absolute;
+      right: -2.5vmin;
+      top: -2.5vmin;
+    }
+  }
+
   &__section {
     @include flex-column-start-center;
     width: 100%;
@@ -51,10 +90,10 @@
     width: 230px;
     background-color: $lightwhite;
     overflow: hidden;
-    border-radius: 5px;
+    // border-radius: 5px;
     padding-top: 5px;
-    margin-bottom: 40px;
-    filter: drop-shadow(5px 5px 5px $gray);
+    // margin-bottom: 40px;
+    // filter: drop-shadow(5px 5px 5px $gray);
   }
   &__schoolname {
     font-size: 1.125rem;
@@ -109,6 +148,7 @@
       @include flex-column-start-center;
       width: 740px;
     }
+
     &__toprip {
       width: 200vw;
       height: auto;
@@ -123,7 +163,7 @@
 
     &__section {
       @include flex-row-spacebetween-start;
-      width: 80%;
+      width: 740px;
     }
 
     &__schoolcard {
@@ -135,8 +175,8 @@
 
 @media screen and (min-width: $desktop) {
   .education {
-    &__education-wrap {
-      @include flex-column-start-center;
+    &__education_wrap {
+      @include flex-row-spacebetween-start-wrap;
       width: 1000px;
     }
     &__toprip {
@@ -152,7 +192,7 @@
     }
 
     &__section {
-      width: 90%;
+      width: 1000px;
     }
 
     &__schoolcard {
@@ -164,7 +204,6 @@
 
 @media screen and (min-width: $larger) {
   .education {
-    //   // width: 1000px;
     &__toprip {
       width: 100vw;
       height: auto;
@@ -176,17 +215,12 @@
       height: auto;
       bottom: -1px;
     }
-    //   &__education-wrap {
-    //     @include flex-row-spacebetween-start;
-    //     width: 1312px;
-    //   }
-
-    //   &__section {
-    //     @include flex-row-spacearound-start;
-    //   }
-    //   &__schoolcard {
-    //     @include flex-column-start-center;
-    //     width: 200px;
-    //   }
+    &__education_wrap {
+      width: 1312px;
+    }
+    &__schoolcard {
+      @include flex-column-start-center;
+      width: 250px;
+    }
   }
 }

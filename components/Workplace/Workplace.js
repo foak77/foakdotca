@@ -22,7 +22,7 @@ export default async function Workplace() {
   return (
     <section className={styles.workplace}>
       <h2 className={`${styles.workplace__title} ${indie.className}`}>
-        Workplace
+        Workplaces
       </h2>
       <section className={styles.workplace__wrap}>
         <section className={styles.workplace__section}>
