@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./../ContactForm/ContactForm.module.scss";
@@ -12,11 +11,10 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 import { MdFormatQuote } from "react-icons/md";
 import { SiGooglemessages } from "react-icons/si";
 
-import { indie, nunito } from "@/app/fonts";
+import { indie } from "@/app/fonts";
 
 export default function Contact({}) {
   const router = useRouter();
-  // const [logMessage, setLogMessage] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -118,19 +116,10 @@ export default function Contact({}) {
         </section>
 
         <section className={styles.contactForm__right}>
-          {/* {logMessage === "" ? (
-            <section
-              className={styles.contactForm__empty_message_log}
-            ></section>
-          ) : (
-            <section className={styles.contactForm__message_log}>
-              {logMessage}
-            </section>
-          )} */}
           <section className={`${styles.contactForm__text} ${indie.className}`}>
-            &ldquo; Thank You for taking the time and the interest in contacting
-            me. There are some aditional links in the footer pointing to my
-            LinkedIn, GitHub Account and my Resume for download. &ldquo;
+            Thank You for taking the time and the interest in contacting me.
+            There are some aditional links in the footer pointing to my
+            LinkedIn, GitHub Account and my Resume for download.
           </section>
         </section>
       </section>

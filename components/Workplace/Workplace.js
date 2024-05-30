@@ -4,7 +4,8 @@ import { indie } from "@/app/fonts";
 
 async function getData() {
   try {
-    const res = await fetch(`${process.env.URL}/api/workplaces`);
+    // const res = await fetch(`${process.env.URL}/api/workplaces`);
+    const res = await fetch(`${process.env.URLLOCAL}/api/workplaces`);
 
     if (res.message) {
       alert("💥💥💥 FAIL TO FETCH DATA");
