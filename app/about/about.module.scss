@@ -136,7 +136,7 @@
   }
 
   &__paragraph_tools {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 2.5rem;
     filter: drop-shadow(0px 0px 2px $gray);
     color: $darkgray;
@@ -155,7 +155,7 @@
   }
   &__paragraphTop {
     width: 350px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 2.5rem;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 40px 0;
@@ -165,18 +165,18 @@
   }
   &__firstP {
     &:first-letter {
-      color: $darkgray !important;
-      float: left !important;
-      font-family: Georgia !important;
-      font-size: 5rem !important;
-      line-height: 60px !important;
-      padding-top: 14px !important;
-      padding-right: 8px !important;
-      padding-left: 3px !important;
+      color: $darkgray;
+      float: left;
+      font-family: Georgia;
+      font-size: 5rem;
+      line-height: 60px;
+      padding-top: 12px;
+      padding-right: 8px;
+      padding-left: 3px;
     }
   }
   &__paragraph {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 2.5rem;
     padding: 0px 0px 0px 0px;
     margin: 50px 0px 50px 0px;
@@ -220,17 +220,11 @@
   &__skill_color {
     margin: 0px 0px 0px 10px;
     color: $red;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   &__ballon_1 {
     background-image: url(./../../public/images/ballon-1.png);
   }
-  // &__ballon_2 {
-  //   background-image: url(./../../public/images/ballon-2.png);
-  // }
-  // &__ballon_3 {
-  //   background-image: url(./../../public/images/ballon-3.png);
-  // }
 }
 
 @media screen and (min-width: $tablet) {
@@ -283,18 +277,6 @@
       filter: drop-shadow(0px 0px 1px $gray);
       color: $darkgray;
       margin-bottom: 48px;
-    }
-    &__firstP {
-      &:first-child:first-letter {
-        color: $darkgray !important;
-        float: left !important;
-        font-family: Georgia !important;
-        font-size: 4.5rem !important;
-        line-height: 60px !important;
-        padding-top: 6px !important;
-        padding-right: 8px !important;
-        padding-left: 3px !important;
-      }
     }
 
     &__skill {
@@ -354,18 +336,6 @@
     }
     &__skill {
       width: 500px;
-    }
-    &__firstP {
-      &:first-child:first-letter {
-        color: $darkgray !important;
-        float: left !important;
-        font-family: Georgia !important;
-        font-size: 4.5rem !important;
-        line-height: 60px !important;
-        padding-top: 6px !important;
-        padding-right: 8px !important;
-        padding-left: 3px !important;
-      }
     }
 
     &__skill_list_item {
