@@ -25,23 +25,33 @@ export default function MainHeader() {
           />
         </Link>
         <ul className={styles.header__listBlock}>
-          <li key={"01"} className={styles.header__list}>
-            <Link href="/about">About Me</Link>
+          <li className={styles.header__list} key={"01"}>
+            <Link className={styles.header__link} href="/about">
+              About Me
+            </Link>
           </li>
           <li key={"02"} className={styles.header__list}>
-            <Link href="/portfolio">Portfolio</Link>
+            <Link className={styles.header__link} href="/portfolio">
+              Portfolio
+            </Link>
           </li>
           <li key={"03"} className={styles.header__list}>
-            <Link href="/contact">Contact</Link>
+            <Link className={styles.header__link} href="/contact">
+              Contact
+            </Link>
           </li>
           {!appConnection && (
             <li key={"04"} className={styles.header__list}>
-              <Link href="/sign-in">Sign In</Link>
+              <Link className={styles.header__link} href="/sign-in">
+                Sign In
+              </Link>
             </li>
           )}
           {appConnection && (
             <li key={"05"} className={styles.header__list}>
-              <Link href={`/user/${userId}`}>Profile</Link>
+              <Link className={styles.header__link} href={`/user/${userId}`}>
+                Profile
+              </Link>
             </li>
           )}
         </ul>

@@ -23,7 +23,7 @@
     text-decoration: none !important;
   }
   &__list {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
     display: inline;
     padding: 10px;
@@ -31,12 +31,13 @@
   }
 
   &__link {
+    filter: drop-shadow(0px 0px 1px $gray);
     &:hover {
-      color: $lightyellow !important;
+      color: $lightgray !important;
     }
-    &:visited {
-      color: $lightyellow !important;
-    }
+    // &:visited {
+    //   color: $lightyellow !important;
+    // }
     &:active {
       color: $lightyellow !important;
     }

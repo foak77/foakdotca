@@ -1,14 +1,16 @@
 import styles from "./Workplace.module.scss";
 import WorkplaceCard from "./WorkplaceCard";
-import dbConnect from "@/lib/mongoDb/dbConnect";
-import Workplaces from "./../../models/workplaceModel";
 import { indie } from "@/app/fonts";
 
 async function getData() {
   try {
-    await dbConnect();
-    const workplaces = await Workplaces.find({});
-    return workplaces;
+    const res = await fetch(`${process.env.URL}/api/workplaces`);
+
+    if (res.message) {
+      alert("💥💥💥 FAIL TO FETCH DATA");
+      return;
+    }
+    return await res.json();
   } catch (error) {
     console.log(error);
   }
@@ -24,7 +26,7 @@ export default async function Workplace() {
       </h2>
       <section className={styles.workplace__wrap}>
         <section className={styles.workplace__section}>
-          {workplaces.map((w) => (
+          {workplaces.workplaces.map((w) => (
             <WorkplaceCard work={w} key={w.id} />
           ))}
         </section>

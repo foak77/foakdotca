@@ -16,9 +16,9 @@
     list-style-type: none !important;
   }
   &__logo {
-    width: 150px;
+    width: 175px;
     height: auto;
-    filter: drop-shadow(0px 0px 1px $black);
+    filter: drop-shadow(0px 0px 2px $black);
     color: $darkgray;
   }
   &__navBlock1 {
@@ -37,8 +37,8 @@
     margin: 0 30px 0px 0px;
   }
   &__link {
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1.675rem;
+    font-weight: 600;
     color: $black;
     text-decoration: none !important;
     list-style-type: none !important;
@@ -47,7 +47,7 @@
     }
   }
   &__icon {
-    font-size: 1.25rem;
+    font-size: 1.65rem;
     margin: 0px 12px 0px 0px;
   }
 }

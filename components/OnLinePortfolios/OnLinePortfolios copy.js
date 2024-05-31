@@ -1,14 +1,14 @@
 import styles from "./OnLinePortfolios.module.scss";
 import PortfolioCard from "./PortfolioCard";
 import { indie } from "@/app/fonts";
-import dbConnect from "@/lib/mongoDb/dbConnect";
-import Onportfolios from "./../../models/onportfolioModel";
 
 async function getData() {
   try {
-    await dbConnect();
-    const onportfolios = await Onportfolios.find();
-    return onportfolios;
+    const res = await fetch(`${process.env.URL}/api/onportfolios`);
+    if (!res.ok) {
+      throw new Error("💥💥💥FAIL TO FETCH DATA");
+    }
+    return await res.json();
   } catch (error) {
     console.log(error);
   }
@@ -33,7 +33,7 @@ export default async function OnLinePortfolios() {
         description of the work and the link to its respective app.
       </p>
       <section className={styles.onportfolio__map}>
-        {onportfolios.map((port) => (
+        {onportfolios.onportfolios.map((port) => (
           <PortfolioCard key={port.id} portfolio={port} />
         ))}
       </section>
