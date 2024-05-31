@@ -5,10 +5,11 @@
   overflow: hidden;
   margin: 30px 30px 30px 30px;
   width: 350px;
+  height: auto;
   padding: 0px 0px 20px 0px;
   border-radius: 10px;
   background-color: $lightwhite;
-  filter: drop-shadow(1px 1px 3px $gray);
+  filter: drop-shadow(3px 3px 3px $gray);
   &:nth-child(6) {
     display: none;
   }
@@ -32,15 +33,17 @@
   &__info {
     @include flex-column-start-start;
     padding: 16px 16px;
+    margin-bottom: 12px;
   }
   &__title {
     padding: 8px 0 8px 0;
     width: 100%;
     text-align: left;
     color: $blue;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     border-bottom: 1px solid $blue;
-    margin: 0px 0px 8px 0px;
+    margin: 0px 0px 12px 0px;
   }
   &__stack {
     font-size: 0.8rem;
@@ -57,23 +60,24 @@
     width: 100%;
     margin-bottom: 15px;
     font-weight: 200;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.6rem;
     padding: 0px 0px 8px 0px;
     border-bottom: 1px solid $blue;
   }
   &__descripiton {
-    margin-bottom: 0px;
+    margin-bottom: 8px 0px 22px 0px;
     font-weight: 200;
     width: 100%;
-    font-size: 1rem;
-    line-height: 1.9rem;
+    font-size: 1.125rem;
+    line-height: 2rem;
     overflow: auto;
+    filter: drop-shadow(0px 0px 2px $gray);
   }
 
   &__link {
-    font-size: 0.8rem;
-    margin-left: 10px;
+    font-size: 1rem;
+    margin: 16px;
     cursor: pointer;
     padding: 10px 12px;
     border-radius: 6px;
@@ -81,11 +85,10 @@
     text-decoration: none;
     color: $blue;
     font-weight: 800;
+    filter: drop-shadow(2px 2px 3px $gray);
+
     &:hover {
       background-color: $yellow;
-      transition: 0.3s ease;
-      color: $lightwhite;
-      text-decoration: none;
     }
   }
 }

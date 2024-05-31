@@ -24,18 +24,20 @@
     padding: 20px 15px 20px 15px;
     text-align: center;
     font-weight: 200;
-    font-size: 1.275rem;
+    font-size: 1.5rem;
     margin: 0;
+    filter: drop-shadow(0px 0px 2px $gray);
   }
 
   &__company {
     text-align: center;
     width: 85%;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     margin-bottom: 5px;
     padding-bottom: 20px;
     border-bottom: 1px solid $gray;
+    filter: drop-shadow(0px 0px 2px $gray);
   }
 
   &__date {
@@ -43,19 +45,20 @@
     width: 85%;
     font-size: 0.9rem;
     margin: 10px 0px 20px 0;
+    filter: drop-shadow(0px 0px 2px $gray);
   }
 
   &__spaceBetweenBullets {
-    padding-bottom: 16px;
+    padding-bottom: 24px;
   }
 
   &__bullets {
-    // font-family: "Indie Flower", cursive;
     list-style-type: none;
-    width: 85%;
-    font-size: 1.25rem;
+    width: 87%;
+    font-size: 1.5rem;
     font-weight: 200;
-    line-height: 30px;
+    line-height: 2.3rem;
+    filter: drop-shadow(0px 0px 2px $gray);
   }
 }
 
@@ -67,12 +70,12 @@
 
 @media screen and (min-width: $desktop) {
   .workplaceCard {
-    width: 300px;
+    width: 320px;
   }
 }
 
 @media screen and (min-width: $larger) {
   .workplaceCard {
-    width: 350px;
+    width: 400px;
   }
 }

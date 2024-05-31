@@ -23,7 +23,6 @@
     @include flex-column-start-center;
     width: 350px;
     margin: 30px 0px 60px 0px;
-    overflow: visible;
   }
   &__topTitle {
     @include flex-column-center-center;
@@ -36,6 +35,7 @@
     background-size: 100% 100%;
     color: $darkgray;
     filter: drop-shadow(0px 0px 2px $gray);
+    transform: rotate(-4deg);
   }
 
   &__title {
@@ -136,9 +136,9 @@
   }
 
   &__paragraph_tools {
-    font-size: 1.275rem;
-    line-height: 2.125rem;
-    filter: drop-shadow(0px 0px 1px $gray);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    filter: drop-shadow(0px 0px 2px $gray);
     color: $darkgray;
     margin-bottom: 48px;
   }
@@ -155,12 +155,12 @@
   }
   &__paragraphTop {
     width: 350px;
-    font-size: 1.275rem;
-    line-height: 2.125rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 40px 0;
     font-weight: 200;
-    filter: drop-shadow(0px 0px 1px $gray);
+    filter: drop-shadow(0px 0px 2px $gray);
     color: $darkgray;
   }
   &__firstP {
@@ -168,19 +168,19 @@
       color: $darkgray !important;
       float: left !important;
       font-family: Georgia !important;
-      font-size: 4.5rem !important;
+      font-size: 5rem !important;
       line-height: 60px !important;
-      padding-top: 6px !important;
+      padding-top: 14px !important;
       padding-right: 8px !important;
       padding-left: 3px !important;
     }
   }
   &__paragraph {
-    font-size: 1.275rem;
-    line-height: 2.125rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     padding: 0px 0px 0px 0px;
     margin: 50px 0px 50px 0px;
-    filter: drop-shadow(0px 0px 1px $gray);
+    filter: drop-shadow(0px 0px 2px $gray);
     color: $darkgray;
   }
   &__paragraph_special {
@@ -352,7 +352,6 @@
     &__paragraph_special {
       width: 400px;
     }
-
     &__skill {
       width: 500px;
     }
@@ -397,13 +396,9 @@
     }
     &__paragraph_tools {
       width: 500px;
-      font-size: 1.325rem;
     }
     &__paragraph_special {
       width: 500px;
-    }
-    &__paragraph {
-      font-size: 1.325rem;
     }
     &__paragraphTopWrapper {
       width: 1312px;
@@ -411,6 +406,9 @@
     &__paragraphTop {
       width: 600px;
     }
+    // &__paragraph {
+    //   width: 600px;
+    // }
     &__tools_wrapper {
       width: 1312px;
       @include flex-row-spacebetween-center;
@@ -418,13 +416,6 @@
     &__header_1 {
       width: 50%;
       margin-bottom: 52px;
-    }
-    &__paragraph_header {
-      padding: 80px;
-      font-size: 1.275rem;
-      line-height: 2.125rem;
-      filter: drop-shadow(0px 0px 1px $gray);
-      color: $darkgray;
     }
     &__skill {
       width: 50%;

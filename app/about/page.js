@@ -252,7 +252,7 @@ export default function About() {
           <section className={`${styles.about__section}`}>
             <section className={`${styles.about__title_b1}`}></section>
             <h3 className={`${styles.about__title_1} ${indie.className}`}>
-              enjoyment
+              Enjoyment
             </h3>
             <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
               I really enjoy creating visual elements and graphic pieces such as

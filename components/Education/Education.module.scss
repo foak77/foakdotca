@@ -23,8 +23,8 @@
   }
 
   &__title {
-    // font-family: "Indie Flower", cursive;
-    font-size: 2rem;
+    width: 350px;
+    font-size: 3.5rem;
     text-align: center;
     padding: 16px 32px;
     margin: 40px 0;
@@ -32,8 +32,9 @@
     background-image: url("./../../public/images/tape1.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
     filter: drop-shadow(0px 0px 2px $black);
+    transform: rotate(4deg);
   }
 
   &__education_wrap {
