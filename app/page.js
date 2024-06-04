@@ -29,11 +29,11 @@ export default function Home() {
             a dynamic blend of creativity and production.
           </p>
           <p className={`${styles.main__paragraphBlockWrapRight}`}>
-            My professional narrative encompasses a mix of graphic design
-            projects, printing industry, social media asset creation, photo and
-            video editing, and recently, the intricacies of web design,
-            seamlessly intertwined with the strategic realm of Search Engine
-            Optimization (SEO).
+            My professional narrative involves a mix of graphic design projects,
+            the editorial and printing industry, social media assets creation,
+            photo and video editing, and recently, the intricacies of web design
+            and front-end development together with the strategic realm of
+            Search Engine Optimization, SEO.
           </p>
         </section>
         <Link href={"/portfolio"}>
@@ -61,15 +61,15 @@ export default function Home() {
       />
       <section className={`${styles.main__wrapperMid}`}>
         <p className={`${styles.main__firstP} ${styles.main__paragraph}`}>
-          Embracing challenges with enthusiasm, I am perpetually on the lookout
-          for opportunities to expand my knowledge and apply my evolving skill
+          Embracing challenges with enthusiasm, I am perpetually looking for
+          opportunities to expand my knowledge and apply my ever-evolving skill
           set.
         </p>
         <p className={`${styles.main__paragraph}`}>
           I am motivated to assist individuals and businesses in achieving their
           aspirations. Whether it&apos;s amplifying market presence, launching
           innovative products, supporting their communities, or solving problems
-          in innovative ways, I am dedicated to making a positive impact through
+          in creative ways, I am dedicated to making a positive impact through
           my work.
         </p>
         <section className={`${styles.main__paragraphBlock_B}`}>
@@ -83,7 +83,7 @@ export default function Home() {
               className={`${styles.main__paragraph} ${styles.main__list_paragraph1} ${indie.className}`}
             >
               Several years of Graphic Designer experience combined with
-              Customer Relations, Production and Office environment experience.
+              Customer Relations, Production, and Office environment experience.
             </div>
           </div>
 
@@ -91,9 +91,8 @@ export default function Home() {
             <div
               className={`${styles.main__paragraph} ${styles.main__list_paragraph2}`}
             >
-              Online Marketting Certification, Web development diploma from
-              BrainStation, Web Development and Design certificates from George
-              Brown College, and a B.A in Industrial Design.
+              Online Marketing Certification, Web Development Diploma, Web
+              Design Certificate, and a B.A in Industrial Design.
             </div>
           </div>
 
@@ -113,7 +112,7 @@ export default function Home() {
             >
               Ability to prioritize responsibilities, identify problems in need
               of decision-making, excellent attention to detail, and adapt to
-              various working environments (office, plant).
+              various working environments (home, office, plant).
             </div>
           </div>
 
@@ -122,17 +121,18 @@ export default function Home() {
               className={`${styles.main__paragraph} ${styles.main__list_paragraph5} ${indie.className}`}
             >
               Ability to work with minimum supervision, self-motivated,
-              inquisitive and relentless, comfortable working with technology
+              inquisitive, and relentless, comfortable working with technology
               and arts, and autodidact.
             </div>
           </div>
         </section>
         <p className={`${styles.main__firstP} ${styles.main__paragraph}`}>
-          Having honed my skills in the printing industry, I firmly believe that
-          staying abreast of cutting-edge trends and technologies is paramount
-          in the ever-evolving landscape of design and production. My curiosity
-          extends to uncharted territories, with a keen interest in delving into
-          areas like packaging design and the fascinating world of 3D printing.
+          Having spent a good portion of my professional life in the Editorial
+          and Printing Industry, I firmly believe that staying abreast of
+          cutting-edge trends and technologies is crucial in the ever-evolving
+          landscape of design and production. My curiosity and interests delve
+          into areas like Front-End Web Development, Packaging Design, and the
+          fascinating world of 3D printing.
         </p>
       </section>
       <Image
@@ -155,8 +155,7 @@ export default function Home() {
         </Link>
         <section className={`${styles.main__paragraphBlock_C}`}>
           <p className={`${styles.main__paragraph} ${styles.main__firstP}`}>
-            Curious about who is behind the scenes? Dive into the captivating
-            narratives of the{" "}
+            Dive into the captivating narratives of the{" "}
             <Link className={`${styles.main__pageLink}`} href={"/about"}>
               ABOUT
             </Link>{" "}
@@ -165,12 +164,16 @@ export default function Home() {
               {" "}
               PORTFOLIO
             </Link>{" "}
-            section, where you will learn more about the essence of my
-            professional journey, and the driving force behind my work.
+            section, where you will learn more about the about professional
+            journey, and the driving forces behind my work.
           </p>
           <p className={`${styles.main__paragraph}`}>
-            Let&apos;s create something extraordinary together. I can&apos;t
-            wait to connect with you!
+            I am looking forward to bringing my creativity and passion for
+            design to new projects, and I am convinced that this opportunity
+            would be mutually beneficial. I can&apos;t wait to connect with you!
+          </p>
+          <p className={`${styles.main__paragraph}`}>
+            I can&apos;t wait to connect with you!
           </p>
         </section>
       </section>

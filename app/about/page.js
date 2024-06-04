@@ -55,20 +55,20 @@ export default function About() {
       </section>
       <section className={`${styles.about__paragraphTopWrapper}`}>
         <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
-          Drawing inspiration from a cross-cultural existence in both Canada and
+          Drawing inspiration from a cross-cultural existence in Canada and
           Brazil, I bring a unique worldview to my endeavors. Grateful for the
-          enriching experiences of studying, working and living in both
-          countries, I am excited about the unfolding future of the web and
-          design. I envision a harmonious convergence of technology and art,
-          shaping a brighter world for us all.
+          enriching experiences of studying, working, and living in both
+          countries, I am excited about the unfolding future of Production and
+          Design. Continuously I work hard to envision a harmonious convergence
+          of technology and art and to shape a brighter world for all of us.
         </p>
         <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
-          Meeting with prospects, art directors, graphic designer, ilustrators,
-          and business owners to determine the project&apos;s scope and how and
-          when it would be delivered is a big part of my daily routine. I find
-          these interactions to be incredibly valuable as they help me
-          understand the client&apos;s needs and ensure a successful project
-          outcome.
+          Meeting with prospects, art directors, graphic designers,
+          illustrators, and business owners to determine the project&apos;s
+          scope and how and when it would be delivered is crucial for the
+          quality of the outcome material. I find these interactions to be
+          incredibly valuable as they help me understand the client&apos;s needs
+          and ensure a successful project.
         </p>
       </section>
       <Image
@@ -91,8 +91,8 @@ export default function About() {
             >
               In my daily activities, I heavily rely on photo, vector, layout
               editing, imposing, and scheduling plan software. These tools are
-              essential in my work, and I constantly dedicate time to improve my
-              skills and master them. I am always on the lookout for new
+              essential in my work, and I constantly dedicate time to improving
+              my skills and mastering them. I am always on the lookout for new
               techniques and features that can enhance my productivity and
               creativity.
             </p>
@@ -255,12 +255,11 @@ export default function About() {
               Enjoyment
             </h3>
             <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
-              I really enjoy creating visual elements and graphic pieces such as
-              logos, flyers, posters, magazines, and newspapers. Designing
-              layouts and carefully selecting colors, images, and typefaces is a
-              creative process that I value a lot. With the advent of the web, I
-              have found a new playground to explore and experiment with fresh
-              ideas.
+              I enjoy creating visual elements and graphic pieces such as logos,
+              flyers, posters, magazines, and newspapers. Designing layouts and
+              carefully selecting colors, images, and typefaces is a creative
+              process that I value a lot. With the advent of the web, I have
+              found a new playground to explore and experiment with fresh ideas.
             </p>
           </section>
 
@@ -286,10 +285,10 @@ export default function About() {
 
             <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
               I am passionate about what I do, and I am committed to delivering
-              exceptional work to the people I get involved professionaly. By
+              exceptional work to the people I get involved professionally. By
               embracing new challenges, sharpening my skills, and maintaining a
               collaborative mindset, I am confident in my ability to succeed in
-              this ever_evolving field.
+              this ever-evolving field.
             </p>
           </section>
         </section>

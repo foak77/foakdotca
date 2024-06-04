@@ -118,8 +118,8 @@ export default function Contact({}) {
         <section className={styles.contactForm__right}>
           <section className={`${styles.contactForm__text} ${indie.className}`}>
             Thank You for taking the time and the interest in contacting me.
-            There are some aditional links in the footer pointing to my
-            LinkedIn, GitHub Account and my Resume for download.
+            There are some additional links in the footer pointing to my
+            LinkedIn, GitHub Account, and a Resume for download.
           </section>
         </section>
       </section>

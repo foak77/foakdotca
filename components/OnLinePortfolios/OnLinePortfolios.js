@@ -28,9 +28,9 @@ export default async function OnLinePortfolios() {
         className={`${styles.onportfolio__heading} ${styles.onportfolio__firstP}`}
       >
         Delve into my web design and development portfolio. Here is a collection
-        of some of the works and studies of some online material pieces
-        I&ldquo;ve been producing lately. Each card will have a short
-        description of the work and the link to its respective app.
+        of some of the works and studies of some online material pieces I have
+        been producing lately. Each card will have a short description of the
+        work and the link to its respective app.
       </p>
       <section className={styles.onportfolio__map}>
         {onportfolios.map((port) => (

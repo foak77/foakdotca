@@ -279,7 +279,7 @@
       margin-top: 60px;
     }
     &__wrapperBottom {
-      @include flex-row-start-start;
+      @include flex-row-start-center;
       width: 740px;
     }
     &__sampleWork_M {
