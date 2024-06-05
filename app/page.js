@@ -170,7 +170,7 @@ export default function Home() {
           <p className={`${styles.main__paragraph}`}>
             I am looking forward to bringing my creativity and passion for
             design to new projects, and I am convinced that this opportunity
-            would be mutually beneficial. I can&apos;t wait to connect with you!
+            would be mutually beneficial.
           </p>
           <p className={`${styles.main__paragraph}`}>
             I can&apos;t wait to connect with you!
