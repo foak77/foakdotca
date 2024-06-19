@@ -19,8 +19,8 @@ export default function MainFooter() {
               className={styles.footer__logo}
               src={logo}
               alt="logo"
-              width={150}
-              height={"auto"}
+              width={175}
+              height={100}
               title="Home"
             />
           </Link>
