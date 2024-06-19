@@ -8,7 +8,6 @@
   left: 10px;
   width: 200px;
   background-color: $blue;
-  // opacity: 0.8;
   padding: 10px 20px 20px 20px;
   border-radius: 8px;
   border: 1px solid $lightblue;
@@ -17,12 +16,14 @@
     text-decoration: none;
   }
   &__list {
+    @include flex-row-start-center;
     border-bottom: 1px solid $lightblue;
     padding: 8px 0px 8px 0px;
     text-decoration: none;
     list-style-type: none;
     color: $lightwhite;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    font-weight: 400;
     &:hover {
       color: $lightyellow;
     }
@@ -33,7 +34,7 @@
   &__icon {
     margin-right: 16px;
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   &__x {
     font-size: 2rem;

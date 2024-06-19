@@ -1,4 +1,4 @@
-import SignIn from "@/components/SignIn/SingIn";
+import SignIn from "./../../components/SignIn/SingIn";
 
 export default function Auth() {
   return <SignIn />;

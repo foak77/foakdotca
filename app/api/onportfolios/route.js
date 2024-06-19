@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/mongoDb/dbConnect";
+import dbConnect from "./../../../lib/mongoDb/dbConnect";
 import Onportfolios from "../../../models/onportfolioModel";
 
 export async function GET() {

@@ -1,8 +1,8 @@
 import styles from "./Workplace.module.scss";
 import WorkplaceCard from "./WorkplaceCard";
-import dbConnect from "@/lib/mongoDb/dbConnect";
+import dbConnect from "./../../lib/mongoDb/dbConnect";
 import Workplaces from "./../../models/workplaceModel";
-import { indie } from "@/app/fonts";
+import { indie } from "./../../app/fonts";
 
 async function getData() {
   try {

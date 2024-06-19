@@ -14,7 +14,7 @@ export default function notfound() {
       />
       <h1 className={styles.notfound__title}>Sorry!!!</h1>
       <p className={styles.notfound__text}>
-        Your request failed, try anothe time!
+        Your request failed, try another time!
       </p>
       <Image
         className={styles.notfound__bottomrip}

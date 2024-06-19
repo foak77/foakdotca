@@ -3,7 +3,7 @@ import dbConnect from "../../../../lib/mongoDb/dbConnect";
 import User from "../../../../models/userModel";
 var bcrypt = require("bcryptjs");
 const crypto = require("crypto");
-import { logout } from "@/lib/sectionRelated/getUpdateDeleteSection";
+import { logout } from "./../../../../lib/sectionRelated/getUpdateDeleteSection";
 
 export async function PATCH(request) {
   const { password, userId } = await request.json();

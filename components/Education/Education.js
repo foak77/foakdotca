@@ -4,7 +4,7 @@ import Image from "next/image";
 import toprip from "./../../public/images/transition-y.png";
 import bottomrip from "./../../public/images/transition2.png";
 
-import { indie } from "@/app/fonts";
+import { indie } from "./../../app/fonts";
 
 function Education() {
   return (

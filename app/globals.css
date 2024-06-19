@@ -1,6 +1,3 @@
-@import "./variables";
-@import "./mixins";
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,14 +7,16 @@
 ul,
 li,
 a {
-  color: $black;
+  color: #323232;
   text-decoration: none;
   list-style-type: none;
 }
 
+.home,
+.pageBlock,
 html,
 body {
-  color: $black;
+  color: #323232;
   font-weight: 200;
-  background-color: $lightgray;
+  background-color: #d3d3d3;
 }

@@ -1,4 +1,4 @@
-import styles from "@/components/SideMenu/SideMenu.module.scss";
+import styles from "./../../components/SideMenu/SideMenu.module.scss";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";

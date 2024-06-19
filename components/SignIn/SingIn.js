@@ -9,7 +9,6 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import Image from "next/image";
 import toprip from "./../../public/images/transition1.png";
 import bottomrip from "./../../public/images/transition2.png";
-// import { indie } from "@/app/fonts";
 
 export default function SignIn() {
   const router = useRouter();

@@ -1,5 +1,5 @@
 import styles from "./../../components/Videos/Videos.module.scss";
-import { indie } from "@/app/fonts";
+import { indie } from "./../../app/fonts";
 
 export default function Videos() {
   return (

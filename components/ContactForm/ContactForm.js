@@ -11,7 +11,7 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 import { MdFormatQuote } from "react-icons/md";
 import { SiGooglemessages } from "react-icons/si";
 
-import { indie } from "@/app/fonts";
+import { indie } from "./../../app/fonts";
 
 export default function Contact({}) {
   const router = useRouter();

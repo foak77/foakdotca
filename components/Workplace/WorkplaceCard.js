@@ -3,7 +3,7 @@ import Image from "next/image";
 import clip from "./../../public/images/clip.png";
 import bottomclip from "./../../public/images/bottomclip.png";
 
-import { indie } from "@/app/fonts";
+import { indie } from "./../../app/fonts";
 
 function WorkplaceCard({ work }) {
   return (

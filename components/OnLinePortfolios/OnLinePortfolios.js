@@ -1,7 +1,7 @@
 import styles from "./OnLinePortfolios.module.scss";
 import PortfolioCard from "./PortfolioCard";
-import { indie } from "@/app/fonts";
-import dbConnect from "@/lib/mongoDb/dbConnect";
+import { indie } from "./../../app/fonts";
+import dbConnect from "./../../lib/mongoDb/dbConnect";
 import Onportfolios from "./../../models/onportfolioModel";
 
 async function getData() {

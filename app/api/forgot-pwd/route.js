@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/mongoDb/dbConnect";
+import dbConnect from "./../../../lib/mongoDb/dbConnect";
 import User from "./../../../models/userModel";
 const mail = require("@sendgrid/mail");
 var bcrypt = require("bcryptjs");

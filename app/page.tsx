@@ -2,7 +2,7 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 // components
-import HomeHero from "@/components/Hero/HomeHero";
+import HomeHero from "./../components/Hero/HomeHero";
 //images
 import sample_work_1_M from "./../public/images/sample_work_1_M.png";
 import sample_work_1_L from "./../public/images/sample_work_1_L.png";

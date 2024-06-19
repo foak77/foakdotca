@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import dbConnect from "./../../../lib/mongoDb/dbConnect";
 import User from "./../../../models/userModel";
-import { encrypt, decrypt } from "@/lib/sectionRelated/getUpdateDeleteSection";
+import {
+  encrypt,
+  decrypt,
+} from "./../../../lib/sectionRelated/getUpdateDeleteSection";
 var bcrypt = require("bcryptjs");
 import { cookies } from "next/headers";
 
