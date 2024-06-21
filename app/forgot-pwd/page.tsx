@@ -8,6 +8,19 @@ import Image from "next/image";
 import toprip from "./../../public/images/transition1.png";
 import bottomrip from "./../../public/images/transition2.png";
 
+type forgotType = {
+  message: string;
+  error: boolean;
+  status: number;
+};
+
+type bodyType = {
+  code: string;
+  email: string;
+  password: string;
+  passwordConfirm: string;
+};
+
 export default function ForgotPw() {
   const router = useRouter();
 
@@ -16,16 +29,16 @@ export default function ForgotPw() {
   const [codeInput, setCodeInput] = useState(false);
 
   //REFS FROM INPUTS
-  let codeInputRef = useRef();
-  let emailInputRef = useRef();
-  let passwordInputRef = useRef();
-  let passwordConfirmInputRef = useRef();
+  let codeInputRef = useRef<HTMLInputElement | null>(null);
+  let emailInputRef = useRef<HTMLInputElement | null>(null);
+  let passwordInputRef = useRef<HTMLInputElement | null>(null);
+  let passwordConfirmInputRef = useRef<HTMLInputElement | null>(null);
 
   //SEND EMAIL FOR VERIFICATION
-  const verifyEmail = async (e) => {
+  const verifyEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let data;
-    const email = emailInputRef.current.value;
+    let data: forgotType;
+    const email: string = emailInputRef.current.value;
 
     try {
       const response = await fetch("/api/find-by-email", {
@@ -50,15 +63,15 @@ export default function ForgotPw() {
   };
 
   // AFTER RECEIVING THE CODE REDO THE PASSWORD
-  const pwRedo = async (event) => {
+  const pwRedo = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    let data;
-    let code = codeInputRef.current.value;
-    let email = emailInputRef.current.value;
-    let password = passwordInputRef.current.value;
-    let passwordConfirm = passwordConfirmInputRef.current.value;
+    let data: forgotType;
+    let code: string = codeInputRef.current.value;
+    let email: string = emailInputRef.current.value;
+    let password: string = passwordInputRef.current.value;
+    let passwordConfirm: string = passwordConfirmInputRef.current.value;
 
-    const userBody = {
+    let userBody: bodyType = {
       code: code,
       email: email,
       password: password,
@@ -170,11 +183,7 @@ export default function ForgotPw() {
                 name="passwordConfirm"
                 required
               />
-              <button
-                className={styles.forgotpwd__button}
-                type="submit"
-                lassName={styles.forgotpwd__button}
-              >
+              <button className={styles.forgotpwd__button} type="submit">
                 SET NEW PASSWORD
               </button>
             </form>

@@ -1,15 +1,28 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "./../../../lib/mongoDb/dbConnect";
 import User from "./../../../models/userModel";
 const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
+type responseDataType = {
+  status: string;
+  message: string;
+};
+
+type dataEmailType = {
+  to: string;
+  from: string;
+  subject: string;
+  text: string;
+  html: string;
+};
+
 // GENERATE RANDOM KEY FOR AUTENTICATION
-const keyMaker = (length) => {
-  let result = "";
-  let characters =
+const keyMaker = (length: number) => {
+  let result: string;
+  let characters: string =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let charactersLength = characters.length;
+  let charactersLength: number = characters.length;
   for (var i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
@@ -17,12 +30,14 @@ const keyMaker = (length) => {
 };
 
 // FIND BY EMAIL
-export async function POST(request) {
-  const { email } = await request.json();
-  var ResponseData = {
+export async function POST(req: NextRequest, res: NextResponse) {
+  const { email } = await req.json();
+
+  var ResponseData: responseDataType = {
     status: "",
     message: "",
   };
+
   let response = ResponseData;
 
   if (!email) {
@@ -37,6 +52,8 @@ export async function POST(request) {
 
   const user = await User.findOne({ email: email });
 
+  const userEmail = user.email;
+
   if (!user) {
     return NextResponse.json({
       message: "💥💥💥 EMAIL DOESN'T EXIST IN THE SYSTEM",
@@ -46,14 +63,13 @@ export async function POST(request) {
   }
 
   // GENERATE RANDOM KEY
-  let randomKey = keyMaker(5);
+  let randomKey: string = keyMaker(5);
   user.randomKey = randomKey;
   user.timeToActivate = Date.now() + 60 * 60 * 1000; // 1h
   await user.save();
 
-  const data = {
+  const data: dataEmailType = {
     to: user.email,
-    // to: "emailtofred@gmail.com",
     from: process.env.SENDGRID_EMAIL_FROM,
     subject: "Reset Password",
     text: `Copy code = ${randomKey}`,
@@ -69,7 +85,7 @@ export async function POST(request) {
         message: "Your message was sent. I'll be in contact shortly.",
       };
     })
-    .catch((error) => {
+    .catch((error: any) => {
       response = {
         status: "error",
         message: `Message failed to send with error, ${error}`,
