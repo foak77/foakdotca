@@ -8,14 +8,25 @@ import Image from "next/image";
 import toprip from "./../../public/images/transition1.png";
 import bottomrip from "./../../public/images/transition2.png";
 
-export default function DeleteUser(userId) {
+type dataType = {
+  message: string;
+  error: boolean;
+  status: number;
+};
+
+type utbdType = {
+  userId: string;
+};
+
+export default function DeleteUser(userIdToBeDeleted: utbdType) {
+  console.log("DELETE USER NUMBER", userIdToBeDeleted.userId);
   const router = useRouter();
 
   // LOCAL STATE
   const [message, setMesssage] = useState("");
 
   //GLOBAL STATE
-  let userName = useStore((state) => state.userName);
+  let userName: string = useStore((state) => state.userName);
 
   //STATE FUNCTIONS
   const updateAppConnection = useStore((state) => state.updateAppConnection);
@@ -23,21 +34,21 @@ export default function DeleteUser(userId) {
   const updateUserName = useStore((state) => state.updateUserName);
 
   //REFS FROM INPUT
-  const passwordInputRef = useRef();
+  const passwordInputRef = useRef<HTMLInputElement | null>(null);
 
-  const deleteAcc = async (event) => {
+  const deleteAcc = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    let data;
-    const password = passwordInputRef.current.value;
+    let data: dataType;
+    const password: string = passwordInputRef.current.value;
 
     const userPassword = {
       password: password,
-      userId: userId.userId.params.userId,
+      userId: userIdToBeDeleted.userId,
     };
 
     try {
       const response = await fetch(
-        `/api/delete-acc/${userId.userId.params.userId}`,
+        `/api/delete-acc/${userIdToBeDeleted.userId}`,
         {
           method: "PATCH",
           body: JSON.stringify(userPassword),
@@ -112,7 +123,7 @@ export default function DeleteUser(userId) {
               </button>
             </form>
 
-            <Link href={`/user/${userId.userId.params.userId}`}>
+            <Link href={`/user/${userIdToBeDeleted.userId}`}>
               <button className={styles.deleteUser__button}>
                 BACK TO PROFILE
               </button>

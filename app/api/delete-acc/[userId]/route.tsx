@@ -1,20 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "../../../../lib/mongoDb/dbConnect";
 import User from "../../../../models/userModel";
 var bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 import { logout } from "./../../../../lib/sectionRelated/getUpdateDeleteSection";
 
-export async function PATCH(request) {
-  const { password, userId } = await request.json();
+export async function PATCH(req: NextRequest, res: NextResponse) {
+  const { password, userId } = await req.json();
 
   await dbConnect();
 
   const user = await User.findById(userId)
     .select("+status")
     .select("+password");
-
-  console.log("USER", user);
 
   if (!(user || status)) {
     return NextResponse.json({

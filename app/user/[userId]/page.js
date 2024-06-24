@@ -13,6 +13,8 @@ export default function UserId({ params }) {
   const userId = params.userId;
   const router = useRouter();
 
+  console.log("USER ID DO USER", userId);
+
   //LOCAL STATE
   const [message, setMessage] = useState("");
 
