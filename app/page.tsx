@@ -131,8 +131,8 @@ export default function Home() {
           and Printing Industry, I firmly believe that staying abreast of
           cutting-edge trends and technologies is crucial in the ever-evolving
           landscape of design and production. My curiosity and interests delve
-          into areas like Front-End Web Development, Packaging Design, and the
-          fascinating world of 3D printing.
+          into areas like Printing, Front-End Web Development, Packaging Design,
+          and the fascinating world of 3D printing.
         </p>
       </section>
       <Image

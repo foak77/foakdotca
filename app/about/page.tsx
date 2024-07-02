@@ -90,11 +90,11 @@ export default function About() {
               className={`${styles.about__paragraph_tools} ${styles.about__firstP}`}
             >
               In my daily activities, I heavily rely on photo, vector, layout
-              editing, imposing, and scheduling plan software. These tools are
-              essential in my work, and I constantly dedicate time to improving
-              my skills and mastering them. I am always on the lookout for new
-              techniques and features that can enhance my productivity and
-              creativity.
+              editing, imposing, scheduling plan software and recently coding
+              editor software. These tools are essential in my work, and I
+              constantly dedicate time to improving my skills and mastering
+              them. I am always on the lookout for new techniques and features
+              that can enhance my productivity and creativity.
             </p>
             <p
               className={` ${styles.about__paragraph_special} ${indie.className}`}
@@ -255,8 +255,10 @@ export default function About() {
               Enjoyment
             </h3>
             <p className={`${styles.about__paragraph} ${styles.about__firstP}`}>
-              I enjoy creating visual elements and graphic pieces such as logos,
-              flyers, posters, magazines, and newspapers. Designing layouts and
+              It is very satisfying to see a created graphic piece being used,
+              apreciated and delivering the results proposed. I enjoy creating
+              visual elements and graphic pieces such as logos, flyers, posters,
+              magazines, newspapers and landing pages. Designing layouts and
               carefully selecting colors, images, and typefaces is a creative
               process that I value a lot. With the advent of the web, I have
               found a new playground to explore and experiment with fresh ideas.
