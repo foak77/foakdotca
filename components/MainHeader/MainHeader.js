@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
 import styles from "./../MainHeader/MainHeader.module.scss";
-import Image from "next/image";
-import logo from "./../../public/images/logo.png";
 import HamburgerIcon from "./HamburgerIcon";
 import { useStore } from "./../../global-store/globalStore";
+import { indie } from "./../../app/fonts";
 
 export default function MainHeader() {
   // GLOBAL STATE
@@ -15,14 +14,12 @@ export default function MainHeader() {
     <>
       <header className={styles.header}>
         <HamburgerIcon />
-        <Link href={"/"} title="Home">
-          <Image
-            className={styles.header__logo}
-            src={logo}
-            width={175}
-            height={"auto"}
-            alt="logo"
-          />
+        <Link
+          className={`${styles.header__name} ${indie.className}`}
+          href={"/"}
+          title="Home"
+        >
+          This is my Website
         </Link>
         <ul className={styles.header__listBlock}>
           <li className={styles.header__list} key={"01"}>

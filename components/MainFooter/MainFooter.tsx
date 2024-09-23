@@ -1,28 +1,26 @@
 import { AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
 import styles from "./../../components/MainFooter/MainFooter.module.scss";
-import logo from "./../../public/images/logo.png";
-import Image from "next/image";
+// import logo from "./../../public/images/logo.png";
+// import Image from "next/image";
 import { TiLightbulb } from "react-icons/ti";
 import { TiPencil } from "react-icons/ti";
 import { GiTalk } from "react-icons/gi";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FaRegFilePdf } from "react-icons/fa";
+import { indie } from "./../../app/fonts";
 
 export default function MainFooter() {
   return (
     <footer className={styles.footer}>
       <section className={styles.footer__wrapper}>
         <section className={styles.footer__navBlock1}>
-          <Link href={"/"}>
-            <Image
-              className={styles.footer__logo}
-              src={logo}
-              alt="logo"
-              width={175}
-              height={100}
-              title="Home"
-            />
+          <Link
+            className={`${styles.footer__name} ${indie.className}`}
+            href={"/"}
+            title="Home"
+          >
+            This is my Website
           </Link>
         </section>
         <section className={styles.footer__navBlock2}>
@@ -61,7 +59,7 @@ export default function MainFooter() {
         </section>
         <section className={styles.footer__navBlock3}>
           <ul>
-            <li>
+            <li className={styles.footer__link}>
               <Link
                 className={styles.footer__link}
                 href="https://www.linkedin.com/in/foak77/"
@@ -73,7 +71,7 @@ export default function MainFooter() {
                 LinkedIn
               </Link>
             </li>
-            <li>
+            <li className={styles.footer__link}>
               <Link
                 className={styles.footer__link}
                 href="https://github.com/foak77"
@@ -85,7 +83,7 @@ export default function MainFooter() {
                 GitHub
               </Link>
             </li>
-            <li>
+            <li className={styles.footer__link}>
               <Link
                 className={styles.footer__link}
                 href="/resume/frederico_carvalho_resume.pdf"
