@@ -83,7 +83,7 @@ export default function Home() {
               className={`${styles.main__paragraph} ${styles.main__list_paragraph1} ${indie.className}`}
             >
               Several years of Graphic Designer experience combined with
-              Customer Relations, Production, and Office environment experience.
+              Customer Relations, Production, and Office experience.
             </div>
           </div>
 
@@ -91,8 +91,8 @@ export default function Home() {
             <div
               className={`${styles.main__paragraph} ${styles.main__list_paragraph2}`}
             >
-              Online Marketing Certification, Web Development Diploma, Web
-              Design Certificate, and a B.A in Industrial Design.
+              B.A. in Industrial Design, Online Marketing Certification, Web
+              Development Diploma, Web Design Certificate.
             </div>
           </div>
 
@@ -111,8 +111,9 @@ export default function Home() {
               className={`${styles.main__paragraph} ${styles.main__list_paragraph4} ${indie.className}`}
             >
               Ability to prioritize responsibilities, identify problems in need
-              of decision-making, excellent attention to detail, and adapt to
-              various working environments (home, office, plant).
+              of decision-making, pay excellent attention to detail, and adapt
+              to various working environments (procedures, software, home,
+              office, plant).
             </div>
           </div>
 
@@ -121,7 +122,7 @@ export default function Home() {
               className={`${styles.main__paragraph} ${styles.main__list_paragraph5} ${indie.className}`}
             >
               Ability to work with minimum supervision, self-motivated,
-              inquisitive, and relentless, comfortable working with technology
+              inquisitive and relentless, comfortable working with technology
               and arts, and autodidact.
             </div>
           </div>
@@ -131,8 +132,8 @@ export default function Home() {
           and Printing Industry, I firmly believe that staying abreast of
           cutting-edge trends and technologies is crucial in the ever-evolving
           landscape of design and production. My curiosity and interests delve
-          into areas like Printing, Front-End Web Development, Packaging Design,
-          and the fascinating world of 3D printing.
+          into areas like Printing, Web Design, Front-End Web Development,
+          Packaging Design, and the fascinating world of 3D printing.
         </p>
       </section>
       <Image
