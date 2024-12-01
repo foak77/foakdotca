@@ -16,7 +16,7 @@ export default function Hero() {
         className={`${styles.hero__vid}`}
         alt="video"
       >
-        <source src="/videos/front-hero.mp4" type="video/mp4" />
+        <source src="/videos/front-hero-1.mp4" type="video/mp4" />
       </video>
       <Image className={styles.hero__bottomrip} src={toprip} alt="hero" />
     </section>
