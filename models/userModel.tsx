@@ -58,11 +58,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// BEFORE ANY FIND - CHECK STATUS NOT EQUAL FALSE
-// userSchema.pre(/^find/, function (next) {
-// this points to the current query
-// this.find({ status: { $ne: false } });
-// next();
-// });
-
 export default mongoose.models.User || mongoose.model("User", userSchema);
