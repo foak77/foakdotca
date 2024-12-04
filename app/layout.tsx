@@ -2,6 +2,7 @@ import styles from "./Layout.module.scss";
 import MainHeader from "./../components/MainHeader/MainHeader";
 import MainFooter from "./../components/MainFooter/MainFooter";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { nunito } from "./fonts";
 
 export const metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
           <section className={styles.pageBlock}>{children}</section>
           <MainFooter />
         </section>
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
