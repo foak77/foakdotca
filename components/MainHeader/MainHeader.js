@@ -19,7 +19,7 @@ export default function MainHeader() {
           href={"/"}
           title="Home"
         >
-          This is my Website
+          <h1 className={styles.header__nameSize}>This is my Website</h1>
         </Link>
         <ul className={styles.header__listBlock}>
           <li className={styles.header__list} key={"01"}>

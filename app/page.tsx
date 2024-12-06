@@ -60,18 +60,22 @@ export default function Home() {
         alt="bottom transition image"
       />
       <section className={`${styles.main__wrapperMid}`}>
-        <p className={`${styles.main__firstP} ${styles.main__paragraph}`}>
-          Embracing challenges with enthusiasm, I am perpetually looking for
-          opportunities to expand my knowledge and apply my ever-evolving skill
-          set.
-        </p>
-        <p className={`${styles.main__paragraph}`}>
-          I am motivated to assist individuals and businesses in achieving their
-          aspirations. Whether it&apos;s amplifying market presence, launching
-          innovative products, supporting their communities, or solving problems
-          in creative ways, I am dedicated to making a positive impact through
-          my work.
-        </p>
+        <section className={styles.main__paragraphBlockWrap}>
+          <p
+            className={`${styles.main__firstP} ${styles.main__paragraphBlockWrapLeft}`}
+          >
+            Embracing challenges with enthusiasm, I am perpetually looking for
+            opportunities to expand my knowledge and apply my ever-evolving
+            skill set.
+          </p>
+          <p className={`${styles.main__paragraphBlockWrapRight}`}>
+            I am motivated to assist individuals and businesses in achieving
+            their aspirations. Whether it&apos;s amplifying market presence,
+            launching innovative products, supporting their communities, or
+            solving problems in creative ways, I am dedicated to making a
+            positive impact through my work.
+          </p>
+        </section>
         <section className={`${styles.main__paragraphBlock_B}`}>
           <div className={`${styles.main__dropShadow}`}>
             <h2 className={`${styles.main__title_list} ${indie.className}`}>
@@ -155,7 +159,9 @@ export default function Home() {
           />
         </Link>
         <section className={`${styles.main__paragraphBlock_C}`}>
-          <p className={`${styles.main__paragraph} ${styles.main__firstP}`}>
+          <p
+            className={`${styles.main__paragraph} ${styles.main__paragraph_C} ${styles.main__firstP}`}
+          >
             Dive into the captivating narratives of the{" "}
             <Link className={`${styles.main__pageLink}`} href={"/about"}>
               ABOUT
@@ -168,12 +174,16 @@ export default function Home() {
             section, where you will learn more about the about professional
             journey, and the driving forces behind my work.
           </p>
-          <p className={`${styles.main__paragraph}`}>
+          <p
+            className={`${styles.main__paragraph} ${styles.main__paragraph_C}`}
+          >
             I am looking forward to bringing my creativity and passion for
             design to new projects, and I am convinced that this opportunity
             would be mutually beneficial.
           </p>
-          <p className={`${styles.main__paragraph}`}>
+          <p
+            className={`${styles.main__paragraph} ${styles.main__paragraph_C}`}
+          >
             I can&apos;t wait to connect with you!
           </p>
         </section>

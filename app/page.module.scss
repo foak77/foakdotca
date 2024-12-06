@@ -61,6 +61,9 @@
     color: $darkgray;
     filter: drop-shadow(0px 0px 2px $gray);
   }
+  &__paragraph_C {
+    padding: 0px 0px 0px 0px;
+  }
   &__paragraphIndie {
     color: $darkgray;
     line-height: 2.5rem;
@@ -83,7 +86,6 @@
     width: 350px;
     @include flex-column-start-center;
     margin: 40px 0px 60px 0px;
-    font-weight: 100;
     filter: drop-shadow(0px 0px 2px $lightgray);
   }
   &__title_list {
@@ -349,7 +351,7 @@
       width: 1000px;
     }
     &__wrapperBottom {
-      @include flex-row-spacebetween-start;
+      // @include flex-row-spacebetween-start;
       width: 1000px;
     }
     &__sampleWork_Larger {
