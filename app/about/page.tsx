@@ -24,6 +24,7 @@ import sketchup from "./../../public/images/icons/sketchup.png";
 import vscode from "./../../public/images/icons/vscode.png";
 import wordpress from "./../../public/images/icons/wordpress.png";
 import { indie } from "./../fonts";
+import AboutHero from "./../../components/Hero/AboutHero";
 
 export const metadata = {
   title: "About Fred",
@@ -41,18 +42,19 @@ export const metadata = {
 export default function About() {
   return (
     <main className={styles.about}>
-      <Image
+      <AboutHero />
+      {/* <Image
         className={styles.about__transition}
         src={transition}
         alt="transition image"
-      />
-      <section className={styles.about__positive}>
+      /> */}
+      {/* <section className={styles.about__positive}>
         <section className={styles.about__title_wrap}>
           <h1 className={`${styles.about__topTitle} ${indie.className}`}>
             About, Skills & Experience
           </h1>
         </section>
-      </section>
+      </section> */}
       <section className={`${styles.about__paragraphTopWrapper}`}>
         <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
           Drawing inspiration from a cross-cultural existence in Canada and
