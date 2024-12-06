@@ -3,19 +3,28 @@
 
 .portfolioHero {
   position: relative;
-  background-image: url("./../../public/images/front-Image.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover cover;
+  // background-image: url("./../../public/images/front-image-1.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover; // z-index: 1;
   @include flex-column-start-center;
   width: 100%;
-  height: 70vh;
+  height: 74vh;
   overflow: hidden;
   margin-bottom: 80px;
   &__toprip {
+    z-index: 10;
     width: 300vw;
     height: auto;
     transform: rotateY(180deg);
+  }
+  &__vid {
+    position: absolute;
+    top: 0px;
+    // transform: rotate(270deg);
+    object-fit: contain;
+    height: 100%;
+    width: auto;
   }
   &__bottomrip {
     width: 300vw;
@@ -24,19 +33,58 @@
     position: absolute;
     bottom: -1px;
   }
-  &__hero_img {
-    position: absolute;
-    top: 0;
-    object-fit: cover;
-    width: 100vw;
-    height: auto;
+  &__helloFrame {
+    @include flex-column-center-center;
+    width: 100%;
+    height: 100%;
   }
+  &__title {
+    filter: drop-shadow(0px 0px 2px $lightgray);
+    color: $darkgray;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1;
+  }
+  &__underTitle {
+    filter: drop-shadow(0px 0px 2px $lightgray);
+    color: $darkgray;
+    font-weight: 800;
+    font-size: 1.4rem;
+  }
+  &__text {
+    font-weight: 200;
+    font-size: 1.32rem;
+    filter: drop-shadow(0px 0px 2px $lightgray);
+  }
+  &__underText {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-weight: 200;
+    font-size: 1.35rem;
+    filter: drop-shadow(0px 0px 2px $lightgray);
+  }
+  // &__hero_img {
+  //   position: absolute;
+  //   top: 0;
+  //   object-fit: cover;
+  //   width: 100vw;
+  //   height: auto;
+  // }
 }
 
 @media screen and (min-width: $tablet) {
   .portfolioHero {
+    height: 65vh;
     &__toprip {
       width: 200vw;
+    }
+    &__vid {
+      // position: absolute;
+      top: 0px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
     &__bottomrip {
       width: 200vw;
@@ -46,9 +94,15 @@
 
 @media screen and (min-width: $desktop) {
   .portfolioHero {
+    height: 80vh;
     &__toprip {
       width: 150vw;
     }
+    // &__vid {
+    //   top: 0px;
+    //   width: auto;
+    //   height: 100%;
+    // }
     &__bottomrip {
       width: 150vw;
     }
@@ -57,9 +111,16 @@
 
 @media screen and (min-width: $larger) {
   .portfolioHero {
+    height: 90vh;
     &__toprip {
       width: 100vw;
     }
+    // &__vid {
+    //   position: absolute;
+    //   top: 200px;
+    //   width: 100vw;
+    //   height: auto;
+    // }
     &__bottomrip {
       width: 100vw;
     }

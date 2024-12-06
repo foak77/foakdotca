@@ -18,6 +18,7 @@ import img3Mob from "./../../public/images/img3-Mob.png";
 import img4Mob from "./../../public/images/img4-Mob.png";
 import img5Mob from "./../../public/images/img5-Mob.png";
 import img6Mob from "./../../public/images/img6-Mob.png";
+import PortfolioHero from "./../../components/Hero/PortfolioHero";
 import { indie } from "./../fonts";
 
 export const metadata = {
@@ -36,15 +37,16 @@ export const metadata = {
 export default function Portfolio() {
   return (
     <main className={styles.portfolio}>
-      <Image
+      <PortfolioHero />
+      {/* <Image
         className={styles.portfolio__transition}
         src={transition}
         alt="transition image"
-      />
+      /> */}
       <section className={styles.portfolio__wrap}>
-        <h5 className={`${styles.portfolio__title} ${indie.className}`}>
+        {/* <h5 className={`${styles.portfolio__title} ${indie.className}`}>
           Portfolio
-        </h5>
+        </h5> */}
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
