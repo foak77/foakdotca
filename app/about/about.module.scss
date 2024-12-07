@@ -2,53 +2,21 @@
 @import "./../mixins";
 
 .about {
-  @include flex-column-start-center;
+  @include flex-column-center-center;
   width: 100%;
   overflow: hidden;
+
   &__transition {
     width: 300%;
     height: auto;
     margin-bottom: 50px;
   }
-  &__positive {
-    z-index: 100;
-    background-image: url("./../../public/images/positive.png");
-    background-position: 0 0px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    filter: drop-shadow(0px 0px 5px $gray);
-    margin-bottom: 40px;
-  }
-  &__title_wrap {
-    @include flex-column-start-center;
-    width: 350px;
-    margin: 30px 0px 60px 0px;
-  }
-  &__topTitle {
+  &__sectionWrapper {
     @include flex-column-center-center;
-    width: 350px;
-    height: 80px;
-    font-size: 1.65rem;
-    background-image: url("./../../public/images/tape.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: $darkgray;
-    filter: drop-shadow(0px 0px 2px $gray);
-    transform: rotate(-4deg);
-  }
-
-  &__title {
-    @include flex-column-center-center;
-    width: 350px;
-    height: 80px;
-    font-size: 1.65rem;
-    background-image: url("./../../public/images/tape.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: $darkgray;
-    filter: drop-shadow(0px 0px 2px $gray);
+    background-color: $lightred;
+    padding-top: 80px;
+    width: 100%;
+    height: 100%;
   }
   &__title_b1 {
     @include flex-column-center-center;
@@ -95,9 +63,9 @@
   }
   &__pencil {
     @include flex-column-center-center;
-    padding-top: 22px;
-    width: 350px;
-    height: 70px;
+    margin: 40px 0px 40px 0px;
+    width: 300px;
+    height: 50px;
     font-size: 2.5rem;
     background-image: url("./../../public/images/pencil.png");
     background-position: center;
@@ -110,7 +78,6 @@
   &__info {
     @include flex-column-start-center;
     width: 100%;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: 300% 100%;
@@ -146,12 +113,12 @@
   &__tools_wrap {
     width: 350px;
     @include flex-column-center-center;
-    margin-bottom: 48px;
   }
 
   &__paragraphTopWrapper {
     width: 350px;
     @include flex-column-start-center;
+    margin-bottom: 60px;
   }
   &__paragraphTop {
     width: 350px;
@@ -161,7 +128,19 @@
     margin: 0px 0px 40px 0;
     font-weight: 200;
     filter: drop-shadow(0px 0px 2px $gray);
-    color: $darkgray;
+    color: $lightwhite;
+  }
+  &__firstPtop {
+    &:first-letter {
+      color: $lightwhite;
+      float: left;
+      font-family: Georgia;
+      font-size: 5rem;
+      line-height: 60px;
+      padding-top: 12px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
   }
   &__firstP {
     &:first-letter {
@@ -199,12 +178,13 @@
     @include flex-column-start-center;
     width: 100%;
     margin-bottom: 50px;
-    // padding: 16px;
   }
 
   &__skill_list {
     @include flex-row-center-center-wrap;
     list-style-type: none;
+    padding: 0px;
+    margin: 0px;
   }
 
   &__skill_list_item {
@@ -215,15 +195,6 @@
     filter: drop-shadow(0px 10px 8px $gray);
     width: 56px;
     height: auto;
-  }
-
-  &__skill_color {
-    margin: 0px 0px 0px 10px;
-    color: $red;
-    font-size: 1.4rem;
-  }
-  &__ballon_1 {
-    background-image: url(./../../public/images/ballon-1.png);
   }
 }
 

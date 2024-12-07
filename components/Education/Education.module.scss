@@ -4,7 +4,7 @@
 .education {
   @include flex-column-start-center;
   width: 100%;
-  background-color: $lightblue;
+  // background-color: $lightblue;
   // background-image: url("./../../public/images/education_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -43,7 +43,7 @@
   }
 
   &__frame {
-    background-color: #ddc;
+    background-color: $lightgray;
     border: solid 5vmin #eee;
     border-bottom-color: #fff;
     border-left-color: #eee;

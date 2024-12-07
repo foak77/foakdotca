@@ -3,6 +3,7 @@ import Image from "next/image";
 import Workplace from "./../../components/Workplace/Workplace";
 import Education from "./../../components/Education/Education";
 import transition from "./../../public/images/transition1.png";
+import redTransition from "./../../public/images/transition-r.png";
 import aftereffects from "./../../public/images/icons/aftereffects.png";
 import canva from "./../../public/images/icons/canva.png";
 import corel from "./../../public/images/icons/corel.png";
@@ -43,48 +44,43 @@ export default function About() {
   return (
     <main className={styles.about}>
       <AboutHero />
-      {/* <Image
-        className={styles.about__transition}
-        src={transition}
-        alt="transition image"
-      /> */}
-      {/* <section className={styles.about__positive}>
-        <section className={styles.about__title_wrap}>
-          <h1 className={`${styles.about__topTitle} ${indie.className}`}>
-            About, Skills & Experience
-          </h1>
+      <section className={`${styles.about__sectionWrapper}`}>
+        <section className={`${styles.about__paragraphTopWrapper}`}>
+          <p
+            className={`${styles.about__paragraphTop} ${styles.about__firstPtop}`}
+          >
+            Drawing inspiration from a cross-cultural existence in Canada and
+            Brazil, I bring a unique worldview to my endeavors. Grateful for the
+            enriching experiences of studying, working, and living in both
+            countries, I am excited about the unfolding future of Production and
+            Design. Continuously I work hard to envision a harmonious
+            convergence of technology and art and to shape a brighter world for
+            all of us.
+          </p>
+          <p
+            className={`${styles.about__paragraphTop} ${styles.about__firstPtop}`}
+          >
+            Meeting with prospects, art directors, graphic designers,
+            illustrators, and business owners to determine the project&apos;s
+            scope and how and when it would be delivered is crucial for the
+            quality of the outcome material. I find these interactions to be
+            incredibly valuable as they help me understand the client&apos;s
+            needs and ensure a successful project.
+          </p>
         </section>
-      </section> */}
-      <section className={`${styles.about__paragraphTopWrapper}`}>
-        <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
-          Drawing inspiration from a cross-cultural existence in Canada and
-          Brazil, I bring a unique worldview to my endeavors. Grateful for the
-          enriching experiences of studying, working, and living in both
-          countries, I am excited about the unfolding future of Production and
-          Design. Continuously I work hard to envision a harmonious convergence
-          of technology and art and to shape a brighter world for all of us.
-        </p>
-        <p className={`${styles.about__paragraphTop} ${styles.about__firstP}`}>
-          Meeting with prospects, art directors, graphic designers,
-          illustrators, and business owners to determine the project&apos;s
-          scope and how and when it would be delivered is crucial for the
-          quality of the outcome material. I find these interactions to be
-          incredibly valuable as they help me understand the client&apos;s needs
-          and ensure a successful project.
-        </p>
       </section>
       <Image
         className={styles.about__transition}
-        src={transition}
+        src={redTransition}
         alt="transition image"
       />
-      <section className={styles.about__title_wrap}>
+      {/* <section className={styles.about__title_wrap}>
         <h1
           className={`${styles.about__pencil} ${indie.className} ${styles.about__tilt}`}
         >
           Tools
         </h1>
-      </section>
+      </section> */}
       <section className={styles.about__info}>
         <section className={styles.about__tools_wrapper}>
           <section className={styles.about__tools_wrap}>
@@ -108,6 +104,9 @@ export default function About() {
           </section>
 
           <section className={styles.about__skill}>
+            {/* <section className={styles.about__title_wrap}> */}
+            <h1 className={`${styles.about__pencil} ${indie.className}`}></h1>
+            {/* </section> */}
             <ul className={styles.about__skill_list}>
               <li key={"01"} className={styles.about__skill_list_item}>
                 <Image

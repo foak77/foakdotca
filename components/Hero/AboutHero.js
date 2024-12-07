@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./../Hero/AboutHero.module.scss";
 import toprip from "./../../public/images/transition1.png";
+import redrip from "./../../public/images/transition-r.png";
 
 export default function AboutHero() {
   return (
@@ -18,7 +19,7 @@ export default function AboutHero() {
       >
         <source src="/videos/front-hero-2.mp4" type="video/mp4" />
       </video>
-      <Image className={styles.aboutHero__bottomrip} src={toprip} alt="hero" />
+      <Image className={styles.aboutHero__bottomrip} src={redrip} alt="hero" />
     </section>
   );
 }

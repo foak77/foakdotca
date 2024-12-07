@@ -7,19 +7,24 @@
   @include flex-row-center-center;
   width: 100%;
   height: 100px;
-  &__name {
-    @include flex-row-center-center;
+  &__homeLink {
     text-decoration: none;
-    padding: 14px 40px;
-    background-image: url("./../../public/images/tape.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: $black;
+  }
+  &__nameLogoWrap {
+    @include flex-column-center-center;
     filter: drop-shadow(0px 0px 2px $gray);
+    margin: 30px 0px 0px 0px;
   }
   &__nameSize {
-    font-size: 1.65rem;
+    font-size: 2rem;
+    margin: 0px;
+    line-height: 28px;
+    color: $darkgray;
+  }
+  &__bottomName {
+    font-size: 1.275rem;
+    margin: 0px;
+    color: $darkred;
   }
   &__listBlock {
     display: none;
@@ -64,12 +69,8 @@
     &__iconBurger {
       display: none;
     }
-    &__name {
-      text-decoration: none;
-      padding: 14px 40px;
-      font-size: 1.65rem;
-      color: $black;
-      filter: drop-shadow(0px 0px 2px $gray);
+    &__nameLogoWrap {
+      margin: 30px 60px 0px 0px;
     }
     &__list {
       font-size: 1.2rem;

@@ -14,12 +14,13 @@ export default function MainHeader() {
     <>
       <header className={styles.header}>
         <HamburgerIcon />
-        <Link
-          className={`${styles.header__name} ${indie.className}`}
-          href={"/"}
-          title="Home"
-        >
-          <h1 className={styles.header__nameSize}>This is my Website</h1>
+        <Link className={`${styles.header__homeLink}`} href={"/"} title="Home">
+          <div className={`${styles.header__nameLogoWrap} ${indie.className}`}>
+            <h1 className={styles.header__nameSize}>Hello, I am Fred</h1>
+            <h2 className={styles.header__bottomName}>
+              and This is my Website
+            </h2>
+          </div>
         </Link>
         <ul className={styles.header__listBlock}>
           <li className={styles.header__list} key={"01"}>
