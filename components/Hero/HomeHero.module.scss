@@ -3,15 +3,11 @@
 
 .hero {
   position: relative;
-  // background-image: url("./../../public/images/front-image-1.png");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover; // z-index: 1;
   @include flex-column-start-center;
   width: 100%;
   height: 74vh;
   overflow: hidden;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   &__toprip {
     z-index: 10;
     width: 300vw;
@@ -21,7 +17,6 @@
   &__vid {
     position: absolute;
     top: 0px;
-    // transform: rotate(270deg);
     object-fit: contain;
     height: 100%;
     width: auto;

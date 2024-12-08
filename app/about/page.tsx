@@ -74,13 +74,6 @@ export default function About() {
         src={redTransition}
         alt="transition image"
       />
-      {/* <section className={styles.about__title_wrap}>
-        <h1
-          className={`${styles.about__pencil} ${indie.className} ${styles.about__tilt}`}
-        >
-          Tools
-        </h1>
-      </section> */}
       <section className={styles.about__info}>
         <section className={styles.about__tools_wrapper}>
           <section className={styles.about__tools_wrap}>

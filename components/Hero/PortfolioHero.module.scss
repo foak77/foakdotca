@@ -3,15 +3,10 @@
 
 .portfolioHero {
   position: relative;
-  // background-image: url("./../../public/images/front-image-1.png");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover; // z-index: 1;
   @include flex-column-start-center;
   width: 100%;
   height: 74vh;
   overflow: hidden;
-  margin-bottom: 80px;
   &__toprip {
     z-index: 10;
     width: 300vw;
@@ -33,44 +28,6 @@
     position: absolute;
     bottom: -1px;
   }
-  &__helloFrame {
-    @include flex-column-center-center;
-    width: 100%;
-    height: 100%;
-  }
-  &__title {
-    filter: drop-shadow(0px 0px 2px $lightgray);
-    color: $darkgray;
-    font-weight: 800;
-    font-size: 3rem;
-    line-height: 1;
-  }
-  &__underTitle {
-    filter: drop-shadow(0px 0px 2px $lightgray);
-    color: $darkgray;
-    font-weight: 800;
-    font-size: 1.4rem;
-  }
-  &__text {
-    font-weight: 200;
-    font-size: 1.32rem;
-    filter: drop-shadow(0px 0px 2px $lightgray);
-  }
-  &__underText {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    padding: 5px 8px;
-    font-weight: 200;
-    font-size: 1.35rem;
-    filter: drop-shadow(0px 0px 2px $lightgray);
-  }
-  // &__hero_img {
-  //   position: absolute;
-  //   top: 0;
-  //   object-fit: cover;
-  //   width: 100vw;
-  //   height: auto;
-  // }
 }
 
 @media screen and (min-width: $tablet) {

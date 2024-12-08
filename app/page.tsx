@@ -11,7 +11,6 @@ import bottomrip from "./../public/images/transition2.png";
 import toprip from "./../public/images/transition1.png";
 //files
 import pdf_logo from "./../public/images/pdf_logo.png";
-
 import { indie } from "./fonts";
 
 export default function Home() {
@@ -163,11 +162,17 @@ export default function Home() {
             className={`${styles.main__paragraph} ${styles.main__paragraph_C} ${styles.main__firstP}`}
           >
             Dive into the captivating narratives of the{" "}
-            <Link className={`${styles.main__pageLink}`} href={"/about"}>
+            <Link
+              className={`${styles.main__pageLink} ${styles.main__tapeBgLink} ${indie.className}`}
+              href={"/about"}
+            >
               ABOUT
             </Link>{" "}
             and
-            <Link className={`${styles.main__pageLink}`} href={"/portfolio"}>
+            <Link
+              className={`${styles.main__pageLink} ${styles.main__tapeBgLink} ${indie.className}`}
+              href={"/portfolio"}
+            >
               {" "}
               PORTFOLIO
             </Link>{" "}
@@ -181,9 +186,7 @@ export default function Home() {
             design to new projects, and I am convinced that this opportunity
             would be mutually beneficial.
           </p>
-          <p
-            className={`${styles.main__paragraph} ${styles.main__paragraph_C}`}
-          >
+          <p className={`${styles.main__tapeBg} ${indie.className}`}>
             I can&apos;t wait to connect with you!
           </p>
         </section>

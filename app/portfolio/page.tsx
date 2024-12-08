@@ -38,15 +38,7 @@ export default function Portfolio() {
   return (
     <main className={styles.portfolio}>
       <PortfolioHero />
-      {/* <Image
-        className={styles.portfolio__transition}
-        src={transition}
-        alt="transition image"
-      /> */}
       <section className={styles.portfolio__wrap}>
-        {/* <h5 className={`${styles.portfolio__title} ${indie.className}`}>
-          Portfolio
-        </h5> */}
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
