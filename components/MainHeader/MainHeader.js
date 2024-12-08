@@ -16,7 +16,7 @@ export default function MainHeader() {
         <HamburgerIcon />
         <Link className={`${styles.header__homeLink}`} href={"/"} title="Home">
           <div className={`${styles.header__nameLogoWrap} ${indie.className}`}>
-            <h1 className={styles.header__nameSize}>Hello, I am Fred</h1>
+            <h1 className={styles.header__nameSize}>I am Fred</h1>
             <h2 className={styles.header__bottomName}>
               and This is my Website
             </h2>
