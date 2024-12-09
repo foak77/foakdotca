@@ -53,11 +53,13 @@ export default function Home() {
           />
         </Link>
       </section>
+      {/* <section className={`${styles.main__transition__b}`}> */}
       <Image
         className={`${styles.main__transition}`}
         src={toprip}
         alt="bottom transition image"
       />
+      {/* </section> */}
       <section className={`${styles.main__wrapperMid}`}>
         <section className={styles.main__paragraphBlockWrap}>
           <p

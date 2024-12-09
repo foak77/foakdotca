@@ -102,7 +102,6 @@
     height: 80px;
     margin: 0px 0px 40px 0px;
     font-size: 1.8rem;
-    // font-family: "Indie Flower", cursive;
     transform: rotate(1deg);
   }
   &__list_paragraph1,
@@ -263,9 +262,15 @@
   &__transition {
     width: 300%;
     height: auto;
-    margin-bottom: 80px;
-    margin-top: 40px;
+    margin-bottom: 60px;
   }
+
+  // &__transition__b {
+  //   background-image: url("./../public/images/binoculars.png");
+  //   background-repeat: no-repeat;
+  //   background-position: center -5px;
+  //   background-size: 350px;
+  // }
   &__pageLink {
     color: $red;
     text-decoration: none;
@@ -346,8 +351,11 @@
     &__transition {
       width: 200%;
       height: auto;
-      margin-bottom: 60px;
     }
+    // &__transition__b {
+    //   background-position: center -5px;
+    //   background-size: 410px;
+    // }
     // --------------------------------DropShadow
     //   Horrizontal
     &__dropShadow {
@@ -439,6 +447,13 @@
     }
     &__transition {
       width: 150%;
+      // margin-bottom: 170px;
+    }
+    &__transition__b {
+      background-image: url("./../public/images/binoculars.png");
+      background-repeat: no-repeat;
+      background-position: center -5px;
+      background-size: 550px;
     }
 
     // horizontal dropshadow
