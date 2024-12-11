@@ -1,12 +1,12 @@
-import { NextResponse } from "next/server";
-import User from "./../../../../models/userModel";
-import dbConnect from "./../../../../lib/mongoDb/dbConnect";
+import { NextRequest, NextResponse } from "next/server";
+import User from "../../../../models/userModel";
+import dbConnect from "../../../../lib/mongoDb/dbConnect";
 const bcrypt = require("bcryptjs");
 
 //TO UPDATE PASSWORD
-export async function POST(request) {
+export async function POST(req: NextRequest, res: NextResponse) {
   const { user_id, password, newPassword, newPasswordConfirm } =
-    await request.json();
+    await req.json();
 
   await dbConnect();
 
@@ -31,7 +31,7 @@ export async function POST(request) {
   } else {
     // 3) IF OK than update
     user.password = await bcrypt.hash(newPassword, 12);
-    user.modifiedAt = Date.now();
+    user.modifiedAt = new Date();
 
     await user.save();
 

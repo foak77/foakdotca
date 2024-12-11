@@ -1,16 +1,16 @@
-import { NextResponse } from "next/server";
-import dbConnect from "./../../../lib/mongoDb/dbConnect";
-import User from "./../../../models/userModel";
+import { NextRequest, NextResponse } from "next/server";
+import dbConnect from "../../../lib/mongoDb/dbConnect";
+import User from "../../../models/userModel";
 import {
   encrypt,
   decrypt,
-} from "./../../../lib/sectionRelated/getUpdateDeleteSection";
+} from "../../../lib/sectionRelated/getUpdateDeleteSection";
 var bcrypt = require("bcryptjs");
 import { cookies } from "next/headers";
 
 // SIGN IN
-export async function POST(request) {
-  const { email, password } = await request.json();
+export async function POST(req: NextRequest, res: NextResponse) {
+  const { email, password } = await req.json();
 
   if (!email || !password) {
     return NextResponse.json({

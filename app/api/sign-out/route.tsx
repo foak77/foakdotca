@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { logout } from "./../../../lib/sectionRelated/getUpdateDeleteSection";
+import { logout } from "../../../lib/sectionRelated/getUpdateDeleteSection";
 
 // SIGN OUT
 export async function GET() {

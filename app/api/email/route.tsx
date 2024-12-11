@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 const mail = require("@sendgrid/mail");
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -7,11 +7,18 @@ var ResponseData = {
   message: "",
 };
 
-export async function POST(request) {
-  let response = ResponseData;
-  const body = await request.json();
+type MessageBodyType = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
-  const message = {
+export async function POST(req: NextRequest, res: NextResponse) {
+  let response = ResponseData;
+  const body = await req.json();
+
+  const message: MessageBodyType = {
     name: body.contact.name,
     email: body.contact.email,
     subject: body.contact.subject,
@@ -21,11 +28,11 @@ export async function POST(request) {
   const data = {
     to: process.env.SENDGRID_EMAIL_TO,
     from: process.env.SENDGRID_EMAIL_FROM,
-    subject: body.contact.subject,
+    subject: message.subject,
     text: body.contact.message,
-    html: `<h2>My name is ${body.contact.name}</h2>
-    <p>My email is ${body.contact.email}</p>
-    <p>${body.contact.message}</p>`,
+    html: `<h2>My name is ${message.name}</h2>
+    <p>My email is ${message.email}</p>
+    <p>${message.message}</p>`,
   };
 
   // console.log("DATA", data);

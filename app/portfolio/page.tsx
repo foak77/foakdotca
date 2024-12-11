@@ -1,9 +1,13 @@
 import styles from "./../portfolio/Portfolio.module.scss";
 import OnLinePortfolios from "./../../components/OnLinePortfolios/OnLinePortfolios";
-import bottomrip from "./../../public/images/transition2.png";
-import transition from "./../../public/images/transition1.png";
 import Videos from "./../../components/Videos/Videos";
 import Image from "next/image";
+import PortfolioHero from "./../../components/Hero/PortfolioHero";
+import { indie } from "./../fonts";
+
+// Images
+import bottomrip from "./../../public/images/transition2.png";
+import transition from "./../../public/images/transition1.png";
 import img0 from "./../../public/images/img0.png";
 import img1 from "./../../public/images/img1.png";
 import img2 from "./../../public/images/img2.png";
@@ -18,8 +22,6 @@ import img3Mob from "./../../public/images/img3-Mob.png";
 import img4Mob from "./../../public/images/img4-Mob.png";
 import img5Mob from "./../../public/images/img5-Mob.png";
 import img6Mob from "./../../public/images/img6-Mob.png";
-import PortfolioHero from "./../../components/Hero/PortfolioHero";
-import { indie } from "./../fonts";
 
 export const metadata = {
   title: "Portfolio",
@@ -38,6 +40,7 @@ export default function Portfolio() {
   return (
     <main className={styles.portfolio}>
       <PortfolioHero />
+
       <section className={styles.portfolio__wrap}>
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
@@ -54,6 +57,7 @@ export default function Portfolio() {
           src={img1Mob}
           alt="slide"
         />
+
         <p
           className={`${styles.portfolio__firstP} ${styles.portfolio__heading}`}
         >
@@ -69,6 +73,7 @@ export default function Portfolio() {
           src={img0Mob}
           alt="slide"
         />
+
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -84,6 +89,7 @@ export default function Portfolio() {
           src={img6Mob}
           alt="slide"
         />
+
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -105,6 +111,7 @@ export default function Portfolio() {
           src={img3Mob}
           alt="slide"
         />
+
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -120,6 +127,7 @@ export default function Portfolio() {
           src={img4Mob}
           alt="slide"
         />
+
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -137,18 +145,23 @@ export default function Portfolio() {
           alt="slide"
         />
       </section>
+
       <Image
         className={styles.portfolio__transition}
         src={transition}
         alt="bottom transition image"
       />
+
       <Videos />
+
       <Image
         className={styles.portfolio__transition}
         src={transition}
         alt="bottom transition image"
       />
+
       <OnLinePortfolios />
+
       <Image
         className={styles.portfolio__bottomrip}
         src={bottomrip}

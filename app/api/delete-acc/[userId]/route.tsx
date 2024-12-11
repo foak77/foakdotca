@@ -51,37 +51,3 @@ export async function PATCH(req: NextRequest, res: NextResponse) {
     });
   }
 }
-
-// export async function PATCH(req: NextRequest, res: NextResponse) {
-//   const { password, userId } = await req.json();
-//   console.log("PASSWORD,ID", password, userId);
-//   await dbConnect();
-
-//   var user = await User.findById(userId).select("+status").select("+password");
-//   console.log("USER P DELETAR", user);
-//   if (!(user || user.status)) {
-//     return NextResponse.json({
-//       message: "💥 USER NOT FOUND OR SESSION EXPIRED",
-//       error: true,
-//       status: 401,
-//     });
-//   } else if (!(await bcrypt.compare(password, user.password))) {
-//     return NextResponse.json({
-//       message: "💥 WRONG PASSWORD OR SESSION EXPIRED",
-//       error: true,
-//       status: 401,
-//     });
-//   } else {
-//     logout();
-//     user.status = false;
-//     user.active = false;
-//     user.oldEmail = user.email;
-//     user.email = crypto.randomBytes(16).toString("hex");
-//     await user.save();
-//     return NextResponse.json({
-//       message: "👋 USER DELETED",
-//       error: false,
-//       status: 200,
-//     });
-//   }
-// }

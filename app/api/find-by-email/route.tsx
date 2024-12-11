@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "./../../../lib/mongoDb/dbConnect";
 import User from "./../../../models/userModel";
-const mail = require("@sendgrid/mail");
+import mail from "@sendgrid/mail";
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 type responseDataType = {
@@ -18,11 +18,12 @@ type dataEmailType = {
 };
 
 // GENERATE RANDOM KEY FOR AUTENTICATION
+let result: string;
 const keyMaker = (length: number) => {
-  let result: string;
-  let characters: string =
+  let result = "";
+  let characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let charactersLength: number = characters.length;
+  let charactersLength = characters.length;
   for (var i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     message: "",
   };
 
-  let response = ResponseData;
+  let response: responseDataType = ResponseData;
 
   if (!email) {
     return NextResponse.json({
@@ -52,8 +53,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   const user = await User.findOne({ email: email });
 
-  const userEmail = user.email;
-
   if (!user) {
     return NextResponse.json({
       message: "💥💥💥 EMAIL DOESN'T EXIST IN THE SYSTEM",
@@ -65,7 +64,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   // GENERATE RANDOM KEY
   let randomKey: string = keyMaker(5);
   user.randomKey = randomKey;
-  user.timeToActivate = Date.now() + 60 * 60 * 1000; // 1h
+  user.timeToActivate = new Date(Date.now() + 60 * 60 * 1000); // 1h
   await user.save();
 
   const data: dataEmailType = {
