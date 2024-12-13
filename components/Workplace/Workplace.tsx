@@ -11,6 +11,7 @@ async function getData() {
     return workplaces;
   } catch (error) {
     console.log(error);
+    throw new Error("OOOPS!Failed to fetch data");
   }
 }
 

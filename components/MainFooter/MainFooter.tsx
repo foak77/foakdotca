@@ -1,8 +1,6 @@
 import { AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
 import styles from "./../../components/MainFooter/MainFooter.module.scss";
-// import logo from "./../../public/images/logo.png";
-// import Image from "next/image";
 import { TiLightbulb } from "react-icons/ti";
 import { TiPencil } from "react-icons/ti";
 import { GiTalk } from "react-icons/gi";

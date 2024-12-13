@@ -19,7 +19,6 @@ type utbdType = {
 };
 
 export default function DeleteUser(userIdToBeDeleted: utbdType) {
-  console.log("DELETE USER NUMBER", userIdToBeDeleted.userId);
   const router = useRouter();
 
   // LOCAL STATE
@@ -82,13 +81,13 @@ export default function DeleteUser(userIdToBeDeleted: utbdType) {
   return (
     <main className={styles.deleteUser}>
       <Image className={styles.deleteUser__toprip} src={toprip} alt="top rip" />
-      <div className={styles.deleteUser__wrapper}>
-        <div className={styles.deleteUser__wrap}>
-          <div className={styles.deleteUser__twrap}>
+      <section className={styles.deleteUser__wrapper}>
+        <section className={styles.deleteUser__wrap}>
+          <section className={styles.deleteUser__twrap}>
             <h2 className={styles.deleteUser__title}>DELETE ACCOUNT</h2>
-          </div>
+          </section>
           <p className={styles.deleteUser__message}>{message}</p>
-          <div>
+          <section>
             <p className={styles.deleteUser__question}>
               Dear{" "}
               <span className={styles.deleteUser__red}>
@@ -97,7 +96,10 @@ export default function DeleteUser(userIdToBeDeleted: utbdType) {
               , Are You Sure?
             </p>
             <form className={styles.deleteUser__form} onSubmit={deleteAcc}>
-              <label className={styles.deleteUser__label}>
+              <label
+                className={styles.deleteUser__label}
+                htmlFor="password-input"
+              >
                 Confirm your
                 <span className={styles.deleteUser__red}>
                   <strong> password </strong>
@@ -128,9 +130,9 @@ export default function DeleteUser(userIdToBeDeleted: utbdType) {
                 BACK TO PROFILE
               </button>
             </Link>
-          </div>
-        </div>
-      </div>
+          </section>
+        </section>
+      </section>
       <Image
         className={styles.deleteUser__bottomrip}
         src={bottomrip}

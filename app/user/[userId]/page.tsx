@@ -1,9 +1,8 @@
 "use client";
-// import Image from "next/image";
 import Link from "next/link";
 import styles from "./curUser.module.scss";
 import { useState } from "react";
-import { useStore } from "./../../../global-store/globalStore";
+import { useStore } from "../../../global-store/globalStore";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import toprip from "./../../../public/images/transition1.png";
@@ -12,8 +11,6 @@ import bottomrip from "./../../../public/images/transition2.png";
 export default function UserId({ params }) {
   const userId = params.userId;
   const router = useRouter();
-
-  console.log("USER ID DO USER", userId);
 
   //LOCAL STATE
   const [message, setMessage] = useState("");
@@ -57,11 +54,11 @@ export default function UserId({ params }) {
   return (
     <main className={styles.curUser}>
       <Image className={styles.curUser__toprip} src={toprip} alt="top rip" />
-      <div className={styles.curUser__wrapper}>
-        <div className={styles.curUser__twrap}>
+      <section className={styles.curUser__wrapper}>
+        <section className={styles.curUser__twrap}>
           <h3 className={styles.curUser__user}>{userName}</h3>
           <p className={styles.curUser__message}>{message}</p>
-        </div>
+        </section>
         <Link href={`/name-update/${userId}`}>
           <button className={styles.curUser__button}>Update Name</button>
         </Link>
@@ -77,8 +74,7 @@ export default function UserId({ params }) {
         >
           Log Out
         </button>
-        {/* </div> */}
-      </div>
+      </section>
       <Image
         className={styles.curUser__bottomrip}
         src={bottomrip}

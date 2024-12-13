@@ -5,11 +5,17 @@ import { useState } from "react";
 import styles from "./../../components/MainHeader/MainHeader.module.scss";
 import SideMenu from "../SideMenu/SideMenu";
 
-export default function HamburgerIcon({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
+type HamburgerIconProps = {
+  children?: React.ReactNode;
+};
+
+const HamburgerIcon: React.FC<HamburgerIconProps> = ({ children }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const toggle = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
+
   return (
     <>
       <TiThMenu
@@ -20,4 +26,6 @@ export default function HamburgerIcon({ children }) {
       {isOpen && <SideMenu toggle={toggle} />}
     </>
   );
-}
+};
+
+export default HamburgerIcon;

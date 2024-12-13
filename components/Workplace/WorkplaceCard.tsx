@@ -3,7 +3,7 @@ import Image from "next/image";
 import clip from "./../../public/images/clip.png";
 import bottomclip from "./../../public/images/bottomclip.png";
 
-import { indie } from "./../../app/fonts";
+import { indie } from "../../app/fonts";
 
 function WorkplaceCard({ work }) {
   return (
@@ -16,10 +16,7 @@ function WorkplaceCard({ work }) {
         <ul className={`${styles.workplaceCard__bullets} ${indie.className}`}>
           {work.description.map((desc, index) => {
             return (
-              <li
-                className={styles.workplaceCard__bullets_list}
-                key={desc[index]}
-              >
+              <li className={styles.workplaceCard__bullets_list} key={index}>
                 <p className={styles.workplaceCard__spaceBetweenBullets}>
                   {desc}
                 </p>

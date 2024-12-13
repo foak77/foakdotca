@@ -11,30 +11,36 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 import { MdFormatQuote } from "react-icons/md";
 import { SiGooglemessages } from "react-icons/si";
 
-import { indie } from "./../../app/fonts";
+import { indie } from "../../app/fonts";
 
 export default function Contact({}) {
   const router = useRouter();
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const contact = {};
-    Array.from(e.currentTarget.elements).forEach((field) => {
+    const contact: Record<string, string> = {};
+    const elements = Array.from(e.currentTarget.elements) as HTMLInputElement[];
+
+    elements.forEach((field) => {
       if (!field.name) return;
       contact[field.name] = field.value;
     });
+
     try {
       const res = await fetch("/api/email", {
-        method: "post",
+        method: "POST",
         body: JSON.stringify({ contact }),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
       if (res.ok) {
         router.push("/thank-you");
       } else {
-        throw new Error("Fail to Create Topic");
+        throw new Error("Failed to send message");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -96,7 +102,6 @@ export default function Contact({}) {
                 <SiGooglemessages className={styles.contactForm__icons} />
               </label>
               <textarea
-                type="text"
                 name="message"
                 placeholder="Your message"
                 className={styles.contactForm__message_input}

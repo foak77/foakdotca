@@ -15,7 +15,6 @@ export default function AboutHero() {
         preload="true"
         playsInline
         className={`${styles.aboutHero__vid}`}
-        alt="video"
       >
         <source src="/videos/front-hero-2.mp4" type="video/mp4" />
       </video>

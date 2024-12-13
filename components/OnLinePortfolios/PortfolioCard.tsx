@@ -1,7 +1,21 @@
 import styles from "./../../components/OnLinePortfolios/PortfolioCard.module.scss";
 import Image from "next/image";
 
-export default function PortfolioCard({ portfolio }) {
+interface Portfolio {
+  title: string;
+  description: string;
+  technology: string;
+  stack: string;
+  mode: string;
+  imgFile: string;
+  link: string;
+}
+
+interface PortfolioCardProps {
+  portfolio: Portfolio;
+}
+
+export default function PortfolioCard({ portfolio }: PortfolioCardProps) {
   return (
     <section className={styles.cardframe}>
       <Image
@@ -20,7 +34,7 @@ export default function PortfolioCard({ portfolio }) {
           )}
         </p>
         <p className={styles.cardframe__paragraphs}>{portfolio.technology}</p>
-        <p className={styles.cardframe__descripiton}>{portfolio.description}</p>
+        <p className={styles.cardframe__description}>{portfolio.description}</p>
       </section>
       <a
         href={portfolio.link}

@@ -23,7 +23,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/sectionRelated/getUpdateDeleteSection.js"
+    "lib/sectionRelated/getUpdateDeleteSection.tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
+    "@types/mongoose": "^5.11.96",
     "@types/node": "20.14.5",
     "@types/react": "18.3.3",
     "eslint": "^8",

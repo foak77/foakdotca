@@ -1,19 +1,24 @@
 import styles from "./OnLinePortfolios.module.scss";
 import PortfolioCard from "./PortfolioCard";
-import { indie } from "./../../app/fonts";
-import dbConnect from "./../../lib/mongoDb/dbConnect";
-import Onportfolios from "./../../models/onportfolioModel";
+import { indie } from "../../app/fonts";
+import dbConnect from "../../lib/mongoDb/dbConnect";
+import Onportfolios, {
+  OnportfolioDocument,
+} from "../../models/onportfolioModel";
 
-async function getData() {
+// Fetch data with proper typing
+async function getData(): Promise<OnportfolioDocument[]> {
   try {
     await dbConnect();
     const onportfolios = await Onportfolios.find();
     return onportfolios;
   } catch (error) {
     console.log(error);
+    return []; // Return an empty array if there's an error
   }
 }
 
+// The OnLinePortfolios component is typed as an async function
 export default async function OnLinePortfolios() {
   const onportfolios = await getData();
 
