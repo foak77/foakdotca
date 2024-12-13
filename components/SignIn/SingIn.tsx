@@ -5,8 +5,6 @@ import styles from "./SignIn.module.scss";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { useStore } from "../../global-store/globalStore";
-import { MdAlternateEmail } from "react-icons/md";
-import { RiLockPasswordLine } from "react-icons/ri";
 import Image from "next/image";
 import toprip from "./../../public/images/transition1.png";
 import bottomrip from "./../../public/images/transition2.png";

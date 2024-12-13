@@ -12,6 +12,7 @@ import sample_work_Larger from "./../public/images/sample_Larger.png";
 import bottomrip from "./../public/images/transition2.png";
 import toprip from "./../public/images/transition1.png";
 import pdf_logo from "./../public/images/pdf_logo.png";
+import ripBlue from "./../public/images/transition-b.png";
 
 // Fonts
 import { indie } from "./fonts";
@@ -22,9 +23,10 @@ export default function Home() {
       <HomeHero />
 
       <section className={styles.main__wrapperTop}>
+        {/* <section className={styles.main__blockWrapper}> */}
         <section className={styles.main__paragraphBlockWrap}>
           <p
-            className={`${styles.main__firstP} ${styles.main__paragraphBlockWrapLeft}`}
+            className={`${styles.main__firstP__white} ${styles.main__paragraphBlockWrapLeft}`}
           >
             Greetings, I&apos;m Frederico Carvalho, also known as Fred, and I
             welcome you to my website. Rigged with a Bachelor&apos;s degree in
@@ -39,42 +41,47 @@ export default function Home() {
             Search Engine Optimization, SEO.
           </p>
         </section>
-
-        <Link href="/portfolio">
-          <Image
-            src={sample_work_1_M}
-            className={styles.main__sampleWork_M}
-            alt="sample work"
-          />
-          <Image
-            src={sample_work_1_L}
-            className={styles.main__sampleWork_L}
-            alt="sample work"
-          />
-          <Image
-            src={sample_work_Larger}
-            className={styles.main__sampleWork_Larger}
-            alt="sample work"
-          />
-        </Link>
+        {/* </section> */}
       </section>
-
       <Image
         className={styles.main__transition}
-        src={toprip}
+        src={ripBlue}
         alt="top transition image"
       />
 
+      <Link href="/portfolio">
+        <Image
+          src={sample_work_1_M}
+          className={styles.main__sampleWork_M}
+          alt="sample work"
+        />
+        <Image
+          src={sample_work_1_L}
+          className={styles.main__sampleWork_L}
+          alt="sample work"
+        />
+        <Image
+          src={sample_work_Larger}
+          className={styles.main__sampleWork_Larger}
+          alt="sample work"
+        />
+      </Link>
+      {/* <Image
+        className={styles.main__transition}
+        src={toprip}
+        alt="top transition image"
+      /> */}
+
       <section className={styles.main__wrapperMid}>
-        <section className={styles.main__paragraphBlockWrap}>
+        <section className={styles.main__paragraphBlockWrap__M}>
           <p
-            className={`${styles.main__firstP} ${styles.main__paragraphBlockWrapLeft}`}
+            className={`${styles.main__firstP} ${styles.main__paragraphBlockWrapLeft__M}`}
           >
             Embracing challenges with enthusiasm, I am perpetually looking for
             opportunities to expand my knowledge and apply my ever-evolving
             skill set.
           </p>
-          <p className={styles.main__paragraphBlockWrapRight}>
+          <p className={styles.main__paragraphBlockWrapRight__M}>
             I am motivated to assist individuals and businesses in achieving
             their aspirations. Whether it&apos;s amplifying market presence,
             launching innovative products, supporting their communities, or

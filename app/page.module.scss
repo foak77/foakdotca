@@ -7,7 +7,9 @@
   overflow: hidden;
   &__wrapperTop {
     @include flex-column-center-center;
-    width: 350px;
+    width: 100%;
+    background-color: $blue;
+    padding-top: 40px;
   }
   &__wrapperMid {
     @include flex-column-start-center;
@@ -25,7 +27,33 @@
     width: 350px;
     margin-top: 20px;
   }
+  // &__blockWrapper {
+  //   @include flex-column-center-center;
+  //   width: 350px;
+  // }
+  &__paragraphBlockWrap_M {
+    @include flex-column-center-center;
+    width: 350px;
+    margin-top: 20px;
+  }
   &__paragraphBlockWrapLeft {
+    margin: 0px;
+    width: 350px;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    padding: 0px 0px 40px 0px;
+    color: $white;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__paragraphBlockWrapRight {
+    width: 350px;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    padding: 0px 0px 40px 0px;
+    color: $white;
+    filter: drop-shadow(0px 0px 2px $gray);
+  }
+  &__paragraphBlockWrapLeft__M {
     margin: 0px;
     width: 350px;
     font-size: 1.4rem;
@@ -34,7 +62,7 @@
     color: $darkgray;
     filter: drop-shadow(0px 0px 2px $gray);
   }
-  &__paragraphBlockWrapRight {
+  &__paragraphBlockWrapRight__M {
     width: 350px;
     font-size: 1.4rem;
     line-height: 2.5rem;
@@ -46,6 +74,18 @@
   &__firstP {
     &:first-letter {
       color: $darkgray;
+      float: left;
+      font-family: Georgia;
+      font-size: 5rem;
+      line-height: 60px;
+      padding-top: 14px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
+  }
+  &__firstP__white {
+    &:first-letter {
+      color: $white;
       float: left;
       font-family: Georgia;
       font-size: 5rem;
@@ -301,9 +341,9 @@
 
 @media screen and (min-width: $tablet) {
   .main {
-    &__wrapperTop {
-      width: 740px;
-    }
+    // &__wrapperTop {
+    //   width: 740px;
+    // }
     &__wrapperMid {
       width: 740px;
       margin-top: 60px;
@@ -326,6 +366,15 @@
       width: 740px;
     }
     &__paragraphBlockWrapRight {
+      width: 740px;
+    }
+    &__paragraphBlockWrap__M {
+      width: 740px;
+    }
+    &__paragraphBlockWrapLeft__M {
+      width: 740px;
+    }
+    &__paragraphBlockWrapRight__M {
       width: 740px;
     }
     &__paragraphBlock_A {
@@ -378,9 +427,9 @@
 
 @media screen and (min-width: $desktop) {
   .main {
-    &__wrapperTop {
-      width: 1000px;
-    }
+    // &__wrapperTop {
+    //   width: 1000px;
+    // }
     &__wrapperMid {
       width: 1000px;
     }
@@ -519,9 +568,9 @@
 
 @media screen and (min-width: $larger) {
   .main {
-    &__wrapperTop {
-      width: 1312px;
-    }
+    // &__wrapperTop {
+    //   width: 1312px;
+    // }
     &__wrapperMid {
       width: 1312px;
     }
