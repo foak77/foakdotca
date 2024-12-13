@@ -1,9 +1,8 @@
 import Image from "next/image";
 import styles from "./../Hero/ContactHero.module.scss";
-// import heroImage from "./../../public/images/about_hero.jpg";
 import toprip from "./../../public/images/transition1.png";
 
-export default function ContactHero() {
+export default function ContactHero(): JSX.Element {
   return (
     <section className={styles.contactHero}>
       <Image

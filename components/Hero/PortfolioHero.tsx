@@ -7,14 +7,12 @@ export default function PortfolioHero() {
     <section className={styles.portfolioHero}>
       <Image className={styles.portfolioHero__toprip} src={toprip} alt="hero" />
       <video
-        // controls
         autoPlay
         muted
         loop
         preload="true"
         playsInline
         className={`${styles.portfolioHero__vid}`}
-        alt="video"
       >
         <source src="/videos/front-hero-1.mp4" type="video/mp4" />
       </video>

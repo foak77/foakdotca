@@ -8,7 +8,6 @@ export default function AboutHero() {
     <section className={styles.aboutHero}>
       <Image className={styles.aboutHero__toprip} src={toprip} alt="hero" />
       <video
-        // controls
         autoPlay
         muted
         loop

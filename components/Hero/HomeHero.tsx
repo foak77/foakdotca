@@ -8,14 +8,12 @@ export default function Hero() {
     <section className={styles.hero}>
       <Image className={styles.hero__toprip} src={toprip} alt="hero" />
       <video
-        // controls
         autoPlay
         muted
         loop
         preload="true"
         playsInline
         className={`${styles.hero__vid}`}
-        alt="video"
       >
         <source src="/videos/front-hero-3.mp4" type="video/mp4" />
       </video>
