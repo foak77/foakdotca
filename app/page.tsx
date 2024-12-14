@@ -23,7 +23,6 @@ export default function Home() {
       <HomeHero />
 
       <section className={styles.main__wrapperTop}>
-        {/* <section className={styles.main__blockWrapper}> */}
         <section className={styles.main__paragraphBlockWrap}>
           <p
             className={`${styles.main__firstP__white} ${styles.main__paragraphBlockWrapLeft}`}
@@ -41,10 +40,9 @@ export default function Home() {
             Search Engine Optimization, SEO.
           </p>
         </section>
-        {/* </section> */}
       </section>
       <Image
-        className={styles.main__transition}
+        className={styles.main__transition__flipped}
         src={ripBlue}
         alt="top transition image"
       />

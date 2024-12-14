@@ -8,6 +8,7 @@ import { indie } from "./../fonts";
 // Images
 import bottomrip from "./../../public/images/transition2.png";
 import transition from "./../../public/images/transition1.png";
+import transition_bottom from "./../../public/images/transition-y.png";
 import img0 from "./../../public/images/img0.png";
 import img1 from "./../../public/images/img1.png";
 import img2 from "./../../public/images/img2.png";
@@ -40,8 +41,7 @@ export default function Portfolio() {
   return (
     <main className={styles.portfolio}>
       <PortfolioHero />
-
-      <section className={styles.portfolio__wrap}>
+      <section className={styles.portfolio__top}>
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -51,6 +51,14 @@ export default function Portfolio() {
           logos. It&apos;s been an exciting journey creating a diverse range of
           content that caters to these different platforms.
         </p>
+      </section>
+      <Image
+        className={styles.portfolio__transition__bottom}
+        src={transition_bottom}
+        alt="bottom transition image"
+      />
+
+      <section className={styles.portfolio__wrap}>
         <Image className={styles.portfolio__imgs} src={img1} alt="slide" />
         <Image
           className={styles.portfolio__imgs_MOB}

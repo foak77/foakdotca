@@ -89,7 +89,7 @@ function Education() {
             <p className={styles.education__schoolcourse}>
               VISUAL COMMUNICATION
             </p>
-            <p className={styles.education__schoolyear}>1999</p>
+            <p className={styles.education__schoolyear}>2000</p>
           </section>
         </section>
       </section>

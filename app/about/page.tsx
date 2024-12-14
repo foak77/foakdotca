@@ -70,7 +70,7 @@ export default function About() {
         </section>
       </section>
       <Image
-        className={styles.about__transition}
+        className={styles.about__transition__flipped}
         src={redTransition}
         alt="transition image"
       />

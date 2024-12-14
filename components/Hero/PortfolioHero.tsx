@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./../Hero/PortfolioHero.module.scss";
 import toprip from "./../../public/images/transition1.png";
+import bottomrip from "./../../public/images/transition-y.png";
 
 export default function PortfolioHero() {
   return (
@@ -18,7 +19,7 @@ export default function PortfolioHero() {
       </video>
       <Image
         className={styles.portfolioHero__bottomrip}
-        src={toprip}
+        src={bottomrip}
         alt="hero"
       />
     </section>
