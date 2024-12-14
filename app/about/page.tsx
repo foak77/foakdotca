@@ -1,5 +1,6 @@
 import styles from "./../about/about.module.scss";
 import Image from "next/image";
+import pencil from "./../../public/images/pencil.png";
 import Workplace from "./../../components/Workplace/Workplace";
 import Education from "./../../components/Education/Education";
 import transition from "./../../public/images/transition1.png";
@@ -97,9 +98,8 @@ export default function About() {
           </section>
 
           <section className={styles.about__skill}>
-            {/* <section className={styles.about__title_wrap}> */}
-            <h1 className={`${styles.about__pencil} ${indie.className}`}></h1>
-            {/* </section> */}
+            <Image className={styles.about__pencil} src={pencil} alt="pencil" />
+
             <ul className={styles.about__skill_list}>
               <li key={"01"} className={styles.about__skill_list_item}>
                 <Image

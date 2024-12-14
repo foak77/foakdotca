@@ -59,13 +59,6 @@ export default function Portfolio() {
       />
 
       <section className={styles.portfolio__wrap}>
-        <Image className={styles.portfolio__imgs} src={img1} alt="slide" />
-        <Image
-          className={styles.portfolio__imgs_MOB}
-          src={img1Mob}
-          alt="slide"
-        />
-
         <p
           className={`${styles.portfolio__firstP} ${styles.portfolio__heading}`}
         >
@@ -75,10 +68,10 @@ export default function Portfolio() {
           website, when working with the &ldquo;Uflawless Medical Grade
           Skincare&ldquo; Team.
         </p>
-        <Image className={styles.portfolio__imgs} src={img0} alt="slide" />
+        <Image className={styles.portfolio__imgs} src={img1} alt="slide" />
         <Image
           className={styles.portfolio__imgs_MOB}
-          src={img0Mob}
+          src={img1Mob}
           alt="slide"
         />
 
@@ -91,13 +84,12 @@ export default function Portfolio() {
           were very pleased with the results developed for the Logo, Package,
           Flyers, Posters, User Interface, and Social Media Assets.
         </p>
-        <Image className={styles.portfolio__imgs} src={img6} alt="slide" />
+        <Image className={styles.portfolio__imgs} src={img0} alt="slide" />
         <Image
           className={styles.portfolio__imgs_MOB}
-          src={img6Mob}
+          src={img0Mob}
           alt="slide"
         />
-
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -106,6 +98,21 @@ export default function Portfolio() {
           pieces, feel free to reach out! I helped the people from the
           &ldquo;Elite Custom Made Furniture&ldquo; reach their first position
           in the Google Rank only from organic SEO work.
+        </p>
+        <Image className={styles.portfolio__imgs} src={img6} alt="slide" />
+        <Image
+          className={styles.portfolio__imgs_MOB}
+          src={img6Mob}
+          alt="slide"
+        />
+        <p
+          className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
+        >
+          As previously mentioned, printing magazines and newspapers were big in
+          my life, woven into the very fabric of my creative journey. A
+          substantial collection of these printed pieces is preserved within my
+          portfolio. If you&apos;re inclined to see it, the world of paper and
+          ink is very real.
         </p>
         <Image className={styles.portfolio__imgs} src={img2} alt="slide" />
         <Image
@@ -119,23 +126,6 @@ export default function Portfolio() {
           src={img3Mob}
           alt="slide"
         />
-
-        <p
-          className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
-        >
-          As previously mentioned, printing magazines and newspapers were big in
-          my life, woven into the very fabric of my creative journey. A
-          substantial collection of these printed pieces is preserved within my
-          portfolio. If you&apos;re inclined to see it, the world of paper and
-          ink is very real.
-        </p>
-        <Image className={styles.portfolio__imgs} src={img4} alt="slide" />
-        <Image
-          className={styles.portfolio__imgs_MOB}
-          src={img4Mob}
-          alt="slide"
-        />
-
         <p
           className={`${styles.portfolio__heading} ${styles.portfolio__firstP}`}
         >
@@ -146,6 +136,14 @@ export default function Portfolio() {
           from the &ldquo;Conti Realty Group&ldquo; benefits a lot from the
           Social Media Content created for them.
         </p>
+
+        <Image className={styles.portfolio__imgs} src={img4} alt="slide" />
+        <Image
+          className={styles.portfolio__imgs_MOB}
+          src={img4Mob}
+          alt="slide"
+        />
+
         <Image className={styles.portfolio__imgs} src={img5} alt="slide" />
         <Image
           className={styles.portfolio__imgs_MOB}

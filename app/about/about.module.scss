@@ -69,16 +69,10 @@
     transform: rotate(-10deg);
   }
   &__pencil {
-    @include flex-column-center-center;
+    // @include flex-column-center-center;
     margin: 40px 0px 40px 0px;
-    width: 300px;
+    width: 260px;
     height: 50px;
-    font-size: 2.5rem;
-    background-image: url("./../../public/images/pencil.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: $darkgray;
     filter: drop-shadow(0px 6px 5px $gray);
   }
 
@@ -310,11 +304,11 @@
       @include flex-row-spacebetween-start;
     }
     &__tools_wrap {
+      @include flex-column-start-center;
       width: 500px;
-      margin-bottom: 52px;
     }
     &__paragraph_tools {
-      width: 400px;
+      width: 470px;
     }
     &__paragraph_special {
       width: 400px;
@@ -338,6 +332,9 @@
     &__transition {
       width: 100%;
     }
+    &__tools_wrap {
+      width: 600px;
+    }
     &__transition__flipped {
       width: 100%;
     }
@@ -352,10 +349,10 @@
       width: 400px;
     }
     &__paragraph_tools {
-      width: 500px;
+      width: 600px;
     }
     &__paragraph_special {
-      width: 500px;
+      width: 600px;
     }
     &__paragraphTopWrapper {
       width: 1312px;

@@ -11,7 +11,7 @@ export default function Hero() {
         autoPlay
         muted
         loop
-        preload="true"
+        preload="auto"
         playsInline
         className={`${styles.hero__vid}`}
       >

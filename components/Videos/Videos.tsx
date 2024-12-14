@@ -14,7 +14,7 @@ export default function Videos() {
         <section className={styles.video__frameWrap}>
           <video
             controls
-            preload="true"
+            preload="auto"
             playsInline
             className={`${styles.video__frame}`}
           >
@@ -22,7 +22,7 @@ export default function Videos() {
           </video>
           <video
             controls
-            preload="true"
+            preload="auto"
             playsInline
             className={`${styles.video__frame} ${styles.video__frameOFF}`}
           >
@@ -30,12 +30,12 @@ export default function Videos() {
           </video>
           <video
             controls
-            preload="true"
+            preload="auto"
             className={`${styles.video__frame} ${styles.video__frameOFF}`}
           >
             <source src="/videos/metropica_V.mp4" type="video/mp4" />
           </video>
-          <video controls preload="true" className={styles.video__frame}>
+          <video controls preload="auto" className={styles.video__frame}>
             <source
               src="/videos/Uflawless_Dermal Fillers.mp4"
               type="video/mp4"
@@ -43,7 +43,7 @@ export default function Videos() {
           </video>
           <video
             controls
-            preload="true"
+            preload="auto"
             className={`${styles.video__frame} ${styles.video__frameOFF}`}
           >
             <source
@@ -51,7 +51,7 @@ export default function Videos() {
               type="video/mp4"
             />
           </video>
-          <video controls preload="true" className={styles.video__frame}>
+          <video controls preload="auto" className={styles.video__frame}>
             <source
               src="/videos/Uflawless_Youthful Skin Cells.mp4"
               type="video/mp4"

@@ -311,6 +311,7 @@
     text-decoration: none;
   }
   &__tapeBg {
+    width: 270px;
     padding: 30px 40px;
     font-size: 2rem;
     text-align: center;
@@ -343,6 +344,9 @@
     &__wrapperBottom {
       @include flex-row-start-center;
       width: 740px;
+    }
+    &__dLoad {
+      margin: 0px 20px 0px 0px;
     }
     &__sampleWork_M {
       display: none;
@@ -424,6 +428,9 @@
       // @include flex-row-spacebetween-start;
       width: 1000px;
     }
+    &__dLoad {
+      margin: 0px 40px 0px 0px;
+    }
     &__sampleWork_Larger {
       display: block;
       margin: 50px 0px 50px 0px;
@@ -434,6 +441,18 @@
     &__paragraphBlockWrap {
       @include flex-row-spacebetween-start;
       width: 1000px;
+    }
+    &__tapeBg {
+      width: 270px;
+      padding: 30px 0px;
+      font-size: 2rem;
+      text-align: center;
+      background-image: url("./../public/images/tape1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      color: $blue;
+      filter: drop-shadow(0px 0px 2px $gray);
     }
     &__paragraphBlockWrapLeft {
       width: 480px;
@@ -487,6 +506,7 @@
     &__transition__flipped {
       width: 150%;
     }
+
     // horizontal dropshadow
     &__dropShadow {
       width: 90%;

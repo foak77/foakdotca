@@ -2,6 +2,8 @@
 import Link from "next/link";
 import styles from "./../MainHeader/MainHeader.module.scss";
 import HamburgerIcon from "./HamburgerIcon";
+import machine from "./../../public/images/machine-g.png";
+import Image from "next/image";
 import { useStore } from "../../global-store/globalStore";
 import { indie } from "../../app/fonts";
 
